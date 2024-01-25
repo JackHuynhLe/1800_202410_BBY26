@@ -2,8 +2,14 @@
 
 ## 1. Project Description
 State your app in a nutshell, or one-sentence pitch. Give some elaboration on what the core features are.  
+<<<<<<< HEAD
 This browser based web application to help people track and record thir traveling.
 
+=======
+This browser based web application to track and record peoples travel.
+our project is to help people track their directions 
+To help people recorde theirs fantastic travel memories
+>>>>>>> c4c077808cf3a3c18250e62711d416ae435435c5
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
 * Hi, my name is Jack! I am exicted to start working on this project!
