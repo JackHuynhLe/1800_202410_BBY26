@@ -7,7 +7,7 @@ our project is to help people track their directions
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
-* Hi, my name is Jack! I am exicted to start my journey on developing a journey app.
+* Hi, my name is Jack! I am exicted to start working on this project!
 * Hello, i am Uppnoor and ready to work on this project!
 * Hi, my name is Jiarui Xing and people usually call me Jerry. I will try my best to work in a team!
 	
