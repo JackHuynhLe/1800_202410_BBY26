@@ -1,1 +1,8 @@
+/* Global color tone */
+:root {
+    --primary-bg-color: #fff;
+    --secondary-bg-color: #d9d9d9;
+    --text-color: #000;
+    --link-color: #000;
+}
 

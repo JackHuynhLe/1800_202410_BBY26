@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <!--    Website Title    -->
-    <title>Welcome to Travel Tracker!</title>
+    <!--    =====Website Title=====    -->
+    <title>Welcome to Stardust!</title>
     <link rel="icon" type="images/x-icon" href="./images/YuanXi.ico">
 
-    <!-- Required meta tags -->
-    <meta name="comp1800 template" content="My 1800 App">
+
+    <!--    =====Required meta tags=====     -->
+    <meta name="Stardust" content="BBY26 Project Travel Tracker">
     <!-- viewport -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +17,8 @@
     <meta name="author" content="Jack Le(JackHuynhLe)" />
     <meta name="author" content="Uppnoor Panesar(uppnoor)" />
 
-    <!-- **********Librarys********** -->
+
+    <!--    =====Librarys=====  -->
 
     <!-- Outside librarys -->
     <!-- Bootstrap Library CSS CDN -->
@@ -39,25 +41,63 @@
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="./styles/style.css">
 
-    <!-- ==========Librarys========== -->
+    <!--    *****Librarys*****   -->
 
 </head>
 
 <body>
+    <main class="header">
+        <!-- Welcome banner -->
+        <div class="header-title">
+            <div class="header-title-items">Welcome to Stardust!</div>
+        </div>
 
-    <!------------------------------>
-    <!-- Your HTML Layout go here -->
-    <!------------------------------>
-    <!-- Stuff for body goes here -->
+        <!-- Icon and login button -->
+        <div class="header-btns">
+            <form class="header-btns-items" action="login.html" target="_self">
+                <img class="header-btns-items-logo" src="#" alt="logo_Stardust">
+                <button class="header-btns-items-login" type="button">log in</button>
+            </form>
+        </div>
 
-
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
-
-    <!-- Link to scripts of your own -->
-    <!-- <script src="./scripts/script.js"></script> -->
-
+        <!-- Navigation bar -->
+        <div class="header-navbar">
+            <nav class="header-navbar-nav">
+                <div class="nav-items active">
+                    <a class="nav-items-link" aria-current="page" href="./index.html">
+                        <img class="nav-items-icon icon" src="./images/icon/icon_Navigation.png" alt="Navigation">
+                        <span class="nav-items-info info">
+                            Navigation
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-items">
+                    <a class="nav-items-link" href="#">
+                        <img class="nav-items-icon icon" src="./images/icon/icon_LeaderBoard.png" alt="Leader Board">
+                        <span class="nav-items-info info">
+                            Leader Board
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-items">
+                    <a class="nav-items-link" href="#">
+                        <img class="nav-items-icon icon" src="./images/icon/icon_History.png" alt="History">
+                        <span class="nav-items-info info">
+                            History
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-items">
+                    <a class="nav-items-link" href="#">
+                        <img class="nav-items-icon icon" src="./images/icon/icon_Profile.png" alt="Profile">
+                        <span class="nav-items-info info">
+                            Profile
+                        </span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </main>
 </body>
 
 </html>
