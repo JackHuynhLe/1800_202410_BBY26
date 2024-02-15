@@ -32,7 +32,6 @@ header {
 }
 
 @media (min-width: 701px) {
-
     header {
         /* layout */
         display: grid;
@@ -58,7 +57,6 @@ header {
         position: static;
         background-color: #fff;
     }
-
 }
 
 /* Header-title */
@@ -104,12 +102,10 @@ header {
 }
 
 @media (min-width: 701px) {
-
     .header-btns-items-login {
         /* box */
         width: 50%;
     }
-
 }
 
 /* Header-navbar */
@@ -131,6 +127,7 @@ header {
 }
 
 .nav-item-anchor {
+    /* box */
     display: inline-block;
 }
 
@@ -151,20 +148,22 @@ header {
 }
 
 @media (min-width: 701px) {
-
     .header-navbar-nav {
+        /* layout */
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
+
+        /* box */
         height: 100%;
     }
 
     .nav-items {
+        /* box */
         place-items: center;
         padding: auto;
         margin: auto;
     }
-
 }
 
 
