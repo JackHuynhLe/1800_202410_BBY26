@@ -38,10 +38,44 @@ Here are some known bugs:
 
 ## 6. Features for Future
 What we'd like to build in the future:
-* ...
-* ...
-* ...
-	
+* Custmor support
+    You don't have to login
+* Multi-platform
+    Both PC and PE
+* Intereactive map:
+    Personalised travel tracking
+        Mark places
+        Photos
+        Notes
+    Travel route planning
+        Optimise travel routes
+* Destination discovery and recommendations
+    Interest-based recommendations
+    Community recommendations
+* Real-time weather and transit information
+    Weather updates
+    Transit info
+        Time
+        Alert
+* Social interaction and communiity
+    Sharing and interaction
+        Travel stories
+        Photos
+        Interacting with the community
+* Offline features
+    Offline maps
+    Offline journal entry
+        Record offline and sync when online
+* Rewards and gamification elements
+    Achievement system
+        Unlock places
+        Completing challenges
+    Leaderboards
+        Number of places visited
+        User ratings
+* Multilingual support
+    Mutilingual interface
+        Multiple languages
 ## 7. Contents of Folder
 Content of the project folder:
 
