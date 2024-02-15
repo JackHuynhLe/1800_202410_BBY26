@@ -7,27 +7,39 @@ Only for index, it has alreaanchored to the index.html
 header {
     /* layout */
     display: grid;
-    grid-template-rows: 1fr 1fr 0fr;
+    grid-template-rows: 1fr 20fr 2fr;
     text-align: center;
+
+    /* box */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 .header-title {
     /* layout */
-    place-items: start;
+    place-items: center;
 }
 
-.header-btns {
+.header-map {
     /* layout */
     place-items: center;
+
+    /* box */
+    padding: 0;
+    margin: 0;
+    width: 100vw;
 }
 
 .header-navbar {
     /* layout */
-    position: absolute;
-    bottom: 0;
+    place-items: end;
 
     /* box */
     width: 100%;
+    height: auto;
     background-color: #d9d9d9;
 }
 
@@ -35,25 +47,28 @@ header {
     header {
         /* layout */
         display: grid;
-        grid-template-columns: 1fr 5fr;
-        grid-template-rows: repeat(2, 1fr);
         text-align: center;
+
+        /* box */
+        height: 90vh;
     }
 
     .header-title {
         /* layout */
-        grid-area: 1 / 2 / 2 / 3;
+        grid-area: 1 / 2 / 1 / 2;
         /* start row / start column / end row / end column */
     }
 
-    .header-btns {
+    .header-map {
         /* layout */
-        grid-area: 2 / 2 / 3 / 3;
+        grid-area: 2 / 2 / 2 / 2;
+        width: 80vw;
+        height: 80vh;
     }
 
     .header-navbar {
         /* layout */
-        grid-area: 1 / 1 / 4 / 2;
+        grid-area: 1 / 1 / 3 / 2;
         position: static;
         background-color: #fff;
     }
@@ -61,48 +76,33 @@ header {
 
 /* Header-title */
 .header-title-items {
+    /* box */
+    text-align: left;
+    padding: 10px;
+
     /* font */
     font-size: min(3em, 5vw);
     font-weight: bold;
     color: #000;
 }
 
-/* Header-btns */
-.header-btns-items {
-    /* layout */
-    display: grid;
-    grid-template-rows: auto 1fr;
-    place-items: center;
-}
-
-.header-btns-items-logo {
+/* Header-map */
+.header-map-items {
     /* box */
-    width: min(50%, 200px);
-    height: auto;
-    padding: 0;
-    margin-bottom: 2em;
-}
-
-.header-btns-items-login {
-    /* box */
-    width: 90%;
-    height: auto;
+    height: 100%;
+    width: 100%;
     padding: 1em;
     margin: 0;
-
-    /* font */
-    font-size: min(1.5em, 3vw);
-    font-weight: bold;
-    color: #fff;
-
-    /* btn */
-    border: none;
-    border-radius: 50px;
-    background-color: #d9d9d9;
 }
 
 @media (min-width: 701px) {
-    .header-btns-items-login {
+    .header-title-items {
+        /* box */
+        text-align: center;
+        padding: 0;
+    }
+
+    .header-map-items-login {
         /* box */
         width: 50%;
     }
@@ -116,8 +116,7 @@ header {
 
     /* box */
     padding: 10px 0;
-    margin: 0;
-    margin-bottom: 10px;
+    margin: 0 0 5px 0;
 }
 
 .nav-item {
@@ -133,7 +132,7 @@ header {
 
 .nav-items-anchor-icon {
     /* box */
-    width: 2em;
+    width: 30%;
     padding: 0;
     margin: auto;
 }
