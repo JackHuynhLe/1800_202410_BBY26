@@ -77,6 +77,10 @@ header {
 
 /* Header-title */
 .header-title-items {
+    /* box */
+    text-align: left;
+    padding: 10px;
+
     /* font */
     font-size: min(3em, 5vw);
     font-weight: bold;
@@ -93,6 +97,12 @@ header {
 }
 
 @media (min-width: 701px) {
+    .header-title-items {
+        /* box */
+        text-align: center;
+        padding: 0;
+    }
+
     .header-map-items-login {
         /* box */
         width: 50%;
