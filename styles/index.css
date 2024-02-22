@@ -1,6 +1,6 @@
 /**
 This css file is for index
-Only for index, it has alreaanchored to the index.html
+Only for index, it has already anchored to the index.html
 */
 
 /* Header */
@@ -21,6 +21,8 @@ header {
 .header-title {
     /* layout */
     place-items: center;
+
+    /* box */
     text-align: center;
 }
 
@@ -64,6 +66,8 @@ header {
         /* layout */
         grid-area: 1 / 2 / 1 / 2;
         /* start row / start column / end row / end column */
+
+        /* box */
         text-align: center;
     }
 
@@ -86,13 +90,12 @@ header {
 .header-title-items {
     /* box */
     text-align: center;
-    padding: 10px;
-    
-    /*border*/
     background-color: azure;
-    border: 6px solid black;
     padding: 6px 12px;
     display: inline-block;
+
+    /*border*/
+    border: 6px solid black;
     border-radius: 46px;
 
     /* font */
@@ -114,8 +117,7 @@ header {
     .header-title-items {
         /* box */
         text-align: center;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0 10px
     }
 
     .header-map-items-login {
@@ -176,7 +178,6 @@ header {
     .nav-items {
         /* box */
         place-items: center;
-        padding: auto;
         margin: auto;
     }
 }
