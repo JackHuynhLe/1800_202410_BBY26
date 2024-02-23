@@ -1,222 +1,145 @@
 /**
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 This css file is for index
 Only for index, it has already anchored to the index.html
+///////////////////////////////////////////////////////////
+About commit:
+-----------------------------------------------------------
+====Content====
+means that under this comment is a big class.
+E.g.:
+====media query====
+@media 1 {}
+@media 2 {}
+-----------------------------------------------------------
+++++Element++++:
+means that under this comment are direct child elements.
+E.g.:
+++++Body++++
+<header>
+<main>
+<nav>
+<footer>
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
 
-/* Header */
-header {
-    /* layout */
-    display: grid;
-    grid-template-rows: 1fr 20fr 2fr;
-    text-align: center;
+/* ====HTML==== */
 
-    /* box */
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    width: 100vw;
+/* ++++HTML++++ */
+body {
     height: 100vh;
 }
 
+/* ++++Body++++ */
+.header {
+    /* layout */
+    display: grid;
+    place-items: center;
+
+    /* box */
+    height: 70px;
+    width: min(90%, 800px);
+    padding: 10px 0;
+    margin: auto;
+}
+
+/*
+Main, Navbar and Footer without media query see global
+*/
+
+/* ++++Header++++ */
 .header-title {
     /* layout */
+    display: grid;
     place-items: center;
-
-    /* box */
     text-align: center;
-}
-
-.header-title-items {
-    /* box */
-    text-align: center;
-    padding: 10px;
-}
-
-.header-map {
-    /* layout */
-    place-items: center;
 
     /* box */
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-}
-
-.header-navbar {
-    /* layout */
-    place-items: end;
-
-    /* box */
+    height: 100%;
     width: 100%;
-    height: auto;
-    background-color: #d9d9d9;
-}
-
-@media (min-width: 701px) {
-    header {
-        /* layout */
-        display: grid;
-        text-align: center;
-
-        /* box */
-        height: 90vh;
-    }
-
-    .header-title {
-        /* layout */
-        grid-area: 1 / 2 / 1 / 2;
-        /* start row / start column / end row / end column */
-
-        /* box */
-        text-align: center;
-    }
-
-    .header-map {
-        /* layout */
-        grid-area: 2 / 2 / 2 / 2;
-        width: 80vw;
-        height: 80vh;
-    }
-
-    .header-navbar {
-        /* layout */
-        grid-area: 1 / 1 / 3 / 2;
-        position: static;
-        background-color: #fff;
-    }
-}
-
-/* Header-title */
-.header-title-items {
-    /* box */
-    text-align: center;
-    background-color: azure;
-    padding: 6px 12px;
-    display: inline-block;
+    background-color: #f3ffff;
 
     /*border*/
-    border: 6px solid black;
+    border: 4px solid black;
     border-radius: 46px;
 
-    /* font */
-    font-size: min(3em, 5vw);
+    /* style */
+    font-size: min(2em, max(5vw, 1em));
     font-weight: bold;
     color: #000;
 }
 
-/* Header-map */
-.header-map-items {
+/* ++++Main++++ */
+.main-map {
     /* box */
-    height: 100%;
     width: 100%;
-    padding: 1em;
-    margin: 0;
+    height: 100%;
 }
 
-@media (min-width: 701px) {
-    .header-title-items {
+.main-map iframe {
+    /* box */
+    width: 100%;
+    height: 100%;
+}
+
+/* ====Media query==== */
+
+/* Phone view */
+@media (max-width: 700px) {
+    /* ++++Body++++ */
+    .main {
+        /* layout */
+        flex-grow: 1;
+
         /* box */
-        text-align: center;
-        padding: 0 10px
-    }
-
-    .header-map-items-login {
-        /* box */
-        width: 50%;
+        margin: 10px 20px 80px 20px;
     }
 }
 
-/* Header-navbar */
-.header-navbar-nav {
-    /* layout */
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    /* box */
-    padding: 10px 0;
-    margin: 0 0 5px 0;
-}
-
-.nav-item {
-    /* box */
-    padding: 0;
-    margin: auto;
-}
-
-.nav-item-anchor {
-    /* box */
-    display: inline-block;
-}
-
-.nav-items-anchor-icon {
-    /* box */
-    width: 30%;
-    padding: 0;
-    margin: auto;
-}
-
-.nav-items-anchor-info {
-    /* box */
-    padding: 0;
-    margin: auto;
-
-    /* font */
-    font-size: 10px;
-}
-
+/* Computer view */
+/* index.html has 2 "content(header and main)", therefore can't use global */
 @media (min-width: 701px) {
-    .header-navbar-nav {
+    /* ++++HTML++++ */
+    body {
         /* layout */
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        /* grid */
+        grid-template-columns: min(15%, 180px) auto;
+        grid-template-rows: 70px auto 50px;
+        grid-template-areas:
+        "nav-left header-right"
+        "nav-left main-right"
+        "footer footer";
 
         /* box */
-        height: 100%;
+        height: 100vh;
     }
 
-    .nav-items {
-        /* box */
-        place-items: center;
-        margin: auto;
-    }
-}
-
-
-/* Footer */
-footer {
-    /* layout */
-    display: none;
-}
-
-@media (min-width: 701px) {
-    footer {
+    /* ++++Body++++ */
+    .header {
         /* layout */
-        display: block;
-        position: absolute;
-        bottom: 0;
-
-        /* box */
-        width: 100%;
-        background-color: #d9d9d9;
+        /* grid */
+        grid-area: header-right;
     }
 
-    /* Footer-copyright */
-    .footer-copyright {
-        /* box */
-        padding: 0;
-        margin: 1em;
-        text-align: end;
+    .main {
+        /* layout */
+        /* grid */
+        grid-area: main-right;
     }
 
-    .footer-copyright-anchor {
+    .bottom-nav {
+        /* layout */
+        /* grid */
+        grid-area: nav-left;
+
         /* box */
-        padding: 0;
-        margin: 0;
+        background-color: #f0f0f0;
     }
 
-    .footer-copyright-anchor-img {
-        /* box */
-        width: 50px;
+    .footer {
+        /* layout */
+        /* grid */
+        grid-area: footer;
     }
 }

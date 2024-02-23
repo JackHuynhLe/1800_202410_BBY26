@@ -1,0 +1,215 @@
+/**
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+This css file is for global use
+Therefore be careful to use
+///////////////////////////////////////////////////////////
+About commit:
+-----------------------------------------------------------
+====Content====
+means that under this comment is a big class.
+E.g.:
+====media query====
+@media 1 {}
+@media 2 {}
+-----------------------------------------------------------
+++++Element++++:
+means that under this comment are direct child elements.
+E.g.:
+++++Body++++
+<header>
+<main>
+<nav>
+<footer>
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+/* ====Specific==== */
+/* Color tone */
+:root {
+    --primary-bg-color: #fff;
+    --secondary-bg-color: #d9d9d9;
+    --text-color: #000;
+    --link-color: #000;
+}
+
+/* Anchor */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* ====HTML==== */
+
+/* ++++HTML++++ */
+body {
+    /* box */
+    box-sizing: border-box;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* ++++Body++++ */
+.footer {
+    /* layout */
+    display: none;
+    z-index: 1000;
+
+    /* box */
+    height: 50px;
+    width: 100%;
+    background-color: #d9d9d9;
+    text-align: end;
+}
+
+/* ++++Navbar++++ */
+.bottom-nav {
+    /* layout */
+    z-index: 1000;
+
+    /* box */
+    background-color: #d9d9d9;
+}
+
+.bottom-nav ul {
+    /* layout */
+    display: grid;
+
+    /* box */
+    height: 60px;
+    width: 100%;
+    padding: 0;
+
+    /* style */
+    list-style: none;
+}
+
+.bottom-nav li {
+    /* layout */
+    display: grid;
+    place-items: center;
+
+    /* box */
+    height: 100%;
+    width: 100%;
+    padding: 5px 0 10px 0;
+}
+
+.bottom-nav a {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+
+    /* box */
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    /* style */
+    font-size: 10px;
+}
+
+.nav-items:hover {
+    /* box */
+    background-color: #e0e0e0;
+}
+
+.nav-items-anchor-icon {
+    /* box */
+    width: 25px;
+    height: 25px;
+    margin-bottom: 4px;
+}
+
+.nav-items.active {
+    background-color: #e0e0e0;
+}
+
+/* ++++Footer++++ */
+.footer-copyright {
+    /* layout */
+    display: inline-block;
+
+    /* box */
+    height: 100%;
+    padding: 5px;
+}
+
+.footer-copyright-icon {
+    height: 100%;
+}
+
+/* ====Media query==== */
+
+/* Phone view */
+@media (max-width: 700px) {
+    /* ++++HTML++++ */
+    body {
+        /* layout */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ++++Navbar++++ */
+    .bottom-nav {
+        /* layout */
+        position: fixed;
+        bottom: 0;
+
+        /* box */
+        height: 60px;
+        width: 100%;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .bottom-nav ul {
+        /* layout */
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Computer view */
+@media (min-width: 701px) {
+    /* ++++HTML++++ */
+    body {
+        /* layout */
+        display: grid;
+        /* grid */
+        /* navbar, content */
+        grid-template-columns: min(15%, 180px) auto;
+        /* navbar-content, footer */
+        grid-template-rows: auto 50px;
+        grid-template-areas:
+        "nav-left content-right"
+        "footer footer";
+
+        /* box */
+        height: 100vh;
+    }
+
+    /* ++++Body++++ */
+    .content {
+        /* layout */
+        /* grid */
+        grid-area: content-right;
+    }
+
+    .bottom-nav {
+        /* layout */
+        /* grid */
+        grid-area: nav-left;
+
+        /* box */
+        background-color: #f0f0f0;
+    }
+
+    .footer {
+        /* layout */
+        display: block;
+        position: fixed;
+        bottom: 0;
+        /* grid */
+        grid-area: footer;
+    }
+}

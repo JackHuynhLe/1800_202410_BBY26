@@ -40,7 +40,7 @@
     <!-- Main library -->
     <!-- Link to styles of your own -->
     <!--    main    -->
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="styles/global.css">
     <!--    specific    -->
     <link rel="stylesheet" href="./styles/index.css">
 
@@ -50,73 +50,67 @@
 
 <body>
 <header class="header">
-
-    <!-- Welcome banner -->
-
     <div class="header-title">
-        <div class="header-title-items">
-            Welcome to Stardust!
-        </div>
+        Welcome to Stardust!
     </div>
+</header>
 
-    <!-- Map View -->
-
-    <div class="header-map">
-        <iframe class="header-map-items"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20835.57538095105!2d-123.03794058916013!3d49.2489744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867721fd53fee5%3A0x355ab207647a109d!2sBritish%20Columbia%20Institute%20of%20Technology!5e0!3m2!1sen!2sca!4v1708032259984!5m2!1sen!2sca"
+<main class="main">
+    <div class="main-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20835.57538095105!2d-123.03794058916013!3d49.2489744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867721fd53fee5%3A0x355ab207647a109d!2sBritish%20Columbia%20Institute%20of%20Technology!5e0!3m2!1sen!2sca!4v1708032259984!5m2!1sen!2sca"
                 width="90%" height="300" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </div>
+</main>
 
-    <!-- Navigation bar -->
+<nav class="bottom-nav">
+    <ul>
+        <li class="nav-items active">
+            <a class="nav-items-anchor" aria-current="page" href="./index.html">
+                <img class="nav-items-anchor-icon icon" src="./images/icon/icon_Navigation.png"
+                     alt="Navigation">
+                <div class="nav-items-anchor-info info">
+                    Navigation
+                </div>
+            </a>
+        </li>
 
-    <div class="header-navbar">
-        <nav class="header-navbar-nav">
-            <div class="nav-items active">
-                <a class="nav-items-anchor" aria-current="page" href="./index.html">
-                    <img class="nav-items-anchor-icon icon" src="./images/icon/icon_Navigation.png"
-                         alt="Navigation">
-                    <div class="nav-items-anchor-info info">
-                        Navigation
-                    </div>
-                </a>
-            </div>
-            <div class="nav-items">
-                <a class="nav-items-anchor" href="#">
-                    <img class="nav-items-anchor-icon icon" src="./images/icon/icon_LeaderBoard.png"
-                         alt="LeaderBoard">
-                    <div class="nav-items-anchor-info info">
-                        LeaderBoard
-                    </div>
-                </a>
-            </div>
-            <div class="nav-items">
-                <a class="nav-items-anchor" href="#">
-                    <img class="nav-items-anchor-icon icon" src="./images/icon/icon_History.png" alt="History">
-                    <div class="nav-items-anchor-info info">
-                        History
-                    </div>
-                </a>
-            </div>
-            <div class="nav-items">
-                <a class="nav-items-anchor" href="#">
-                    <img class="nav-items-anchor-icon icon" src="./images/icon/icon_Profile.png" alt="Profile">
-                    <div class="nav-items-anchor-info info">
-                        Profile
-                    </div>
-                </a>
-            </div>
-        </nav>
-    </div>
-</header>
+        <li class="nav-items">
+            <a class="nav-items-anchor" href="#">
+                <img class="nav-items-anchor-icon icon" src="./images/icon/icon_LeaderBoard.png"
+                     alt="LeaderBoard">
+                <div class="nav-items-anchor-info info">
+                    LeaderBoard
+                </div>
+            </a>
+        </li>
+
+        <li class="nav-items">
+            <a class="nav-items-anchor" href="#">
+                <img class="nav-items-anchor-icon icon" src="./images/icon/icon_History.png" alt="History">
+                <div class="nav-items-anchor-info info">
+                    History
+                </div>
+            </a>
+        </li>
+
+        <li class="nav-items">
+            <a class="nav-items-anchor" href="#">
+                <img class="nav-items-anchor-icon icon" src="./images/icon/icon_Profile.png" alt="Profile">
+                <div class="nav-items-anchor-info info">
+                    Profile
+                </div>
+            </a>
+        </li>
+    </ul>
+</nav>
 
 <footer class="footer">
-    <div class="footer-copyright">
-        <a class="footer-copyright-anchor" href="https://github.com/JackHuynhLe/1800_202410_BBY26" target="_blank">
-            <img class="footer-copyright-anchor-img" src="./images/icon/icon_GitHub.png" alt="GitHub">
+        <a class="footer-copyright"
+                href="https://github.com/JackHuynhLe/1800_202410_BBY26" target="_blank">
+            <img class="footer-copyright-icon" src="./images/icon/icon_GitHub.png" alt="GitHub">
         </a>
-    </div>
 </footer>
 </body>
 
