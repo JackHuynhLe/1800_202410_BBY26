@@ -3,7 +3,7 @@
 This css file is for login
 Only for login, it has already anchored to the login.html
 ///////////////////////////////////////////////////////////
-About commit:
+About comment:
 -----------------------------------------------------------
 ====Content====
 means that under this comment is a big class.
@@ -20,6 +20,11 @@ E.g.:
 <main>
 <nav>
 <footer>
+///////////////////////////////////////////////////////////
+-----------------------------------------------------------
+Note: 
+The product reference for the mobile screen size is 430px * 932px
+-----------------------------------------------------------
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
 /* ====HTML==== */
@@ -27,6 +32,9 @@ E.g.:
 /* ++++Body++++ */
 
 .background {
+  /* layout */
+  height: 100vh;
+
   /* style */
   background-image: url("../images/icon/travel.jpg");
   background-size: cover;
@@ -53,7 +61,6 @@ E.g.:
 
   /* box */
   margin: 5px 10px;
-  min-width: 250px;
 }
 
 .col-sm-10 {
