@@ -38,7 +38,8 @@
 
     <!-- Main library -->
     <!-- Link to styles of your own -->
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/login.css">
 
     <!--    *****Librarys*****   -->
 
@@ -46,11 +47,74 @@
 
 <body>
 
-    <!------------------------------>
-    <!-- Your HTML Layout go here -->
-    <!------------------------------>
-    <!-- Stuff for body goes here -->
+    <fieldset class="login">
+        <legend class="login-title">Welcome to Stardust!</legend>
+        <form>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Login / Signup</button>
+                </div>
+            </div>
+        </form>
+    </fieldset>
 
+    <nav class="bottom-nav">
+        <ul>
+            <li class="nav-items">
+                <a class="nav-items-anchor" aria-current="page" href="./index.html">
+                    <img class="nav-items-anchor-icon icon" src="./images/icon/icon_Navigation.png" alt="Navigation">
+                    <div class="nav-items-anchor-info info">
+                        Navigation
+                    </div>
+                </a>
+            </li>
+
+            <li class="nav-items">
+                <a class="nav-items-anchor" href="#">
+                    <img class="nav-items-anchor-icon icon" src="./images/icon/icon_LeaderBoard.png" alt="LeaderBoard">
+                    <div class="nav-items-anchor-info info">
+                        LeaderBoard
+                    </div>
+                </a>
+            </li>
+
+            <li class="nav-items">
+                <a class="nav-items-anchor" href="#">
+                    <img class="nav-items-anchor-icon icon" src="./images/icon/icon_History.png" alt="History">
+                    <div class="nav-items-anchor-info info">
+                        History
+                    </div>
+                </a>
+            </li>
+
+            <li class="nav-items active">
+                <a class="nav-items-anchor" href="login.html">
+                    <img class="nav-items-anchor-icon icon" src="./images/icon/icon_Profile.png" alt="Profile">
+                    <div class="nav-items-anchor-info info">
+                        Profile
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <footer class="footer">
+        <a class="footer-copyright" href="https://github.com/JackHuynhLe/1800_202410_BBY26" target="_blank">
+            <img class="footer-copyright-icon" src="./images/icon/icon_GitHub.png" alt="GitHub">
+        </a>
+    </footer>
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
