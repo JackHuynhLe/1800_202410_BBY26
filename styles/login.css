@@ -26,6 +26,12 @@ E.g.:
 
 /* ++++Body++++ */
 
+.background {
+  /* style */
+  background-image: url("../images/icon/travel.jpg");
+  background-size: cover;
+}
+
 .login {
   /* box */
   margin: 20vh auto auto auto;
@@ -60,17 +66,15 @@ E.g.:
 @media (max-width: 700px) {
   body {
     /* layout */
-    flex-direction:column;
+    flex-direction: column;
   }
 
-  body > div {
+  body>div {
     padding: 20vw;
   }
 
-  .background{
-    background-image: url("/images/icon/travel.jpg");
+  .background {
     background-position: left;
-    background-size: cover;
   }
 }
 
@@ -80,9 +84,7 @@ E.g.:
     width: 400px;
   }
 
-  .background{
-    background-image: url("/images/icon/travel.jpg");
+  .background {
     background-position: center;
-    background-size: cover;
   }
 }
