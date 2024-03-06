@@ -1,7 +1,15 @@
+###From Template###
 .DS_Store
 *.logs
 node_modules/
-.vscode/
 
 ### API Keys###
 firebaseAPI_TEAMBBY_26.js
+
+###Eidtor###
+.vs/
+.vscode/
+.idea/
+
+###Git###
+.gitignore
