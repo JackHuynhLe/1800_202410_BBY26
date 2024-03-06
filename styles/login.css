@@ -25,6 +25,7 @@ E.g.:
 /* ====HTML==== */
 
 /* ++++Body++++ */
+
 .login {
   /* box */
   margin: 20vh auto auto auto;
@@ -51,6 +52,7 @@ E.g.:
 
 .col-sm-10 {
   /* box */
+  padding: 5px;
   width: 100%;
 }
 
@@ -58,7 +60,17 @@ E.g.:
 @media (max-width: 700px) {
   body {
     /* layout */
-    flex-direction: unset;
+    flex-direction:column;
+  }
+
+  body > div {
+    padding: 20vw;
+  }
+
+  .background{
+    background-image: url("/images/icon/travel.jpg");
+    background-position: left;
+    background-size: cover;
   }
 }
 
@@ -66,5 +78,11 @@ E.g.:
   .login {
     /* box */
     width: 400px;
+  }
+
+  .background{
+    background-image: url("/images/icon/travel.jpg");
+    background-position: center;
+    background-size: cover;
   }
 }
