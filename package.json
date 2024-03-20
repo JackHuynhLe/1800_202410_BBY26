@@ -1,0 +1,23 @@
+{
+  "name": "bby26_stardust",
+  "version": "0.2.0",
+  "description": "travel tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackHuynhLe/1800_202410_BBY26.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JackHuynhLe/1800_202410_BBY26/issues"
+  },
+  "homepage": "https://github.com/JackHuynhLe/1800_202410_BBY26#readme",
+  "dependencies": {
+    "express": "^4.19.0",
+    "firebaseui": "^6.1.0"
+  }
+}
