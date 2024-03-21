@@ -40,8 +40,7 @@ The product reference for the mobile screen size is 430px * 932px
 .overflow {
   /* font */
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: auto;
   }
 
 .initiallyHidden {
