@@ -14,30 +14,25 @@ document.getElementById("footerContainer").addEventListener("click", () => {
 
 // Change language
 function changeLanguage(language) {
-    const currentLanguage = language;
     fetch(`/languages/${language}`)
         .then(response => response.json())
         .then(data => {
-            // 假设服务器返回的数据结构为 { Strings: { "text-welcomeToStardust": "欢迎", ... } }
             let strings = data.Strings;
-            document.querySelectorAll('[id^="text-"]').forEach(element => {
-                let key = element.id;
-                if (strings[key]) {
+            for (let key in strings) {
+                let element = document.getElementById(key);
+                if (element) {
                     element.textContent = strings[key];
-                } else {
-                    console.error(`Key not found: ${key}`);
                 }
-            });
+            }
         })
         .catch(error => console.error("Error loading the language file:", error));
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const languageListItems = document.querySelectorAll(".interlanguage-link");
-    languageListItems.forEach(item => {
-        item.addEventListener("click", (event) => {
-            const selectedLanguageCode = event.currentTarget.getAttribute("data-code");
-            changeLanguage(selectedLanguageCode);
-        });
-    });
+document.body.addEventListener("click", function (event) {
+    // 通过event.target检查点击的是否是我们关心的元素
+    if (event.target.matches(".interlanguage-link, .interlanguage-link *")) {
+        const element = event.target.closest(".interlanguage-link");
+        const selectedLanguageCode = element.getAttribute("data-code");
+        changeLanguage(selectedLanguageCode);
+    }
 });
