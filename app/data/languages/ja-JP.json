@@ -1,0 +1,28 @@
+{
+  "languageOption": {
+    "label": "日本語",
+    "value": "ja-JP"
+  },
+  "Strings": {
+    "text-welcomeToStardust": "Stardustへようこそ！",
+    "text-viewLargerMap": "大きな地図を見る",
+
+    "text-navigation": "ナビゲーション",
+    "text-community": "コミュニティ",
+    "text-history": "歴史",
+    "text-profile": "プロフィール",
+
+    "text-email": "メールアドレス",
+    "text-password": "パスワード",
+    "text-login": "ログイン",
+    "text-signup": "サインアップ",
+
+    "text-name": "名前",
+    "text-address": "住所",
+    "text-city": "市町村",
+    "text-province": "都道府県",
+    "text-submit": "提出",
+
+    "text-language": "言語"
+  }
+}

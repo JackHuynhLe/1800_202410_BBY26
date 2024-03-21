@@ -1,0 +1,28 @@
+{
+  "languageOption": {
+    "label": "繁體中文",
+    "value": "zh-TW"
+  },
+  "Strings": {
+    "text-welcomeToStardust": "歡迎來到Stardust！",
+    "text-viewLargerMap": "查看更大的地圖",
+
+    "text-navigation": "導航",
+    "text-community": "社區",
+    "text-history": "歷史",
+    "text-profile": "個人資料",
+
+    "text-email": "電子郵箱",
+    "text-password": "密碼",
+    "text-login": "登錄",
+    "text-signup": "註冊",
+
+    "text-name": "姓名",
+    "text-address": "地址",
+    "text-city": "城市",
+    "text-province": "省份",
+    "text-submit": "提交",
+
+    "text-language": "語言"
+  }
+}

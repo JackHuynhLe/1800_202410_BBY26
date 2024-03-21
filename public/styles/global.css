@@ -44,6 +44,31 @@ The product reference for the mobile screen size is 430px * 932px
   text-overflow: ellipsis;
   }
 
+.initiallyHidden {
+  display: none;
+  }
+
+.column {
+  /* layout */
+  display: flex;
+  flex-direction: column
+  }
+
+.row {
+  /* layout */
+  display: flex;
+  flex-direction: row
+  }
+
+.undecorated {
+  /* box */
+  padding: 0;
+  margin: 0;
+  /* font */
+  text-decoration: none;
+  list-style-type: none;
+  }
+
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -74,7 +99,6 @@ body {
   height: 50px;
   width: 100%;
   background-color: #D9D9D9;
-  text-align: end;
   }
 
 /* ++++Navbar++++ */
@@ -141,6 +165,55 @@ body {
   }
 
 /* ++++Footer++++ */
+#language-select {
+  /* layout */
+  display: flex;
+  place-items: center;
+  /* box */
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0 50px;
+  height: 100%;
+  width: 100px;
+  /* style */
+  background-color: #F0F0F0;
+  }
+
+#language-select:hover {
+  /* style */
+  border: 2px solid #565E64;
+  }
+
+#language-list {
+  /* box*/
+  position: absolute;
+  bottom: 100%;
+  left: 50px;
+  width: 100px;
+  display: none;
+  place-items: center;
+  /* style */
+  background-color: #FFF;
+  }
+
+.footer-language-list {
+  /* box */
+  width: 100%;
+  }
+
+.interlanguage-link{
+  /* box */
+  width: 100%;
+  text-align: center;
+  }
+
+.interlanguage-link:hover {
+  /* style */
+  cursor: pointer;
+  background-color: #E0E0E0;
+  }
+
 .footer-copyright {
   /* layout */
   display: inline-block;
@@ -220,7 +293,9 @@ body {
 
   .footer {
     /* layout */
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     bottom: 0;
     /* grid */

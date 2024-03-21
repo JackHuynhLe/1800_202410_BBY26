@@ -1,0 +1,28 @@
+{
+  "languageOption": {
+    "label": "简体中文",
+    "value": "zh-CN"
+  },
+  "Strings": {
+    "text-welcomeToStardust": "欢迎来到Stardust！",
+    "text-viewLargerMap": "查看更大的地图",
+
+    "text-navigation": "导航",
+    "text-community": "社区",
+    "text-history": "历史",
+    "text-profile": "个人资料",
+
+    "text-email": "电子邮箱",
+    "text-password": "密码",
+    "text-login": "登录",
+    "text-signup": "注册",
+
+    "text-name": "姓名",
+    "text-address": "地址",
+    "text-city": "城市",
+    "text-province": "省份",
+    "text-submit": "提交",
+
+    "text-language": "语言"
+  }
+}
