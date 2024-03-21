@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map with Directions</title>
+    <!-- Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Include Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <!-- Include Leaflet Control Geocoder CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <!-- Include Leaflet EasyButton CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton/src/easy-button.css" />
+
+    <style>
+        /* Set the map container size */
+        #map {
+            height: 98vh;
+            width: 100%;
+        }
+
+        /* Style for the button */
+        #toggleDirectionsBtn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create a div to hold the map -->
+    <div id="map"></div>
+
+    <!-- Include Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Include Leaflet Routing Machine JavaScript -->
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <!-- Include Leaflet Control Geocoder JavaScript -->
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <!-- Include Leaflet EasyButton JavaScript -->
+    <script src="https://unpkg.com/leaflet-easybutton/src/easy-button.js"></script>
+
+    <script>
+        let map;
+        let marker;
+        let routingControl;
+        let directionsVisible = false;
+
+        // Function to initialize the map and display the user's location
+        function initMap() {
+            // Initialize the map with a default view
+            map = L.map('map').setView([0, 0], 13); // Default view centered at [0, 0]
+
+            // Add OpenStreetMap tile layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Request the user's location and display on map
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition((position) => {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+
+                    // Create a marker for the user's location
+                    marker = L.marker([latitude, longitude]).addTo(map)
+                        .bindPopup('Your Location')
+                        .openPopup();
+
+                    // Pan the map to the user's location
+                    map.setView([latitude, longitude], 13);
+                }, (error) => {
+                    console.error("Error getting user's location:", error);
+                    alert("Error getting user's location. Please enable location services and refresh the page.");
+                });
+            } else {
+                console.error("Geolocation is not supported by this browser.");
+                alert("Geolocation is not supported by this browser. Please try a different browser.");
+            }
+
+            // Add Geocoding Control for searching
+            L.Control.geocoder().addTo(map);
+
+            // Create routing control but do not add to map initially
+            routingControl = L.Routing.control({
+                routeWhileDragging: true, // Update route when dragging waypoints
+                geocoder: L.Control.Geocoder.nominatim() // Use Nominatim geocoder
+            });
+
+            // Add a button to toggle the directions menu
+            const toggleDirectionsBtn = L.easyButton('fa-directions', function() {
+                if (directionsVisible) {
+                    routingControl.removeFrom(map);
+                } else {
+                    routingControl.addTo(map);
+                }
+                directionsVisible = !directionsVisible;
+            }).setPosition('topright').addTo(map);
+        }
+
+        // Call initMap function when the page finishes loading
+        window.onload = initMap;
+    </script>
+</body>
+
+</html>
