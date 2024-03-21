@@ -42,6 +42,17 @@ app.get("/get-footer", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./app/data/text/footer.html"));
 });
 
+/*Interaction*/
+//Get languages
+app.get("/languages/:lang", (req, res) => {
+    const lang = req.params.lang;
+    const languageFilePath = path.resolve(__dirname, `./app/data/languages/${lang}.json`);
+    if (fs.existsSync(languageFilePath)) {
+        res.sendFile(languageFilePath);
+    } else {
+        res.status(404).send({error: "Language file not found."});
+    }
+});
 
 //Run the server
 app.listen(2600, () => {

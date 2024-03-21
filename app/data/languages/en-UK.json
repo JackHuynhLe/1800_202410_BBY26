@@ -1,0 +1,28 @@
+{
+  "languageOption": {
+    "label": "English (UK)",
+    "value": "en-UK"
+  },
+  "Strings": {
+    "text-welcomeToStardust": "Welcome to Stardust!",
+    "text-viewLargerMap": "View Larger Map",
+
+    "text-navigation": "Navigation",
+    "text-community": "Community",
+    "text-history": "History",
+    "text-profile": "Profile",
+
+    "text-email": "Email",
+    "text-password": "Password",
+    "text-login": "Login",
+    "text-signup": "Sign up",
+
+    "text-name": "Name",
+    "text-address": "Address",
+    "text-city": "City",
+    "text-province": "Province",
+    "text-submit": "Submit",
+
+    "text-language": "Language"
+  }
+}

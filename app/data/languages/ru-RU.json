@@ -1,0 +1,28 @@
+{
+  "languageOption": {
+    "label": "Русский",
+    "value": "ru-RU"
+  },
+  "Strings": {
+    "text-welcomeToStardust": "Добро пожаловать в Stardust!",
+    "text-viewLargerMap": "Посмотреть большую карту",
+
+    "text-navigation": "Навигация",
+    "text-community": "Сообщество",
+    "text-history": "История",
+    "text-profile": "Профиль",
+
+    "text-email": "Электронная почта",
+    "text-password": "Пароль",
+    "text-login": "Войти",
+    "text-signup": "Зарегистрироваться",
+
+    "text-name": "Имя",
+    "text-address": "Адрес",
+    "text-city": "Город",
+    "text-province": "Область",
+    "text-submit": "Отправить",
+
+    "text-language": "Язык"
+  }
+}
