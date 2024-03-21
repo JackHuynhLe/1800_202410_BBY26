@@ -32,21 +32,21 @@ The product reference for the mobile screen size is 430px * 932px
 
 /* ++++HTML++++ */
 body {
-    height: 100vh;
-}
+  height: 100vh;
+  }
 
 /* ++++Body++++ */
 .header {
-    /* layout */
-    display: grid;
-    place-items: center;
+  /* layout */
+  display: grid;
+  place-items: center;
 
-    /* box */
-    height: 70px;
-    width: min(90%, 800px);
-    padding: 10px 0;
-    margin: auto;
-}
+  /* box */
+  height: 70px;
+  width: min(90%, 800px);
+  padding: 10px 0;
+  margin: auto;
+  }
 
 /*
 Main, Navbar and Footer without media query see global
@@ -54,97 +54,116 @@ Main, Navbar and Footer without media query see global
 
 /* ++++Header++++ */
 .header-title {
-    /* layout */
-    display: grid;
-    place-items: center;
-    text-align: center;
+  /* layout */
+  display: grid;
+  place-items: center;
+  text-align: center;
 
-    /* box */
-    height: 100%;
-    width: 100%;
-    background-color: #f3ffff;
+  /* box */
+  height: 100%;
+  width: 100%;
+  background-color: #F3FFFF;
 
-    /*border*/
-    border: 4px solid black;
-    border-radius: 46px;
+  /*border*/
+  border: 4px solid black;
+  border-radius: 46px;
 
-    /* style */
-    font-size: min(2em, max(5vw, 1em));
-    font-weight: bold;
-    color: #000;
-}
+  /* style */
+  font-size: min(2em, max(5vw, 1em));
+  font-weight: bold;
+  color: #000;
+  }
 
 /* ++++Main++++ */
 .main-map {
-    /* box */
-    width: 100%;
-    height: 100%;
-}
+  /* layout */
+  display: grid;
+  grid-auto-rows: 1fr 21px;
+  /* box */
+  width: 100%;
+  height: 100%;
+  }
 
 .main-map iframe {
-    /* box */
-    width: 100%;
-    height: 100%;
-}
+  /* box */
+  width: 100%;
+  height: 100%;
+  }
+
+.main-map small {
+  /* layout */
+  text-align: center;
+  /* box */
+  width: 100%;
+  }
+
+.main-map small > a {
+  /* box */
+  margin: auto;
+  width: 100%;
+  /* style */
+  display: inline-block;
+  background-color: #D2F8D0;
+  }
 
 /* ====Media query==== */
 
 /* Phone view */
 @media (max-width: 700px) {
-    /* ++++Body++++ */
-    .main {
-        /* layout */
-        flex-grow: 1;
+  /* ++++Body++++ */
+  .main {
+    /* layout */
+    flex-grow: 1;
 
-        /* box */
-        margin: 10px 20px 80px 20px;
+    /* box */
+    margin: 10px 20px 80px 20px;
     }
-}
+  }
 
 /* Computer view */
 /* index.html has 2 "content(header and main)", therefore can't use global */
 @media (min-width: 701px) {
-    /* ++++HTML++++ */
-    body {
-        /* layout */
-        display: grid;
-        /* grid */
-        grid-template-columns: min(15%, 180px) auto;
-        grid-template-rows: 70px auto 50px;
-        grid-template-areas:
+  /* ++++HTML++++ */
+  body {
+    /* layout */
+    display: grid;
+    /* grid */
+    grid-template-columns: min(15%, 180px) auto;
+    grid-template-rows: 70px auto 50px;
+    grid-template-areas:
         "nav-left header-right"
         "nav-left main-right"
         "footer footer";
 
-        /* box */
-        height: 100vh;
+    /* box */
+    height: 100vh;
     }
 
-    /* ++++Body++++ */
-    .header {
-        /* layout */
-        /* grid */
-        grid-area: header-right;
+  /* ++++Body++++ */
+  .header {
+    /* layout */
+    /* grid */
+    grid-area: header-right;
     }
 
-    .main {
-        /* layout */
-        /* grid */
-        grid-area: main-right;
+  .main {
+    /* layout */
+    /* grid */
+    grid-area: main-right;
     }
 
-    .bottom-nav {
-        /* layout */
-        /* grid */
-        grid-area: nav-left;
+  .bottom-nav {
+    /* layout */
+    /* grid */
+    grid-area: nav-left;
 
-        /* box */
-        background-color: #f0f0f0;
+    /* box */
+    background-color: #F0F0F0;
     }
 
-    .footer {
-        /* layout */
-        /* grid */
-        grid-area: footer;
+  .footer {
+    /* layout */
+    /* grid */
+    grid-area: footer;
     }
-}
+  }
