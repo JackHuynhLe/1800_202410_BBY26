@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
 });
 
+//This links to the next part of the page
+document.querySelector('#go-to-app').addEventListener('click', () => {
+    window.location.href = '../app/html/index.html'; 
+});
+
 const guideList = document.querySelector('.guides');
 
 //setup guide

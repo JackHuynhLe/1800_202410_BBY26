@@ -12,9 +12,16 @@ app.use("/styles", express.static(path.resolve(__dirname, "./public/styles")));
 //Functions
 /*Pages*/
 //Index page
+
 app.get("/", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./project/login.html"));
+});
+
+//index page
+app.get("/index", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./app/html/index.html"));
 });
+
 //Community page
 app.get("/community", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./app/html/community.html"));
