@@ -2,7 +2,7 @@
   "name": "bby26_stardust",
   "version": "0.2.0",
   "description": "travel tracker",
-  "main": "index.js",
+  "main": "Not the porject/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

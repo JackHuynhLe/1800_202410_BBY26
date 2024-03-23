@@ -1,22 +1,24 @@
 /*HTML
 * */
 
-// Get navbar.html
-fetch("/get-navbar")
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById("navContainer").innerHTML = html;
-    })
-    .catch(error => console.error("Error loading the navbar:", error));
+document.addEventListener("DOMContentLoaded", () => {
+    // Get navbar.html
+    fetch("../text/navbar.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("navContainer").innerHTML = html;
+        })
+        .catch(error => console.error("Error loading the navbar:", error));
 
 // Get footer.html
-fetch("/get-footer")
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById("footerContainer").innerHTML = html;
-    })
-    .catch(error => console.error("Error loading the footer:", error));
+    fetch("../text/footer.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("footerContainer").innerHTML = html;
+        })
+        .catch(error => console.error("Error loading the footer:", error));
 
+})
 /*Footer
 * */
 
@@ -43,7 +45,7 @@ function changeLanguage(language) {
     window.localStorage.setItem("preferredLanguage", language);
 
     // Load the new language
-    fetch(`/languages/${language}`)
+    fetch(`../languages/${language}.json`)
         .then(response => response.json())
         .then(data => {
             let strings = data.Strings;
