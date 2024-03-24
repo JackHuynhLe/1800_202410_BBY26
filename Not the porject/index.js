@@ -40,9 +40,9 @@ app.get("/signup", (req, res) => {
 });
 
 /*Snippets of HTML*/
-//Get navbar.html
+//Get bottom_navbar.html
 app.get("/get-navbar", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./app/data/text/navbar.html"));
+    res.sendFile(path.resolve(__dirname, "./app/data/text/bottom_navbar.html"));
 });
 //Get footer.html
 app.get("/get-footer", (req, res) => {

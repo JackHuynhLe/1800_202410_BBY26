@@ -4,25 +4,25 @@
     "value": "en-UK"
   },
   "Strings": {
-    "text-welcomeToStardust": "Welcome to Stardust!",
-    "text-viewLargerMap": "View Larger Map",
+    "welcomeToStardust": "Welcome to Stardust!",
+    "viewLargerMap": "View Larger Map",
 
-    "text-navigation": "Navigation",
-    "text-community": "Community",
-    "text-history": "History",
-    "text-profile": "Profile",
+    "navigation": "Navigation",
+    "community": "Community",
+    "history": "History",
+    "profile": "Profile",
 
-    "text-email": "Email",
-    "text-password": "Password",
-    "text-login": "Login",
-    "text-signup": "Sign up",
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "signup": "Sign up",
 
-    "text-name": "Name",
-    "text-address": "Address",
-    "text-city": "City",
-    "text-province": "Province",
-    "text-submit": "Submit",
+    "name": "Name",
+    "address": "Address",
+    "city": "City",
+    "province": "Province",
+    "submit": "Submit",
 
-    "text-language": "Language"
+    "language": "Language"
   }
 }

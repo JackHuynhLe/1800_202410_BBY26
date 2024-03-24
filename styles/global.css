@@ -147,19 +147,19 @@ body {
   font-size: 10px;
   }
 
-.nav-items:hover {
+.bottom-nav-items:hover {
   /* box */
   background-color: #E0E0E0;
   }
 
-.nav-items-anchor-icon {
+.bottom-nav-items-anchor-icon {
   /* box */
   width: 25px;
   height: 25px;
   margin-bottom: 4px;
   }
 
-.nav-items.active {
+.bottom-nav-items.active {
   background-color: #E0E0E0;
   }
 
@@ -267,7 +267,7 @@ body {
     /* navbar-content, footer */
     grid-template-rows: auto 50px;
     grid-template-areas:
-        "nav-left content-right"
+        "bottom-nav-left content-right"
         "footer footer";
 
     /* box */
@@ -284,7 +284,7 @@ body {
   .bottom-nav {
     /* layout */
     /* grid */
-    grid-area: nav-left;
+    grid-area: bottom-nav-left;
 
     /* box */
     background-color: #F0F0F0;

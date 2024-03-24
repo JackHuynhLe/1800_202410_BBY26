@@ -4,25 +4,25 @@
     "value": "fr-FR"
   },
   "Strings": {
-    "text-welcomeToStardust": "Bienvenue chez Stardust !",
-    "text-viewLargerMap": "Voir la carte en plus grand",
+    "welcomeToStardust": "Bienvenue chez Stardust !",
+    "viewLargerMap": "Voir la carte en plus grand",
 
-    "text-navigation": "Navigation",
-    "text-community": "Communauté",
-    "text-history": "Histoire",
-    "text-profile": "Profil",
+    "navigation": "Navigation",
+    "community": "Communauté",
+    "history": "Histoire",
+    "profile": "Profil",
 
-    "text-email": "E-mail",
-    "text-password": "Mot de passe",
-    "text-login": "Connexion",
-    "text-signup": "Inscription",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "login": "Connexion",
+    "signup": "Inscription",
 
-    "text-name": "Nom",
-    "text-address": "Adresse",
-    "text-city": "Ville",
-    "text-province": "Province",
-    "text-submit": "Soumettre",
+    "name": "Nom",
+    "address": "Adresse",
+    "city": "Ville",
+    "province": "Province",
+    "submit": "Soumettre",
 
-    "text-language": "Langue"
+    "language": "Langue"
   }
 }

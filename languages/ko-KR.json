@@ -4,25 +4,25 @@
     "value": "ko-KR"
   },
   "Strings": {
-    "text-welcomeToStardust": "Stardust에 오신 것을 환영합니다!",
-    "text-viewLargerMap": "더 큰 지도 보기",
+    "welcomeToStardust": "Stardust에 오신 것을 환영합니다!",
+    "viewLargerMap": "더 큰 지도 보기",
 
-    "text-navigation": "내비게이션",
-    "text-community": "커뮤니티",
-    "text-history": "역사",
-    "text-profile": "프로필",
+    "navigation": "내비게이션",
+    "community": "커뮤니티",
+    "history": "역사",
+    "profile": "프로필",
 
-    "text-email": "이메일",
-    "text-password": "비밀번호",
-    "text-login": "로그인",
-    "text-signup": "가입하기",
+    "email": "이메일",
+    "password": "비밀번호",
+    "login": "로그인",
+    "signup": "가입하기",
 
-    "text-name": "이름",
-    "text-address": "주소",
-    "text-city": "도시",
-    "text-province": "도",
-    "text-submit": "제출",
+    "name": "이름",
+    "address": "주소",
+    "city": "도시",
+    "province": "도",
+    "submit": "제출",
 
-    "text-language": "언어"
+    "language": "언어"
   }
 }

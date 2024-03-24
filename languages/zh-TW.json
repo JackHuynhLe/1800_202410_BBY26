@@ -4,25 +4,25 @@
     "value": "zh-TW"
   },
   "Strings": {
-    "text-welcomeToStardust": "歡迎來到Stardust！",
-    "text-viewLargerMap": "查看更大的地圖",
+    "welcomeToStardust": "歡迎來到Stardust！",
+    "viewLargerMap": "查看更大的地圖",
 
-    "text-navigation": "導航",
-    "text-community": "社區",
-    "text-history": "歷史",
-    "text-profile": "個人資料",
+    "navigation": "導航",
+    "community": "社區",
+    "history": "歷史",
+    "profile": "個人資料",
 
-    "text-email": "電子郵箱",
-    "text-password": "密碼",
-    "text-login": "登錄",
-    "text-signup": "註冊",
+    "email": "電子郵箱",
+    "password": "密碼",
+    "login": "登錄",
+    "signup": "註冊",
 
-    "text-name": "姓名",
-    "text-address": "地址",
-    "text-city": "城市",
-    "text-province": "省份",
-    "text-submit": "提交",
+    "name": "姓名",
+    "address": "地址",
+    "city": "城市",
+    "province": "省份",
+    "submit": "提交",
 
-    "text-language": "語言"
+    "language": "語言"
   }
 }

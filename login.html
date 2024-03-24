@@ -48,29 +48,47 @@
 </head>
 
 <body>
-<div class="background">
+<div class="login-container">
   <div class="login">
-    <div class="login-title overflow"><span id="text-welcomeToStardust">Welcome to Stardust!</span></div>
+    <div class="login-title overflow"><span class="lang-text" data-key="welcomeToStardust">Welcome to Stardust!</span>
+    </div>
     <form id="loginForm">
       <div class="loginForm-item">
-        <label for="email" class="overflow"><span id="text-email">Email</span></label>
-        <input type="email" class="form-control" id="email" placeholder="Email">
+        <label for="login-email" class="overflow"><span class="lang-text" data-key="email">Email</span></label>
+        <input type="email" class="form-control" id="login-email" placeholder="Email">
       </div>
       <div class="loginForm-item">
-        <label for="password" class="overflow"><span id="text-password">Password</span></label>
-        <input type="password" class="form-control" id="password" placeholder="Password">
+        <label for="login-password" class="overflow"><span class="lang-text" data-key="password">Password</span></label>
+        <input type="password" class="form-control" id="login-password" placeholder="Password">
       </div>
       <div class="loginForm-item loginForm-btn">
-        <form action="#" method="post">
-          <button type="submit" class="btn btn-primary overflow"><span id="text-login">Login</span></button>
-          <a href="./signup.html" class="btn btn-primary overflow"><span id="text-signup">Sign up</span></a>
-        </form>
+        <button type="submit" class="btn btn-primary overflow"><span class="lang-text" data-key="login">Login</span>
+        </button>
+        <a href="./signup.html" class="btn btn-primary overflow"><span class="lang-text"
+          data-key="signup">Sign up</span></a>
+      </div>
+    </form>
+
+    <form id="signupForm">
+      <div class="signupForm-item">
+        <label for="signup-email" class="overflow"><span class="lang-text" data-key="email">Email</span></label>
+        <input type="email" class="form-control" id="signup-email" placeholder="Email">
+      </div>
+      <div class="signupForm-item">
+        <label for="signup-password" class="overflow"><span class="lang-text"
+          data-key="password">Password</span></label>
+        <input type="password" class="form-control" id="signup-password" placeholder="Password">
+      </div>
+      <div class="signupForm-item loginForm-btn">
+        <a href="./signup.html" class="btn btn-primary overflow"><span class="lang-text"
+          data-key="signup">Sign up</span></a>
       </div>
     </form>
   </div>
 </div>
-<!-- Navbar -->
-<div id="navContainer" class="bottom-nav"></div>
+
+<!-- Bottom Navbar -->
+<div id="bottomNavContainer" class="bottom-nav"></div>
 
 <!-- Footer -->
 <div id="footerContainer" class="footer"></div>

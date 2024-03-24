@@ -2,11 +2,11 @@
 * */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Get navbar.html
-    fetch("../text/navbar.html")
+    // Get bottom_navbar.html
+    fetch("../text/bottom_navbar.html")
         .then(response => response.text())
         .then(html => {
-            document.getElementById("navContainer").innerHTML = html;
+            document.getElementById("bottomNavContainer").innerHTML = html;
         })
         .catch(error => console.error("Error loading the navbar:", error));
 
@@ -49,18 +49,20 @@ function changeLanguage(language) {
         .then(response => response.json())
         .then(data => {
             let strings = data.Strings;
-            for (let key in strings) {
-                let element = document.getElementById(key);
-                if (element) {
+            document.querySelectorAll(".lang-text").forEach(element =>{
+                let key = element.getAttribute("data-key");
+                // Check if the key exists in the strings object
+                if (key in strings) {
+                    // Set the text content of the element
                     element.textContent = strings[key];
                 }
-            }
+            });
         })
         .catch(error => console.error("Error loading the language file:", error));
 }
 
 document.body.addEventListener("click", function (event) {
-    // 通过event.target检查点击的是否是我们关心的元素
+    // Check if the clicked element is an interlanguage link
     if (event.target.matches(".interlanguage-link, .interlanguage-link *")) {
         const element = event.target.closest(".interlanguage-link");
         const selectedLanguageCode = element.getAttribute("data-code");

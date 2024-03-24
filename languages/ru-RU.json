@@ -4,25 +4,25 @@
     "value": "ru-RU"
   },
   "Strings": {
-    "text-welcomeToStardust": "Добро пожаловать в Stardust!",
-    "text-viewLargerMap": "Посмотреть большую карту",
+    "welcomeToStardust": "Добро пожаловать в Stardust!",
+    "viewLargerMap": "Посмотреть большую карту",
 
-    "text-navigation": "Навигация",
-    "text-community": "Сообщество",
-    "text-history": "История",
-    "text-profile": "Профиль",
+    "navigation": "Навигация",
+    "community": "Сообщество",
+    "history": "История",
+    "profile": "Профиль",
 
-    "text-email": "Электронная почта",
-    "text-password": "Пароль",
-    "text-login": "Войти",
-    "text-signup": "Зарегистрироваться",
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "login": "Войти",
+    "signup": "Зарегистрироваться",
 
-    "text-name": "Имя",
-    "text-address": "Адрес",
-    "text-city": "Город",
-    "text-province": "Область",
-    "text-submit": "Отправить",
+    "name": "Имя",
+    "address": "Адрес",
+    "city": "Город",
+    "province": "Область",
+    "submit": "Отправить",
 
-    "text-language": "Язык"
+    "language": "Язык"
   }
 }
