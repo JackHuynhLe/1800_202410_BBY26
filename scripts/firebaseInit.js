@@ -1,7 +1,7 @@
-// Import the functions
-import {initializeApp} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-import {getFirestore} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
-
+// firebaseInit.js
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAPr5p921A7Nvox_17pcrADPIcXgONlaGo",
@@ -16,6 +16,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-// Export the database to firebase.mjs
-export {db}
+// Export to firebase.mjs
+export const auth = getAuth(app);
+export const db = getFirestore(app);

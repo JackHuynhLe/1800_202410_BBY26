@@ -1,7 +1,7 @@
 /**
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 This css file is for login
-Only for login, it has already anchored to the login.html
+Only for login, it has already anchored to the profile.html
 ///////////////////////////////////////////////////////////
 About comment:
 -----------------------------------------------------------
@@ -31,7 +31,7 @@ The product reference for the mobile screen size is 430px * 932px
 
 /* ++++Body++++ */
 
-.background {
+main {
   /* layout */
   display: flex;
   align-items: center;
@@ -44,18 +44,23 @@ The product reference for the mobile screen size is 430px * 932px
   }
 
 .login {
-  /* layout */
+  /* box */
   position: relative;
   top: -10vh;
-  /* box */
   padding: 10px;
   background-color: #F5F5F5;
   border-radius: 20px;
   width: min(400px, 100%);
-  height: 300px;
+  height: fit-content;
   }
 
 /* ++++Fieldset++++ */
+.signupForm,
+.loginForm {
+  /* layout */
+  display: flex;
+  }
+
 .login-title {
   /* layout */
   text-align: center;

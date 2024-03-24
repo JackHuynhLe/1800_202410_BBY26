@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--    =====Website Title=====    -->
+  <title>Stardust</title>
+  <link rel="icon" type="images/x-icon" href="./images/icon/logo_Stardust.png">
+
+  <!--    =====Required meta tags=====     -->
+  <meta name="Stardust" content="BBY26 Project Travel Tracker">
+  <!-- viewport -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- author -->
+  <meta name="author" content="Jiarui Xing(YuanXiQWQ)"/>
+  <meta name="author" content="Jack Le(JackHuynhLe)"/>
+  <meta name="author" content="Uppnoor Panesar(uppnoor)"/>
+
+
+  <!--    =====Library=====  -->
+
+  <!-- Outside library -->
+  <!-- Bootstrap Library CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Boostrap Library JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+
+  <!-- Other libraries -->
+  <!--    Font    -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Main library -->
+  <!-- Link to styles of your own -->
+  <link rel="stylesheet" href="/1800_202410_BBY26/styles/global.css">
+  <link rel="stylesheet" href="/1800_202410_BBY26/styles/login.css">
+
+  <!--    *****Library*****   -->
+
+  <!--    Script    -->
+  <script defer src="scripts/client.js"></script>
+  <script type="module" src="scripts/auth.js"></script>
+  <script defer src="scripts/login.js"></script>
+  <script type="module" src="scripts/firebase.mjs"></script>
+</head>
+<body>
+<main>
+  <div id="loginContainer">
+    <div class="login">
+      <div class="login-title overflow"><span class="lang-text" data-key="welcomeToStardust">Welcome to Stardust!</span>
+      </div>
+      <form id="signupForm">
+        <div class="loginForm-item">
+          <label for="signupForm-name"><span class="lang-text" data-key="name">Name:</span></label>
+          <input type="text" class="form-control" id="signupForm-name" name="name" placeholder="Name:">
+        </div>
+        <div class="loginForm-item">
+          <label for="signupForm-email"><span class="lang-text" data-key="email">Email:</span>*</label>
+          <input type="email" class="form-control" id="signupForm-email" name="email" placeholder="Email:" required>
+        </div>
+        <div class="loginForm-item">
+          <label for="signupForm-password"><span class="lang-text" data-key="password">Password:</span>*</label>
+          <input type="password" class="form-control" id="signupForm-password" name="password" placeholder="Password:"
+            required>
+        </div>
+        <div class="loginForm-item">
+          <label for="signupForm-address"><span class="lang-text" data-key="address">Address:</span></label>
+          <input type="text" class="form-control" id="signupForm-address" name="address" placeholder="Address:">
+        </div>
+        <div class="loginForm-item">
+          <label for="signupForm-city"><span class="lang-text" data-key="city">City:</span></label>
+          <input type="text" class="form-control" id="signupForm-city" name="city" placeholder="City:">
+        </div>
+        <div class="loginForm-item">
+          <label for="signupForm-province"><span class="lang-text" data-key="province">Province:</span></label>
+          <input type="text" class="form-control" id="signupForm-province" name="province" placeholder="Province:">
+        </div>
+        <div class="loginForm-item loginForm-btn">
+          <button type="submit" class="btn btn-primary overflow"><span class="lang-text" data-key="signup">Signup</span>
+          </button>
+        </div>
+        <div class="loginForm-item">
+          <span class="lang-text" data-key="signupInfo">Already have an account?</span>
+          <button class="undecorated" id="goToLogin">
+            <span class="lang-text decoratedAnchor" data-key="login">Login</span>
+          </button>
+        </div>
+      </form>
+
+      <form id="loginForm">
+        <div class="loginForm-item">
+          <label for="login-email" class="overflow"><span class="lang-text" data-key="email">Email</span></label>
+          <input type="email" class="form-control" id="login-email" placeholder="Email:">
+        </div>
+        <div class="loginForm-item">
+          <label for="login-password" class="overflow"><span class="lang-text"
+            data-key="password">Password</span></label>
+          <input type="password" class="form-control" id="login-password" placeholder="Password:">
+        </div>
+        <div class="loginForm-item loginForm-btn">
+          <button type="submit" class="btn btn-primary overflow"><span class="lang-text" data-key="login">Login</span>
+          </button>
+        </div>
+        <div class="loginForm-item" id="goToSignup">
+          <span class="lang-text" data-key="loginInfo">Don't have an account?</span>
+          <button class="undecorated">
+            <span class="lang-text decoratedAnchor" data-key="signup">Signup</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="profileContainer">
+    <!-- Basic Information -->
+    <div id="basicInformation">
+      <!-- Info -->
+      <h2><span class="lang-text" data-key="basicInformation">Basic Information</span></h2>
+      <div id="profile-image"></div>
+      <div id="profile-name"><span class="lang-text" data-key="name">Name</span></div>
+      <div id="profile-birthday"><span class="lang-text" data-key="birthday">Birthday</span></div>
+      <div id="profile-gender"><span class="lang-text" data-key="gender">Gender</span></div>
+      <div id="profile-bio"><span class="lang-text" data-key="bio">Bio</span></div>
+      <!-- Edit Button -->
+      <div class="profile-edit">
+        <button class="btn btn-primary overflow">
+          <span class="lang-text" data-key="edit">Edit</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Contact Information -->
+    <div id="contactInformation">
+      <!-- Info -->
+      <h2><span class="lang-text" data-key="contactInformation">Contact Information</span></h2>
+      <div id="email"><span class="lang-text" data-key="email">Email</span></div>
+      <div id="phone"><span class="lang-text" data-key="phone">Phone</span></div>
+      <!-- Edit Button  -->
+      <div class="profile-edit">
+        <button class="btn btn-primary overflow">
+          <span class="lang-text" data-key="edit">Edit</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Account Settings -->
+    <div id="accountSettings">
+      <!-- Info -->
+      <h2><span class="lang-text" data-key="accountSettings">Account Settings</span></h2>
+      <div id="username"><span class="lang-text" data-key="username">Username</span></div>
+      <div id="password"><span class="lang-text" data-key="password">Password</span></div>
+      <div id="language"><span class="lang-text" data-key="language">Language</span></div>
+      <!-- Edit Button  -->
+      <div class="profile-edit">
+        <button class="btn btn-primary overflow">
+          <span class="lang-text" data-key="edit">Edit</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Others Settings -->
+    <div id="othersSettings">
+      <!-- Info -->
+      <h2><span class="lang-text" data-key="othersSettings">Others Settings</span></h2>
+      <h3 id="linked-accounts"><span class="lang-text" data-key="linkedAccounts">Linked Accounts</span></h3>
+      <!-- Add Button  -->
+      <div id="others-add-linked-accounts">
+        <button class="btn btn-primary overflow">
+          <span class="lang-text" data-key="addAccounts">Add Accounts</span>
+        </button>
+      </div>
+      <!-- Deactivate Account -->
+      <div id="deactivate-account">
+        <button class="btn btn-primary overflow">
+          <span class="lang-text" data-key="logout">Logout</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- Bottom Navbar -->
+<div id="bottomNavContainer" class="bottom-nav"></div>
+
+<!-- Footer -->
+<div id="footerContainer" class="footer"></div>
+
+<!---------------------------------------------->
+<!-- Your own JavaScript functions go here    -->
+<!---------------------------------------------->
+
+<!-- Link to scripts of your own -->
+<!-- <script src="./scripts/script.js"></script> -->
+
+
+<script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-analytics.js"></script>
+
+<script type="module">
+
+    import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+    import {getAnalytics} from "https://www.gstatic.com/firebasejs/9.6.0/firebase-analytics.js";
+    import {getAuth, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js";
+
+    //Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyAPr5p921A7Nvox_17pcrADPIcXgONlaGo",
+        authDomain: "bby26-c858c.firebaseapp.com",
+        projectId: "bby26-c858c",
+        storageBucket: "bby26-c858c.appspot.com",
+        messagingSenderId: "569835543614",
+        appId: "1:569835543614:web:fc118410cebf4f1169856f",
+        measurementId: "G-3QTZ7MGJ7W"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app);
+
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                document.getElementById('loginMessage').textContent = "Signed in!!";
+                window.location.href = "index.html";
+            })
+            .catch((error) => {
+                // Handle Errors here.
+                document.getElementById('loginMessage').textContent = "Error: " + error.message; // Show error message
+            });
+    });
+</script>
+
+
+</body>
+</html>

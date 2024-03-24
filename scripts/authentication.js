@@ -1,4 +1,4 @@
-import {db} from './firebaseAPI.js';
+import {db} from './firebaseInit.js';
 
 const uiConfig = {
     callbacks: {
