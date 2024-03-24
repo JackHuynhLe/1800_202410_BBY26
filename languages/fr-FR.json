@@ -5,24 +5,37 @@
   },
   "Strings": {
     "welcomeToStardust": "Bienvenue chez Stardust !",
-    "viewLargerMap": "Voir la carte en plus grand",
+    "viewLargerMap": "Voir la carte en grand",
 
     "navigation": "Navigation",
     "community": "Communauté",
     "history": "Histoire",
     "profile": "Profil",
 
-    "email": "E-mail",
-    "password": "Mot de passe",
+    "email": "E-mail :",
+    "password": "Mot de passe :",
     "login": "Connexion",
-    "signup": "Inscription",
+    "loginInfo": "Vous n'avez pas de compte ?",
+    "signupInfo": "Vous avez déjà un compte ?",
+    "signup": "S'inscrire",
+    "basicInformation": "Informations de base",
+    "name": "Nom :",
+    "birthday": "Date de naissance :",
+    "gender": "Genre :",
+    "bio": "Bio :",
+    "edit": "Modifier",
+    "contactInformation": "Informations de contact",
+    "phone": "Téléphone :",
+    "accountSettings": "Paramètres du compte",
+    "username": "Nom d'utilisateur :",
+    "language": "Langue :",
+    "otherSettings": "Autres paramètres",
+    "linkedAccounts": "Comptes liés",
+    "addAccounts": "Ajouter des comptes",
+    "logout": "Déconnexion",
 
-    "name": "Nom",
-    "address": "Adresse",
-    "city": "Ville",
-    "province": "Province",
-    "submit": "Soumettre",
-
-    "language": "Langue"
+    "address": "Adresse :",
+    "city": "Ville :",
+    "province": "Province :"
   }
 }

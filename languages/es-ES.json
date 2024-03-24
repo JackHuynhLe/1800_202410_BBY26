@@ -1,0 +1,41 @@
+{
+  "languageOption": {
+    "label": "Español",
+    "value": "es-ES"
+  },
+  "Strings": {
+    "welcomeToStardust": "¡Bienvenido a Stardust!",
+    "viewLargerMap": "Ver mapa más grande",
+
+    "navigation": "Navegación",
+    "community": "Comunidad",
+    "history": "Historia",
+    "profile": "Perfil",
+
+    "email": "Correo electrónico:",
+    "password": "Contraseña:",
+    "login": "Iniciar sesión",
+    "loginInfo": "¿No tienes una cuenta?",
+    "signupInfo": "¿Ya tienes una cuenta?",
+    "signup": "Registrarse",
+    "basicInformation": "Información básica",
+    "name": "Nombre:",
+    "birthday": "Fecha de nacimiento:",
+    "gender": "Género:",
+    "bio": "Biografía:",
+    "edit": "Editar",
+    "contactInformation": "Información de contacto",
+    "phone": "Teléfono:",
+    "accountSettings": "Configuración de la cuenta",
+    "username": "Nombre de usuario:",
+    "language": "Idioma:",
+    "otherSettings": "Otras configuraciones",
+    "linkedAccounts": "Cuentas vinculadas",
+    "addAccounts": "Agregar cuentas",
+    "logout": "Cerrar sesión",
+
+    "address": "Dirección:",
+    "city": "Ciudad:",
+    "province": "Provincia:"
+  }
+}

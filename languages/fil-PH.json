@@ -1,0 +1,41 @@
+{
+  "languageOption": {
+    "label": "Filipino",
+    "value": "fil-PH"
+  },
+  "Strings": {
+    "welcomeToStardust": "Maligayang pagdating sa Stardust!",
+    "viewLargerMap": "Tingnan ang Mas Malaking Mapa",
+
+    "navigation": "Nabigasyon",
+    "community": "Komunidad",
+    "history": "Kasaysayan",
+    "profile": "Profile",
+
+    "email": "Email:",
+    "password": "Password:",
+    "login": "Mag-log In",
+    "loginInfo": "Wala pang account?",
+    "signupInfo": "Mayroon nang account?",
+    "signup": "Mag-sign Up",
+    "basicInformation": "Pangunahing Impormasyon",
+    "name": "Pangalan:",
+    "birthday": "Kaarawan:",
+    "gender": "Kasarian:",
+    "bio": "Bio:",
+    "edit": "I-edit",
+    "contactInformation": "Impormasyon sa Pakikipag-ugnayan",
+    "phone": "Telepono:",
+    "accountSettings": "Mga Setting ng Account",
+    "username": "Username:",
+    "language": "Wika:",
+    "otherSettings": "Iba pang mga Setting",
+    "linkedAccounts": "Mga Naka-link na Account",
+    "addAccounts": "Magdagdag ng mga Account",
+    "logout": "Mag-log Out",
+
+    "address": "Address:",
+    "city": "Lungsod:",
+    "province": "Lalawigan:"
+  }
+}
