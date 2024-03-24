@@ -14,7 +14,7 @@ app.use("/styles", express.static(path.resolve(__dirname, "./public/styles")));
 //Index page
 
 app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./project/login.html"));
+    res.sendFile(path.resolve(__dirname, "./project/profile.html"));
 });
 
 //index page
@@ -32,7 +32,7 @@ app.get("/history", (req, res) => {
 });
 //Profile page
 app.get("/profile", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./app/html/login.html"));
+    res.sendFile(path.resolve(__dirname, "./app/html/profile.html"));
 });
 //Signup page
 app.get("/signup", (req, res) => {

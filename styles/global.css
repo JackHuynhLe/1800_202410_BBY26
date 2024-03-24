@@ -71,6 +71,15 @@ The product reference for the mobile screen size is 430px * 932px
   border: none;
   }
 
+.decoratedAnchor {
+  color: #2757C3;
+  text-decoration: underline;
+  }
+
+.decoratedAnchor:hover {
+  color: #BD7FFF;
+  }
+
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -204,7 +213,7 @@ body {
   width: 100%;
   }
 
-.interlanguage-link{
+.interlanguage-link {
   /* box */
   width: 100%;
   text-align: center;
