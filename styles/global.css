@@ -50,13 +50,13 @@ The product reference for the mobile screen size is 430px * 932px
 .column {
   /* layout */
   display: flex;
-  flex-direction: column
+  flex-direction: column;
   }
 
 .row {
-  /* layout */
   display: flex;
-  flex-direction: row
+  align-items: center;
+  justify-content: space-between;
   }
 
 .undecorated {
@@ -66,6 +66,9 @@ The product reference for the mobile screen size is 430px * 932px
   /* font */
   text-decoration: none;
   list-style-type: none;
+  /* style */
+  background-color: transparent;
+  border: none;
   }
 
 a {

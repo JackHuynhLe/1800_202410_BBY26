@@ -37,15 +37,17 @@ body {
 
 /* ++++Body++++ */
 .header {
-  /* layout */
   display: grid;
   place-items: center;
 
-  /* box */
   height: 70px;
   width: min(90%, 800px);
   padding: 10px 0;
   margin: auto;
+  }
+
+.main {
+  position: relative;
   }
 
 /*
@@ -54,54 +56,76 @@ Main, Navbar and Footer without media query see global
 
 /* ++++Header++++ */
 .header-title {
-  /* layout */
   display: grid;
   place-items: center;
   text-align: center;
 
-  /* box */
   height: 100%;
   width: 100%;
   background-color: #F3FFFF;
 
-  /*border*/
   border: 4px solid black;
   border-radius: 46px;
 
-  /* style */
+
   font-size: min(2em, max(5vw, 1em));
   font-weight: bold;
   color: #000;
   }
 
 /* ++++Main++++ */
+.top-searchBox {
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 80%;
+  height: 2.5em;
+
+  background-color: #FFF;
+
+  border: 1px solid black;
+  border-radius: 46px;
+  }
+
+.top-searchBox-search {
+  display: grid;
+  grid-template-columns: auto 25px 25px;
+
+  place-items: center;
+  }
+
+.top-searchBox-search-input {
+  width: 100%;
+  }
+
+.top-searchBox-search-input:focus {
+  outline: none;
+  }
+
 .main-map {
-  /* layout */
   display: grid;
   grid-auto-rows: 1fr 21px;
-  /* box */
   width: 100%;
   height: 100%;
   }
 
 .main-map iframe {
-  /* box */
   width: 100%;
   height: 100%;
   }
 
 .main-map small {
-  /* layout */
   text-align: center;
-  /* box */
   width: 100%;
   }
 
 .main-map small > a {
-  /* box */
   margin: auto;
   width: 100%;
-  /* style */
+
   display: inline-block;
   background-color: #D2F8D0;
   }
@@ -112,10 +136,8 @@ Main, Navbar and Footer without media query see global
 @media (max-width: 700px) {
   /* ++++Body++++ */
   .main {
-    /* layout */
     flex-grow: 1;
 
-    /* box */
     margin: 10px 20px 80px 20px;
     }
   }
@@ -125,7 +147,6 @@ Main, Navbar and Footer without media query see global
 @media (min-width: 701px) {
   /* ++++HTML++++ */
   body {
-    /* layout */
     display: grid;
     /* grid */
     grid-template-columns: min(15%, 180px) auto;
@@ -135,34 +156,28 @@ Main, Navbar and Footer without media query see global
         "nav-left main-right"
         "footer footer";
 
-    /* box */
     height: 100vh;
     }
 
   /* ++++Body++++ */
   .header {
-    /* layout */
     /* grid */
     grid-area: header-right;
     }
 
   .main {
-    /* layout */
     /* grid */
     grid-area: main-right;
     }
 
   .bottom-nav {
-    /* layout */
     /* grid */
     grid-area: nav-left;
 
-    /* box */
     background-color: #F0F0F0;
     }
 
   .footer {
-    /* layout */
     /* grid */
     grid-area: footer;
     }

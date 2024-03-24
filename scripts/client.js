@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(html => {
             document.getElementById("bottomNavContainer").innerHTML = html;
         })
-        .catch(error => console.error("Error loading the navbar:", error));
+        .catch(error => console.error("Error loading the bottom navbar:", error));
 
 // Get footer.html
     fetch("../text/footer.html")
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Error loading the footer:", error));
 
-})
+});
 /*Footer
 * */
 
