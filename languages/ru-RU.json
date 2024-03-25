@@ -12,17 +12,30 @@
     "history": "История",
     "profile": "Профиль",
 
-    "email": "Электронная почта",
-    "password": "Пароль",
-    "login": "Войти",
-    "signup": "Зарегистрироваться",
+    "email": "Электронная почта:",
+    "password": "Пароль:",
+    "login": "Вход",
+    "loginInfo": "Нет учетной записи?",
+    "signupInfo": "Уже есть учетная запись?",
+    "signup": "Регистрация",
+    "basicInformation": "Основная информация",
+    "name": "Имя:",
+    "birthday": "Дата рождения:",
+    "gender": "Пол:",
+    "bio": "Биография:",
+    "edit": "Редактировать",
+    "contactInformation": "Контактная информация",
+    "phone": "Телефон:",
+    "accountSettings": "Настройки аккаунта",
+    "username": "Имя пользователя:",
+    "language": "Язык:",
+    "otherSettings": "Другие настройки",
+    "linkedAccounts": "Связанные аккаунты",
+    "addAccounts": "Добавить аккаунты",
+    "logout": "Выход",
 
-    "name": "Имя",
-    "address": "Адрес",
-    "city": "Город",
-    "province": "Область",
-    "submit": "Отправить",
-
-    "language": "Язык"
+    "address": "Адрес:",
+    "city": "Город:",
+    "province": "Область:"
   }
 }

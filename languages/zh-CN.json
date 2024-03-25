@@ -32,7 +32,11 @@
     "otherSettings": "其它设置",
     "linkedAccounts": "关联账户",
     "addAccounts": "添加账户",
+<<<<<<< HEAD
     "deactivateAccount": "注销账户",
+=======
+    "logout": "登出",
+>>>>>>> 1e6aaae37fd9904041311a397f058db98abef6e7
 
     "address": "地址:",
     "city": "城市:",

@@ -1,0 +1,41 @@
+{
+  "languageOption": {
+    "label": "Türkçe",
+    "value": "tr-TR"
+  },
+  "Strings": {
+    "welcomeToStardust": "Stardust'a Hoş Geldiniz!",
+    "viewLargerMap": "Daha Büyük Haritayı Görüntüle",
+
+    "navigation": "Navigasyon",
+    "community": "Topluluk",
+    "history": "Tarih",
+    "profile": "Profil",
+
+    "email": "E-posta:",
+    "password": "Şifre:",
+    "login": "Giriş Yap",
+    "loginInfo": "Hesabınız yok mu?",
+    "signupInfo": "Zaten bir hesabınız var mı?",
+    "signup": "Kayıt Ol",
+    "basicInformation": "Temel Bilgiler",
+    "name": "İsim:",
+    "birthday": "Doğum Günü:",
+    "gender": "Cinsiyet:",
+    "bio": "Biyografi:",
+    "edit": "Düzenle",
+    "contactInformation": "İletişim Bilgileri",
+    "phone": "Telefon:",
+    "accountSettings": "Hesap Ayarları",
+    "username": "Kullanıcı Adı:",
+    "language": "Dil:",
+    "otherSettings": "Diğer Ayarlar",
+    "linkedAccounts": "Bağlı Hesaplar",
+    "addAccounts": "Hesap Ekle",
+    "logout": "Çıkış Yap",
+
+    "address": "Adres:",
+    "city": "Şehir:",
+    "province": "İl:"
+  }
+}
