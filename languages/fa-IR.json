@@ -1,0 +1,41 @@
+{
+  "languageOption": {
+    "label": "فارس",
+    "value": "fa-IR"
+  },
+  "Strings": {
+    "welcomeToStardust": "به Stardust خوش آمدید!",
+    "viewLargerMap": "نقشه بزرگتر را ببینید",
+
+    "navigation": "ناوبری",
+    "community": "جامعه",
+    "history": "تاریخ",
+    "profile": "پروفایل",
+
+    "email": "ایمیل:",
+    "password": "رمز عبور:",
+    "login": "ورود",
+    "loginInfo": "حساب کاربری ندارید؟",
+    "signupInfo": "قبلاً حساب کاربری ایجاد کرده‌اید؟",
+    "signup": "ثبت نام",
+    "basicInformation": "اطلاعات پایه",
+    "name": "نام:",
+    "birthday": "تاریخ تولد:",
+    "gender": "جنسیت:",
+    "bio": "بیوگرافی:",
+    "edit": "ویرایش",
+    "contactInformation": "اطلاعات تماس",
+    "phone": "تلفن:",
+    "accountSettings": "تنظیمات حساب",
+    "username": "نام کاربری:",
+    "language": "زبان:",
+    "otherSettings": "سایر تنظیمات",
+    "linkedAccounts": "حساب‌های مرتبط",
+    "addAccounts": "افزودن حساب‌ها",
+    "logout": "خروج",
+
+    "address": "آدرس:",
+    "city": "شهر:",
+    "province": "استان:"
+  }
+}

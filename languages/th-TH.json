@@ -1,0 +1,41 @@
+{
+  "languageOption": {
+    "label": "ไทย",
+    "value": "th-TH"
+  },
+  "Strings": {
+    "welcomeToStardust": "ยินดีต้อนรับสู่ Stardust!",
+    "viewLargerMap": "ดูแผนที่ขนาดใหญ่",
+
+    "navigation": "นำทาง",
+    "community": "ชุมชน",
+    "history": "ประวัติศาสตร์",
+    "profile": "โปรไฟล์",
+
+    "email": "อีเมล:",
+    "password": "รหัสผ่าน:",
+    "login": "เข้าสู่ระบบ",
+    "loginInfo": "ไม่มีบัญชีหรือ?",
+    "signupInfo": "มีบัญชีอยู่แล้ว?",
+    "signup": "สมัครสมาชิก",
+    "basicInformation": "ข้อมูลพื้นฐาน",
+    "name": "ชื่อ:",
+    "birthday": "วันเกิด:",
+    "gender": "เพศ:",
+    "bio": "ประวัติ:",
+    "edit": "แก้ไข",
+    "contactInformation": "ข้อมูลติดต่อ",
+    "phone": "โทรศัพท์:",
+    "accountSettings": "การตั้งค่าบัญชี",
+    "username": "ชื่อผู้ใช้:",
+    "language": "ภาษา:",
+    "otherSettings": "การตั้งค่าอื่นๆ",
+    "linkedAccounts": "บัญชีที่เชื่อมโยง",
+    "addAccounts": "เพิ่มบัญชี",
+    "logout": "ออกจากระบบ",
+
+    "address": "ที่อยู่:",
+    "city": "เมือง:",
+    "province": "จังหวัด:"
+  }
+}

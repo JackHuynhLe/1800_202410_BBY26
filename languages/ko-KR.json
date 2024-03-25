@@ -7,22 +7,35 @@
     "welcomeToStardust": "Stardust에 오신 것을 환영합니다!",
     "viewLargerMap": "더 큰 지도 보기",
 
-    "navigation": "내비게이션",
+    "navigation": "네비게이션",
     "community": "커뮤니티",
     "history": "역사",
     "profile": "프로필",
 
-    "email": "이메일",
-    "password": "비밀번호",
+    "email": "이메일:",
+    "password": "비밀번호:",
     "login": "로그인",
-    "signup": "가입하기",
+    "loginInfo": "계정이 없으신가요?",
+    "signupInfo": "이미 계정이 있으신가요?",
+    "signup": "회원가입",
+    "basicInformation": "기본 정보",
+    "name": "이름:",
+    "birthday": "생일:",
+    "gender": "성별:",
+    "bio": "소개:",
+    "edit": "편집",
+    "contactInformation": "연락처 정보",
+    "phone": "전화번호:",
+    "accountSettings": "계정 설정",
+    "username": "사용자 이름:",
+    "language": "언어:",
+    "otherSettings": "기타 설정",
+    "linkedAccounts": "연결된 계정",
+    "addAccounts": "계정 추가",
+    "logout": "로그아웃",
 
-    "name": "이름",
-    "address": "주소",
-    "city": "도시",
-    "province": "도",
-    "submit": "제출",
-
-    "language": "언어"
+    "address": "주소:",
+    "city": "도시:",
+    "province": "지방:"
   }
 }

@@ -1,6 +1,6 @@
 {
   "languageOption": {
-    "label": "繁體中文",
+    "label": "繁體中文 (TW)",
     "value": "zh-TW"
   },
   "Strings": {
@@ -12,17 +12,30 @@
     "history": "歷史",
     "profile": "個人資料",
 
-    "email": "電子郵箱",
-    "password": "密碼",
+    "email": "電子郵件:",
+    "password": "密碼:",
     "login": "登錄",
+    "loginInfo": "還沒有帳號？",
+    "signupInfo": "已經有帳號了？",
     "signup": "註冊",
+    "basicInformation": "基本信息",
+    "name": "姓名:",
+    "birthday": "生日:",
+    "gender": "性別:",
+    "bio": "簡介:",
+    "edit": "編輯",
+    "contactInformation": "聯絡方式",
+    "phone": "手機:",
+    "accountSettings": "帳戶設置",
+    "username": "用戶名:",
+    "language": "語言:",
+    "otherSettings": "其他設置",
+    "linkedAccounts": "關聯帳戶",
+    "addAccounts": "添加帳戶",
+    "logout": "登出",
 
-    "name": "姓名",
-    "address": "地址",
-    "city": "城市",
-    "province": "省份",
-    "submit": "提交",
-
-    "language": "語言"
+    "address": "地址:",
+    "city": "城市:",
+    "province": "省份:"
   }
 }

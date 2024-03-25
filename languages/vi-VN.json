@@ -1,0 +1,41 @@
+{
+  "languageOption": {
+    "label": "Tiếng Việt",
+    "value": "vi-VN"
+  },
+  "Strings": {
+    "welcomeToStardust": "Chào mừng đến với Stardust!",
+    "viewLargerMap": "Xem bản đồ lớn hơn",
+
+    "navigation": "Điều hướng",
+    "community": "Cộng đồng",
+    "history": "Lịch sử",
+    "profile": "Hồ sơ",
+
+    "email": "Email:",
+    "password": "Mật khẩu:",
+    "login": "Đăng nhập",
+    "loginInfo": "Bạn không có tài khoản?",
+    "signupInfo": "Bạn đã có tài khoản?",
+    "signup": "Đăng ký",
+    "basicInformation": "Thông tin cơ bản",
+    "name": "Tên:",
+    "birthday": "Ngày sinh:",
+    "gender": "Giới tính:",
+    "bio": "Tiểu sử:",
+    "edit": "Chỉnh sửa",
+    "contactInformation": "Thông tin liên hệ",
+    "phone": "Điện thoại:",
+    "accountSettings": "Cài đặt tài khoản",
+    "username": "Tên người dùng:",
+    "language": "Ngôn ngữ:",
+    "otherSettings": "Cài đặt khác",
+    "linkedAccounts": "Tài khoản liên kết",
+    "addAccounts": "Thêm tài khoản",
+    "logout": "Đăng xuất",
+
+    "address": "Địa chỉ:",
+    "city": "Thành phố:",
+    "province": "Tỉnh:"
+  }
+}

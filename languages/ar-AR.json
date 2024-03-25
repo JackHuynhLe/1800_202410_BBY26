@@ -1,0 +1,41 @@
+{
+  "languageOption": {
+    "label": "العربية",
+    "value": "ar-AR"
+  },
+  "Strings": {
+    "welcomeToStardust": "مرحباً بكم في Stardust!",
+    "viewLargerMap": "عرض خريطة أكبر",
+
+    "navigation": "التنقل",
+    "community": "المجتمع",
+    "history": "التاريخ",
+    "profile": "الملف الشخصي",
+
+    "email": "البريد الإلكتروني:",
+    "password": "كلمة المرور:",
+    "login": "تسجيل الدخول",
+    "loginInfo": "ليس لديك حساب؟",
+    "signupInfo": "هل لديك حساب بالفعل؟",
+    "signup": "إنشاء حساب",
+    "basicInformation": "المعلومات الأساسية",
+    "name": "الاسم:",
+    "birthday": "تاريخ الميلاد:",
+    "gender": "الجنس:",
+    "bio": "السيرة الذاتية:",
+    "edit": "تعديل",
+    "contactInformation": "معلومات الاتصال",
+    "phone": "الهاتف:",
+    "accountSettings": "إعدادات الحساب",
+    "username": "اسم المستخدم:",
+    "language": "اللغة:",
+    "otherSettings": "إعدادات أخرى",
+    "linkedAccounts": "الحسابات المرتبطة",
+    "addAccounts": "إضافة حسابات",
+    "logout": "تسجيل الخروج",
+
+    "address": "العنوان:",
+    "city": "المدينة:",
+    "province": "المحافظة:"
+  }
+}

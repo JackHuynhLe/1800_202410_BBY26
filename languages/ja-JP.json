@@ -9,20 +9,33 @@
 
     "navigation": "ナビゲーション",
     "community": "コミュニティ",
-    "history": "歴史",
+    "history": "履歴",
     "profile": "プロフィール",
 
-    "email": "メールアドレス",
-    "password": "パスワード",
+    "email": "メール：",
+    "password": "パスワード：",
     "login": "ログイン",
+    "loginInfo": "アカウントを持っていない？",
+    "signupInfo": "すでにアカウントを持っていますか？",
     "signup": "サインアップ",
+    "basicInformation": "基本情報",
+    "name": "名前：",
+    "birthday": "誕生日：",
+    "gender": "性別：",
+    "bio": "バイオ：",
+    "edit": "編集",
+    "contactInformation": "連絡先情報",
+    "phone": "電話：",
+    "accountSettings": "アカウント設定",
+    "username": "ユーザー名：",
+    "language": "言語：",
+    "otherSettings": "その他の設定",
+    "linkedAccounts": "リンクされたアカウント",
+    "addAccounts": "アカウントを追加",
+    "logout": "ログアウト",
 
-    "name": "名前",
-    "address": "住所",
-    "city": "市町村",
-    "province": "都道府県",
-    "submit": "提出",
-
-    "language": "言語"
+    "address": "住所：",
+    "city": "市：",
+    "province": "県："
   }
 }

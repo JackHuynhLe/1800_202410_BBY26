@@ -1,0 +1,41 @@
+{
+  "languageOption": {
+    "label": "हिन्दी",
+    "value": "hi-IN"
+  },
+  "Strings": {
+    "welcomeToStardust": "Stardust में आपका स्वागत है!",
+    "viewLargerMap": "बड़ा नक्शा देखें",
+
+    "navigation": "नेविगेशन",
+    "community": "समुदाय",
+    "history": "इतिहास",
+    "profile": "प्रोफ़ाइल",
+
+    "email": "ईमेल:",
+    "password": "पासवर्ड:",
+    "login": "लॉग इन",
+    "loginInfo": "कोई खाता नहीं है?",
+    "signupInfo": "पहले से ही एक खाता है?",
+    "signup": "साइन अप करें",
+    "basicInformation": "मूल जानकारी",
+    "name": "नाम:",
+    "birthday": "जन्मदिन:",
+    "gender": "लिंग:",
+    "bio": "बायो:",
+    "edit": "संपादित करें",
+    "contactInformation": "संपर्क जानकारी",
+    "phone": "फ़ोन:",
+    "accountSettings": "खाता सेटिंग्स",
+    "username": "उपयोगकर्ता नाम:",
+    "language": "भाषा:",
+    "otherSettings": "अन्य सेटिंग्स",
+    "linkedAccounts": "जुड़े खाते",
+    "addAccounts": "खाते जोड़ें",
+    "logout": "लॉग आउट",
+
+    "address": "पता:",
+    "city": "शहर:",
+    "province": "प्रांत:"
+  }
+}
