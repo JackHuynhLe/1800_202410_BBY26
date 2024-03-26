@@ -37,8 +37,8 @@
 
   <!-- Main library -->
   <!-- Link to styles of your own -->
-  <link rel="stylesheet" href="./styles/global.css">
-  <link rel="stylesheet" href="./styles/login.css">
+  <link rel="stylesheet" href="/1800_202410_BBY26/styles/global.css">
+  <link rel="stylesheet" href="/1800_202410_BBY26/styles/login.css">
 
   <!--    *****Library*****   -->
 
@@ -50,73 +50,7 @@
 </head>
 <body>
 <main>
-  <div id="loginContainer" class="loggedOut">
-    <div class="login">
-      <div class="login-title overflow"><span class="lang-text" data-key="welcomeToStardust">Welcome to Stardust!</span>
-      </div>
-      <form id="signupForm">
-        <div class="loginForm-item">
-          <label for="signupForm-name"><span class="lang-text" data-key="name">Name:</span></label>
-          <input type="text" class="form-control" id="signupForm-name" name="name" placeholder="Name:">
-        </div>
-        <div class="loginForm-item">
-          <label for="signupForm-email"><span class="lang-text" data-key="email">Email:</span>*</label>
-          <input type="email" class="form-control" id="signupForm-email" name="email" placeholder="Email:" required>
-        </div>
-        <div class="loginForm-item">
-          <label for="signupForm-password"><span class="lang-text" data-key="password">Password:</span>*</label>
-          <input type="password" class="form-control" id="signupForm-password" name="password" placeholder="Password:"
-            required>
-        </div>
-        <div class="loginForm-item">
-          <label for="signupForm-address"><span class="lang-text" data-key="address">Address:</span></label>
-          <input type="text" class="form-control" id="signupForm-address" name="address" placeholder="Address:">
-        </div>
-        <div class="loginForm-item">
-          <label for="signupForm-city"><span class="lang-text" data-key="city">City:</span></label>
-          <input type="text" class="form-control" id="signupForm-city" name="city" placeholder="City:">
-        </div>
-        <div class="loginForm-item">
-          <label for="signupForm-province"><span class="lang-text" data-key="province">Province:</span></label>
-          <input type="text" class="form-control" id="signupForm-province" name="province" placeholder="Province:">
-        </div>
-        <div class="loginForm-item loginForm-btn">
-          <button type="submit" class="btn btn-primary overflow"><span class="lang-text" data-key="signup">Signup</span>
-          </button>
-        </div>
-        <div class="loginForm-item">
-          <span class="lang-text" data-key="signupInfo">Already have an account?</span>
-          <button class="undecorated" id="goToLogin">
-            <span class="lang-text decoratedAnchor" data-key="login">Login</span>
-          </button>
-        </div>
-      </form>
-
-      <form id="loginForm">
-        <div class="loginForm-item">
-          <label for="login-email" class="overflow"><span class="lang-text" data-key="email">Email</span></label>
-          <input type="email" class="form-control" id="login-email" placeholder="Email:">
-        </div>
-        <div class="loginForm-item">
-          <label for="login-password" class="overflow"><span class="lang-text"
-            data-key="password">Password</span></label>
-          <input type="password" class="form-control" id="login-password" placeholder="Password:">
-        </div>
-        <div class="loginForm-item loginForm-btn">
-          <button type="submit" class="btn btn-primary overflow"><span class="lang-text" data-key="login">Login</span>
-          </button>
-        </div>
-        <div class="loginForm-item" id="goToSignup">
-          <span class="lang-text" data-key="loginInfo">Don't have an account?</span>
-          <button class="undecorated">
-            <span class="lang-text decoratedAnchor" data-key="signup">Signup</span>
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
- <div id="profileContainer" class="loggedIn">
+  <div id="profileContainer">
     <!-- Basic Information -->
     <div id="basicInformation">
       <!-- Info -->
@@ -159,25 +93,6 @@
       <div class="profile-edit">
         <button class="btn btn-primary overflow">
           <span class="lang-text" data-key="edit">Edit</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Others Settings -->
-    <div id="othersSettings">
-      <!-- Info -->
-      <h2><span class="lang-text" data-key="otherSettings">Others Settings</span></h2>
-      <h3 id="linked-accounts"><span class="lang-text" data-key="linkedAccounts">Linked Accounts</span></h3>
-      <!-- Add Button  -->
-      <div id="others-add-linked-accounts">
-        <button class="btn btn-primary overflow">
-          <span class="lang-text" data-key="addAccounts">Add Accounts</span>
-        </button>
-      </div>
-      <!-- Deactivate Account -->
-      <div id="deactivate-account">
-        <button class="btn btn-primary overflow">
-          <span class="lang-text" data-key="logout">Logout</span>
         </button>
       </div>
     </div>
