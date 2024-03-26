@@ -32,11 +32,7 @@
     "otherSettings": "Other Settings",
     "linkedAccounts": "Linked Accounts",
     "addAccounts": "Add Accounts",
-<<<<<<< HEAD
-    "deactivateAccount": "Deactivate Account",
-=======
     "logout": "Logout",
->>>>>>> 1e6aaae37fd9904041311a397f058db98abef6e7
 
     "address": "Address:",
     "city": "City:",
