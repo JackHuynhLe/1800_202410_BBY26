@@ -54,6 +54,7 @@
 
   <!--    Script    -->
   <script defer src="./scripts/client.js"></script>
+  <script defer src="./scripts/map.js"></script>
 
 </head>
 
@@ -82,15 +83,15 @@
   </div>
 
   <!--Map-->
-  <div class="main-map">
-    <iframe width="425" height="350"
+   <div class="main-map">
+    <iframe id="mapFrame" width="425" height="350"
       src="https://www.openstreetmap.org/export/embed.html?bbox=-123.02095413208009%2C49.24119423801864%2C-122.99177169799806%2C49.25508941196021&amp;layer=mapnik"
       style="border: 1px solid black"></iframe>
     <small>
-      <a class="overflow" href="https://www.openstreetmap.org/#map=15/49.2481/-123.0064"><span class="lang-text"
+        <a class="overflow" href="https://www.openstreetmap.org/#map=15/49.2481/-123.0064"><span class="lang-text"
         data-key="viewLargerMap">View Larger Map</span></a>
     </small>
-  </div>
+</div>
 </main>
 <!-- Bottom Navbar -->
 <div id="bottomNavContainer" class="bottom-nav"></div>
