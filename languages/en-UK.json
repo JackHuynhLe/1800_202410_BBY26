@@ -15,14 +15,31 @@
     "email": "Email:",
     "password": "Password:",
     "login": "Login",
-    "signup": "Sign up",
+    "loginInfo": "Don't have an account?",
+    "signupInfo": "Already have an account?",
+    "signup": "Signup",
+    "basicInformation": "Basic Information",
+    "name": "Name:",
+    "birthday": "Birthday:",
+    "gender": "Gender:",
+    "bio": "Bio:",
+    "edit": "Edit",
+    "contactInformation": "Contact Information",
+    "phone": "Phone:",
+    "accountSettings": "Account Settings",
+    "username": "Username:",
+    "language": "Language:",
+    "otherSettings": "Other Settings",
+    "linkedAccounts": "Linked Accounts",
+    "addAccounts": "Add Accounts",
+<<<<<<< HEAD
+    "deactivateAccount": "Deactivate Account",
+=======
+    "logout": "Logout",
+>>>>>>> 1e6aaae37fd9904041311a397f058db98abef6e7
 
-    "name": "Name",
-    "address": "Address",
-    "city": "City",
-    "province": "Province",
-    "submit": "Submit",
-
-    "language": "Language"
+    "address": "Address:",
+    "city": "City:",
+    "province": "Province:"
   }
 }
