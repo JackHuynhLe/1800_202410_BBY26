@@ -9,23 +9,23 @@ import {setupUI} from "./login.js";
 
 //listen for auth status changes
 document.addEventListener("DOMContentLoaded", () => {
-    auth.onAuthStateChanged(user => {
-        if (user) {
-            document.getElementById("loginContainer").style.display = "none";
-            document.getElementById("profileContainer").style.display = "block";
-            const docRef = collection(db, "users");
-            getDocs(docRef).then((snapshot) => {
-                snapshot.docs.forEach((doc) => {
-                    if (doc.data().email === user.email) {
-                        setupGuides(snapshot.docs);
-                        setupUI(user);
-                    }
-                });
-            });
+  auth.onAuthStateChanged(user => {
+    if (user) {
+      document.getElementById("loginContainer").style.display = "none";
+      document.getElementById("profileContainer").style.display = "block";
+      const docRef = collection(db, "users");
+      getDocs(docRef).then((snapshot) => {
+        snapshot.docs.forEach((doc) => {
+          if (doc.data().email === user.email) {
+            setupGuides(snapshot.docs);
+            setupUI(user);
+          }
+        });
+      });
 
-        } else {
-            document.getElementById("loginContainer").style.display = "block";
-            document.getElementById("profileContainer").style.display = "none";
-        }
-    });
+    } else {
+      document.getElementById("loginContainer").style.display = "block";
+      document.getElementById("profileContainer").style.display = "none";
+    }
+  });
 });

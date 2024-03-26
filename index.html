@@ -2,101 +2,101 @@
 <html lang="en">
 
 <head>
-    <!--    =====Website Title=====    -->
-    <title>Stardust</title>
-    <link rel="icon" type="images/x-icon" href="./images/icon/logo_Stardust.png">
+  <!--    =====Website Title=====    -->
+  <title>Stardust</title>
+  <link rel="icon" type="images/x-icon" href="./images/icon/logo_Stardust.png">
 
 
-    <!--    =====Required meta tags=====     -->
-    <meta name="Stardust" content="BBY26 Project Travel Tracker">
-    <!-- viewport -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- author -->
-    <meta name="author" content="Jiarui Xing(YuanXiQWQ)" />
-    <meta name="author" content="Jack Le(JackHuynhLe)" />
-    <meta name="author" content="Uppnoor Panesar(uppnoor)" />
+  <!--    =====Required meta tags=====     -->
+  <meta name="Stardust" content="BBY26 Project Travel Tracker">
+  <!-- viewport -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- author -->
+  <meta name="author" content="Jiarui Xing(YuanXiQWQ)"/>
+  <meta name="author" content="Jack Le(JackHuynhLe)"/>
+  <meta name="author" content="Uppnoor Panesar(uppnoor)"/>
 
 
-    <!--    =====Libraries=====  -->
+  <!--    =====Libraries=====  -->
 
-    <!-- Outside libraries -->
+  <!-- Outside libraries -->
 
-    <!-- Bootstrap Library CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  <!-- Bootstrap Library CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- Boostrap Library JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-    </script>
+  <!-- Boostrap Library JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
 
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js"></script>
-
-
-    <!-- Other libraries -->
-    <!--    Font    -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js"></script>
 
 
-    <!-- Main library -->
-    <!-- Link to styles of your own -->
-    <!--    main    -->
-    <link rel="stylesheet" href="./styles/global.css">
-    <!--    specific    -->
-    <link rel="stylesheet" href="./styles/index.css">
+  <!-- Other libraries -->
+  <!--    Font    -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
 
-    <!--    *****Libraries*****   -->
 
-    <!--    Script    -->
-    <script defer src="./scripts/client.js"></script>
-    <script defer src="./scripts/map.js"></script>
+  <!-- Main library -->
+  <!-- Link to styles of your own -->
+  <!--    main    -->
+  <link rel="stylesheet" href="./styles/global.css">
+  <!--    specific    -->
+  <link rel="stylesheet" href="./styles/index.css">
+
+  <!--    *****Libraries*****   -->
+
+  <!--    Script    -->
+  <script defer src="./scripts/client.js"></script>
+  <script defer src="./scripts/map.js"></script>
 
 </head>
 
 <body>
-  <header class="header">
-      <div class="header-title">
-          <span class="lang-text" data-key="welcomeToStardust">Welcome to Stardust!</span>
-      </div>
-  </header>
+<header class="header">
+  <div class="header-title">
+    <span class="lang-text" data-key="welcomeToStardust">Welcome to Stardust!</span>
+  </div>
+</header>
 
-  <main class="main">
-      <!--Search-->
-      <div class="row top-searchBox">
-          <form class="top-searchBox-search" onsubmit="searchOnMap(); return false;">
-              <input class="undecorated top-searchBox-search-input" id="site-search" type="search" name="query"
-                  aria-label="Search through site content" placeholder="Search the place you want to go">
-              <button class="undecorated top-searchBox-search-btns" type="submit">
-                  <img class="btns-icon" id="Ender_Pearl" src="/images/icon/icon_Search.png" alt="Go!">
-              </button>
-              <!--User avatar-->
-              <a class="undecorated top-searchBox-user-avatar" href="profile.html">
-                  <img src="./images/icon/icon_UserImg.png" alt="User">
-              </a>
-          </form>
-      </div>
+<main class="main">
+  <!--Search-->
+  <div class="row top-searchBox">
+    <form class="top-searchBox-search" onsubmit="searchOnMap(); return false;">
+      <input class="undecorated top-searchBox-search-input" id="site-search" type="search" name="query"
+             aria-label="Search through site content" placeholder="Search the place you want to go">
+      <button class="undecorated top-searchBox-search-btns" type="submit">
+        <img class="btns-icon" id="Ender_Pearl" src="/images/icon/icon_Search.png" alt="Go!">
+      </button>
+      <!--User avatar-->
+      <a class="undecorated top-searchBox-user-avatar" href="profile.html">
+        <img src="./images/icon/icon_UserImg.png" alt="User">
+      </a>
+    </form>
+  </div>
 
-      <!--Map-->
-      <div class="main-map">
-          <iframe id="mapFrame" width="425" height="350"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-123.02095413208009%2C49.24119423801864%2C-122.99177169799806%2C49.25508941196021&amp;layer=mapnik"
-              style="border: 1px solid black"></iframe>
-          <small>
-              <a class="overflow" href="https://www.openstreetmap.org/#map=15/49.2481/-123.0064"><span
-                      class="lang-text" data-key="viewLargerMap">View Larger Map</span></a>
-          </small>
-      </div>
-  </main>
-  <!-- Bottom Navbar -->
-  <div id="bottomNavContainer" class="bottom-nav"></div>
+  <!--Map-->
+  <div class="main-map">
+    <iframe id="mapFrame" width="425" height="350"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-123.02095413208009%2C49.24119423801864%2C-122.99177169799806%2C49.25508941196021&amp;layer=mapnik"
+            style="border: 1px solid black"></iframe>
+    <small>
+      <a class="overflow" href="https://www.openstreetmap.org/#map=15/49.2481/-123.0064"><span
+              class="lang-text" data-key="viewLargerMap">View Larger Map</span></a>
+    </small>
+  </div>
+</main>
+<!-- Bottom Navbar -->
+<div id="bottomNavContainer" class="bottom-nav"></div>
 
-  <!-- Footer -->
-  <div id="footerContainer" class="footer"></div>
+<!-- Footer -->
+<div id="footerContainer" class="footer"></div>
 </body>
 
 </html>
