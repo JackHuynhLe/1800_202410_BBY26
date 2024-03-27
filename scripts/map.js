@@ -38,3 +38,36 @@ function searchOnMap() {
     });
 }
 
+<<<<<<< Updated upstream
+=======
+
+// Function to save the current location
+function saveCurrentLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      const dateTime = new Date().toLocaleString(); // Get current date and time
+
+      // Store latitude, longitude, and dateTime in a variable or perform any other action
+      const savedLocation = {
+        latitude: latitude,
+        longitude: longitude,
+        dateTime: dateTime
+      };
+
+      // Example: Storing the saved location in local storage
+      localStorage.setItem('savedLocation', JSON.stringify(savedLocation));
+
+      // Example: Alert the user that the location is saved
+      alert('Current location saved successfully!');
+    });
+  } else {
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+
+// Add event listener to the button to save the current location
+document.getElementById('saveLocationBtn').addEventListener('click', saveCurrentLocation);
+
+>>>>>>> Stashed changes
