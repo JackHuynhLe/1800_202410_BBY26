@@ -16,8 +16,25 @@ function showPosition(position) {
 window.onload = initMap;
 
 function searchOnMap() {
-  const query = document.getElementById('site-search').value;
-  const encodedQuery = encodeURIComponent(query);
-  const mapFrame = document.getElementById('mapFrame');
-  mapFrame.src = `https://www.openstreetmap.org/export/embed.html?layer=mapnik&query=${encodedQuery}`;
+  let query = document.getElementById('site-search').value;
+  let url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      if (data.length > 0) {
+        let lat = parseFloat(data[0].lat);
+        let lon = parseFloat(data[0].lon);
+        // update the iframe
+        const mapFrame = document.getElementById('mapFrame');
+        mapFrame.src = `https://www.openstreetmap.org/export/embed.html?bbox=${lon-0.005},${lat-0.005},${lon+0.005},${lat+0.005}&layer=mapnik&marker=${lat},${lon}`;
+      } else {
+        alert('未找到搜索结果。');
+      }
+    })
+    .catch(error => {
+      console.error('搜索出错:', error);
+      alert('搜索出错，请稍后再试。');
+    });
 }
+
