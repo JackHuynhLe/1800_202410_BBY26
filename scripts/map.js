@@ -1,3 +1,7 @@
+// Import auth and db from
+import {auth, db} from '../Project/scripts/firebaseInit.js';
+import {doc, setDoc} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
+
 function initMap() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, handleError);
@@ -55,6 +59,45 @@ function searchOnMap() {
       });
 }
 
+// Function to save the current location to Firebase Firestore
+async function saveLocationToFirestore(latitude, longitude, dateTime) {
+    try {
+        // Access the currently authenticated user
+        const user = auth.currentUser;
+
+        // Ensure user is logged in
+        if (!user) {
+            alert("User not authenticated. Please log in.");
+            return;
+        }
+
+        // Construct the data object to be saved to Firestore
+        const locationData = {
+            latitude: latitude,
+            longitude: longitude,
+            dateTime: dateTime
+        };
+
+        // Get the user document ID from the users collection
+        const userDocRef = doc(db, "users", user.uid);
+        const userDocSnap = await userDocRef.get();
+        if (!userDocSnap.exists()) {
+            console.error("User document not found.");
+            return;
+        }
+
+        // Add a new collection under the user's document ID
+        const locationsCollectionRef = collection(userDocRef, "locations");
+        await addDoc(locationsCollectionRef, locationData);
+
+        // Success message
+        alert("Location saved successfully to Firestore!");
+    } catch (error) {
+        console.error("Error saving location to Firestore:", error);
+        alert("Failed to save location to Firestore.");
+    }
+}
+
 // Function to save the current location
 function saveCurrentLocation() {
     if (navigator.geolocation) {
@@ -63,7 +106,10 @@ function saveCurrentLocation() {
             const longitude = position.coords.longitude;
             const dateTime = new Date().toLocaleString(); // Get current date and time
 
-            // Store latitude, longitude, and dateTime in a variable or perform any other action
+            // Save the location to Firestore
+            saveLocationToFirestore(latitude, longitude, dateTime);
+
+            // Continue with original functionality
             const savedLocation = {
                 latitude: latitude,
                 longitude: longitude,
@@ -80,6 +126,7 @@ function saveCurrentLocation() {
         alert(getLocalisedString("geoNotSupported"));
     }
 }
+
 
 window.onload = initMap;
 
