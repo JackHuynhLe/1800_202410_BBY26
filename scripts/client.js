@@ -33,7 +33,9 @@ document.getElementById("footerContainer").addEventListener("click", () => {
   }
 });
 
-// Change language
+/**
+ * Change the language based on the selected language.
+ * */
 // Check if the preferred language is saved
 const preferredLanguage = localStorage.getItem("preferredLanguage");
 if (preferredLanguage) {
