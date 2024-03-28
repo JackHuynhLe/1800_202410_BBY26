@@ -5,7 +5,6 @@
   },
   "Strings": {
     "welcomeToStardust": "Stardustへようこそ！",
-    "viewLargerMap": "大きな地図を見る",
     "saveCurrentLocation": "現在の位置を保存",
 
     "navigation": "ナビゲーション",
@@ -29,7 +28,7 @@
     "phone": "電話：",
     "accountSettings": "アカウント設定",
     "username": "ユーザー名：",
-    "language": "言語：",
+    "language": "言語",
     "otherSettings": "その他の設定",
     "linkedAccounts": "リンクされたアカウント",
     "addAccounts": "アカウントを追加",

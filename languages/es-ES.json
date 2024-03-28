@@ -5,7 +5,6 @@
   },
   "Strings": {
     "welcomeToStardust": "¡Bienvenido a Stardust!",
-    "viewLargerMap": "Ver mapa más grande",
     "saveCurrentLocation": "Guardar ubicación actual",
 
     "navigation": "Navegación",
@@ -29,7 +28,7 @@
     "phone": "Teléfono:",
     "accountSettings": "Configuración de la cuenta",
     "username": "Nombre de usuario:",
-    "language": "Idioma:",
+    "language": "Idioma",
     "otherSettings": "Otras configuraciones",
     "linkedAccounts": "Cuentas vinculadas",
     "addAccounts": "Agregar cuentas",

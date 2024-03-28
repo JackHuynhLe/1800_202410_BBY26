@@ -5,7 +5,6 @@
   },
   "Strings": {
     "welcomeToStardust": "Добро пожаловать в Stardust!",
-    "viewLargerMap": "Посмотреть большую карту",
     "saveCurrentLocation": "Сохранить текущее местоположение",
 
     "navigation": "Навигация",
@@ -29,7 +28,7 @@
     "phone": "Телефон:",
     "accountSettings": "Настройки аккаунта",
     "username": "Имя пользователя:",
-    "language": "Язык:",
+    "language": "Язык",
     "otherSettings": "Другие настройки",
     "linkedAccounts": "Связанные аккаунты",
     "addAccounts": "Добавить аккаунты",

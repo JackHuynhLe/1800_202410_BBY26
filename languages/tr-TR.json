@@ -5,7 +5,6 @@
   },
   "Strings": {
     "welcomeToStardust": "Stardust'a Hoş Geldiniz!",
-    "viewLargerMap": "Daha Büyük Haritayı Görüntüle",
     "saveCurrentLocation": "Mevcut Konumu Kaydet",
 
     "navigation": "Navigasyon",
@@ -29,7 +28,7 @@
     "phone": "Telefon:",
     "accountSettings": "Hesap Ayarları",
     "username": "Kullanıcı Adı:",
-    "language": "Dil:",
+    "language": "Dil",
     "otherSettings": "Diğer Ayarlar",
     "linkedAccounts": "Bağlı Hesaplar",
     "addAccounts": "Hesap Ekle",

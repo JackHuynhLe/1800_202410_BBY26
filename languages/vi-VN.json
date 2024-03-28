@@ -5,7 +5,6 @@
   },
   "Strings": {
     "welcomeToStardust": "Chào mừng đến với Stardust!",
-    "viewLargerMap": "Xem bản đồ lớn hơn",
     "saveCurrentLocation": "Lưu Vị Trí Hiện Tại",
 
     "navigation": "Điều hướng",
@@ -29,7 +28,7 @@
     "phone": "Điện thoại:",
     "accountSettings": "Cài đặt tài khoản",
     "username": "Tên người dùng:",
-    "language": "Ngôn ngữ:",
+    "language": "Ngôn ngữ",
     "otherSettings": "Cài đặt khác",
     "linkedAccounts": "Tài khoản liên kết",
     "addAccounts": "Thêm tài khoản",

@@ -5,7 +5,6 @@
   },
   "Strings": {
     "welcomeToStardust": "Stardust에 오신 것을 환영합니다!",
-    "viewLargerMap": "더 큰 지도 보기",
     "saveCurrentLocation": "현재 위치 저장",
 
     "navigation": "네비게이션",
@@ -29,7 +28,7 @@
     "phone": "전화번호:",
     "accountSettings": "계정 설정",
     "username": "사용자 이름:",
-    "language": "언어:",
+    "language": "언어",
     "otherSettings": "기타 설정",
     "linkedAccounts": "연결된 계정",
     "addAccounts": "계정 추가",

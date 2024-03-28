@@ -5,7 +5,6 @@
   },
   "Strings": {
     "welcomeToStardust": "歡迎來到Stardust！",
-    "viewLargerMap": "查看更大的地圖",
     "saveCurrentLocation": "保存當前位置",
 
     "navigation": "導航",
@@ -29,7 +28,7 @@
     "phone": "手機:",
     "accountSettings": "帳戶設置",
     "username": "用戶名:",
-    "language": "語言:",
+    "language": "語言",
     "otherSettings": "其他設置",
     "linkedAccounts": "關聯帳戶",
     "addAccounts": "添加帳戶",

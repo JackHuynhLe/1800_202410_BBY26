@@ -5,7 +5,6 @@
   },
   "Strings": {
     "welcomeToStardust": "Maligayang pagdating sa Stardust!",
-    "viewLargerMap": "Tingnan ang Mas Malaking Mapa",
     "saveCurrentLocation": "I-save ang Kasalukuyang Lokasyon",
 
     "navigation": "Nabigasyon",
@@ -29,7 +28,7 @@
     "phone": "Telepono:",
     "accountSettings": "Mga Setting ng Account",
     "username": "Username:",
-    "language": "Wika:",
+    "language": "Wika",
     "otherSettings": "Iba pang mga Setting",
     "linkedAccounts": "Mga Naka-link na Account",
     "addAccounts": "Magdagdag ng mga Account",

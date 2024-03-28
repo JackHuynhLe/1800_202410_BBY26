@@ -5,7 +5,6 @@
   },
   "Strings": {
     "welcomeToStardust": "Stardust में आपका स्वागत है!",
-    "viewLargerMap": "बड़ा नक्शा देखें",
     "saveCurrentLocation": " वर्तमान स्थान सहेजें",
 
     "navigation": "नेविगेशन",
@@ -29,7 +28,7 @@
     "phone": "फ़ोन:",
     "accountSettings": "खाता सेटिंग्स",
     "username": "उपयोगकर्ता नाम:",
-    "language": "भाषा:",
+    "language": "भाषा",
     "otherSettings": "अन्य सेटिंग्स",
     "linkedAccounts": "जुड़े खाते",
     "addAccounts": "खाते जोड़ें",
