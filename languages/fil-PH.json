@@ -5,10 +5,7 @@
   },
   "Strings": {
     "welcomeToStardust": "Maligayang pagdating sa Stardust!",
-<<<<<<< HEAD
-=======
     "searchPlaceholder": "Hanapin ang lugar na gusto mong puntahan",
->>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": "I-save ang Kasalukuyang Lokasyon",
     "geoNotSupported": "Hindi suportado ng browser na ito ang geolocation.",
     "noResultsFound": "Walang natagpuang resulta. Pakisubukang muli.",

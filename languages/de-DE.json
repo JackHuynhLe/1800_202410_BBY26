@@ -5,10 +5,7 @@
   },
   "Strings": {
     "welcomeToStardust": "Willkommen bei Stardust!",
-<<<<<<< HEAD
-=======
     "searchPlaceholder": "Suchen Sie den Ort, zu dem Sie gehen möchten",
->>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation":"Aktuellen Standort speichern",
     "geoNotSupported": "Geolokalisierung wird von diesem Browser nicht unterstützt.",
     "noResultsFound": "Keine Ergebnisse gefunden. Bitte versuchen Sie es erneut.",

@@ -5,10 +5,7 @@
   },
   "Strings": {
     "welcomeToStardust": "欢迎来到Stardust！",
-<<<<<<< HEAD
-=======
     "searchPlaceholder": "搜索你想去的地方",
->>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": "保存当前位置",
     "geoNotSupported": "此浏览器不支持地理定位。",
     "noResultsFound": "未找到结果。请再试一次。",

@@ -5,10 +5,7 @@
   },
   "Strings": {
     "welcomeToStardust": "Chào mừng đến với Stardust!",
-<<<<<<< HEAD
-=======
     "searchPlaceholder": "Tìm kiếm nơi bạn muốn đến",
->>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": "Lưu Vị Trí Hiện Tại",
     "geoNotSupported": "Trình duyệt này không hỗ trợ định vị địa lý.",
     "noResultsFound": "Không tìm thấy kết quả. Vui lòng thử lại.",

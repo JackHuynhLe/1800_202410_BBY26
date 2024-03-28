@@ -5,10 +5,7 @@
   },
   "Strings": {
     "welcomeToStardust": "Stardust में आपका स्वागत है!",
-<<<<<<< HEAD
-=======
     "searchPlaceholder": "जिस जगह जाना चाहते हैं, उसे खोजें",
->>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": " वर्तमान स्थान सहेजें",
     "geoNotSupported": "इस ब्राउज़र में भू-स्थानीयकरण का समर्थन नहीं है।",
     "noResultsFound": "कोई परिणाम नहीं मिला। कृपया पुनः प्रयास करें।",

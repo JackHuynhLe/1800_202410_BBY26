@@ -5,10 +5,7 @@
   },
   "Strings": {
     "welcomeToStardust": "Stardust'a Hoş Geldiniz!",
-<<<<<<< HEAD
-=======
     "searchPlaceholder": "Gitmek istediğiniz yeri arayın",
->>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": "Mevcut Konumu Kaydet",
     "geoNotSupported": "Bu tarayıcı coğrafi konum desteği sunmuyor.",
     "noResultsFound": "Sonuç bulunamadı. Lütfen tekrar deneyin.",

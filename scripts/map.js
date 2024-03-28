@@ -26,13 +26,7 @@ function showPosition(position) {
     const longitude = position.coords.longitude;
     const zoomLevel = 13;
     const mapFrame = document.getElementById('mapFrame');
-<<<<<<< HEAD
-    mapFrame.src =
-      `https://www.openstreetmap.org/export/embed.html?bbox=${longitude-0.01},${latitude-0.01},
-      ${longitude+0.01},${latitude+0.01}&layer=mapnik&marker=${latitude},${longitude}`;
-=======
     mapFrame.src = generateMapURL(latitude, longitude, 0.01, 0.01);
->>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
 }
 
 /**

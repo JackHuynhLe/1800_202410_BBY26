@@ -6,59 +6,63 @@
  * Function about loading page
  * */
 {
-    /*
-    * Fetches and injects HTML content into a specified container.
-    * */
-    function loadHTMLContent(containerId, htmlPath) {
-        return fetch(htmlPath)
-          .then(response => response.text())
-          .then(html => {
-              document.getElementById(containerId).innerHTML = html;
-          }).catch(error => console.error("Error loading HTML content:", error));
-    }
-
-    /**
-     * To insert the bottom navbar and footer into each page,
-     * and load the language file for it if exists.
-     * */
-    const bottomNavLoaded = loadHTMLContent("bottomNavContainer", "../text/bottom_navbar.html");
-    const footerLoaded = loadHTMLContent("footerContainer", "../text/footer.html")
-
-    Promise.all([bottomNavLoaded, footerLoaded]).then(() => {
-        // Check if the preferred language is saved and change it if it is.
-        const preferredLanguage = localStorage.getItem("preferredLanguage");
-        if (preferredLanguage) {
-            changeLanguage(preferredLanguage);
+    document.addEventListener("DOMContentLoaded", () => {
+        /*
+         * Fetches and injects HTML content into a specified container.
+         * */
+        function loadHTMLContent(containerId, htmlPath) {
+            return fetch(htmlPath)
+              .then(response => response.text())
+              .then(html => {
+                  document.getElementById(containerId).innerHTML = html;
+              }).catch(error => console.error("Error loading HTML content:", error));
         }
-    }).catch(error => console.error("Error initializing the page:", error));
+
+        /**
+         * To insert the bottom navbar and footer into each page,
+         * and load the language file for it if exists.
+         * */
+        const bottomNavLoaded = loadHTMLContent("bottomNavContainer", "../text/bottom_navbar.html");
+        const footerLoaded = loadHTMLContent("footerContainer", "../text/footer.html")
+
+        Promise.all([bottomNavLoaded, footerLoaded]).then(() => {
+            // Check if the preferred language is saved and change it if it is.
+            const preferredLanguage = localStorage.getItem("preferredLanguage");
+            if (preferredLanguage) {
+                changeLanguage(preferredLanguage);
+            }
+        }).catch(error => console.error("Error initializing the page:", error));
+    });
 }
 /**
  * Function about language selection
  * */
 {
-    /**
-     * To display the language list when the user clicks on the language button.
-     * */
-    document.getElementById("footerContainer").addEventListener("click", () => {
-        const languageList = document.getElementById("language-list")
+    document.addEventListener("DOMContentLoaded", () => {
+        /**
+         * To display the language list when the user clicks on the language button.
+         * */
+        document.getElementById("footerContainer").addEventListener("click", () => {
+            const languageList = document.getElementById("language-list")
 
-        if (languageList.style.display === "none") {
-            languageList.style.display = "flex";
-        } else {
-            languageList.style.display = "none";
-        }
-    });
+            if (languageList.style.display === "none") {
+                languageList.style.display = "flex";
+            } else {
+                languageList.style.display = "none";
+            }
+        });
 
-    /**
-     * Select language code
-     * */
-    document.body.addEventListener("click", function (event) {
-        // Check if the clicked element is an interlanguage link
-        if (event.target.matches(".interlanguage-link, .interlanguage-link *")) {
-            const element = event.target.closest(".interlanguage-link");
-            const selectedLanguageCode = element.getAttribute("data-code");
-            changeLanguage(selectedLanguageCode);
-        }
+        /**
+         * Select language code
+         * */
+        document.body.addEventListener("click", function (event) {
+            // Check if the clicked element is an interlanguage link
+            if (event.target.matches(".interlanguage-link, .interlanguage-link *")) {
+                const element = event.target.closest(".interlanguage-link");
+                const selectedLanguageCode = element.getAttribute("data-code");
+                changeLanguage(selectedLanguageCode);
+            }
+        });
     });
 }
 /**
