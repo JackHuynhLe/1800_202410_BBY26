@@ -1,9 +1,24 @@
 function initMap() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(showPosition, handleError);
     } else {
         alert(getLocalisedString("geoNotSupported"));
     }
+}
+
+/*
+* Handles errors during geolocation fetching
+* */
+function handleError(error) {
+    console.error('Geolocation error:', error);
+    alert(getLocalisedString("geoNotSupported"));
+}
+
+/*
+* Generates URL for the iframe to display the map centered around the specified coordinates
+* */
+function generateMapURL(latitude, longitude, latOffset = 0.005, longOffset = 0.005) {
+    return `https://www.openstreetmap.org/export/embed.html?bbox=${longitude - longOffset},${latitude - latOffset},${longitude + longOffset},${latitude + latOffset}&layer=mapnik&marker=${latitude},${longitude}`;
 }
 
 function showPosition(position) {
@@ -11,19 +26,15 @@ function showPosition(position) {
     const longitude = position.coords.longitude;
     const zoomLevel = 13;
     const mapFrame = document.getElementById('mapFrame');
-    mapFrame.src =
-      `https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.01},${latitude - 0.01},
-      ${longitude + 0.01},${latitude + 0.01}&layer=mapnik&marker=${latitude},${longitude}`;
+    mapFrame.src = generateMapURL(latitude, longitude, 0.01, 0.01);
 }
-
-window.onload = initMap;
 
 /**
  * Function to search the given query on the map and update the iframe with the result.
  */
 function searchOnMap() {
-    let query = document.getElementById('site-search').value;
-    let url =
+    const query = document.getElementById('site-search').value;
+    const url =
       `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`;
 
     fetch(url)
@@ -33,10 +44,7 @@ function searchOnMap() {
               let lat = parseFloat(data[0].lat);
               let lon = parseFloat(data[0].lon);
               // update the iframe
-              const mapFrame = document.getElementById('mapFrame');
-              mapFrame.src =
-                `https://www.openstreetmap.org/export/embed.html?bbox=${lon - 0.005},
-                ${lat - 0.005},${lon + 0.005},${lat + 0.005}&layer=mapnik&marker=${lat},${lon}`;
+              document.getElementById('mapFrame').src = generateMapURL(lat, lon);
           } else {
               alert(getLocalisedString("noResultsFound"));
           }
@@ -67,11 +75,13 @@ function saveCurrentLocation() {
 
             // Example: Alert the user that the location is saved
             alert(getLocalisedString("locationSavedSuccess"));
-        });
+        }, handleError);
     } else {
         alert(getLocalisedString("geoNotSupported"));
     }
 }
+
+window.onload = initMap;
 
 // Add event listener to the button to save the current location
 document.getElementById('saveLocationBtn').addEventListener('click', saveCurrentLocation);
