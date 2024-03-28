@@ -1,6 +1,6 @@
-// Import auth and db from firebaseInit.js
-import { auth, db } from './firebaseInit.js';
-import { doc, setDoc } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
+// Import auth and db from
+import {auth, db} from './firebaseInit.js';
+import {doc, setDoc} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
 
 // Listen for auth state changes to ensure we have a user logged in
 auth.onAuthStateChanged(user => {

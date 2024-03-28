@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
 
     var modals = document.querySelectorAll('.modal');
     M.Modal.init(modals);
@@ -13,24 +13,24 @@ const guideList = document.querySelector('.guides');
 //setup guide
 export const setupGuides = (data) => {
 
-if (data.length) {
+    if (data.length) {
 
-let html = '';
-data.forEach(doc => {
-    const guide = doc.data();
-    const li = `
+        let html = '';
+        data.forEach(doc => {
+            const guide = doc.data();
+            const li = `
     <li>
         <div class='collapsible-header grey lighten-4'>${guide.title}</div>
         <div class='collapsible-body white'>${guide.content}</div>
     </li>
     `;
-    html += li;
-})
+            html += li;
+        })
 
-guideList.innerHTML = html;
-} else {
-    guideList.innerHTML = '<h5 class="center-align">Login to view content</h5>';
-}
+        guideList.innerHTML = html;
+    } else {
+        guideList.innerHTML = '<h5 class="center-align">Login to view content</h5>';
+    }
 
 }
 

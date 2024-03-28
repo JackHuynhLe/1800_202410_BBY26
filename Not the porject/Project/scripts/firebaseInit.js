@@ -1,4 +1,3 @@
-// firebaseInit.js
 import {initializeApp} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
 import {getAuth} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-authentication.js";
 import {getFirestore} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
