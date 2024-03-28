@@ -9,9 +9,11 @@ function initMap() {
 function showPosition(position) {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
+    const zoomLevel = 13;
     const mapFrame = document.getElementById('mapFrame');
     mapFrame.src =
-      `https://www.openstreetmap.org/export/embed.html?layer=mapnik&marker=${latitude},${longitude}`;
+      `https://www.openstreetmap.org/export/embed.html?bbox=${longitude-0.01},${latitude-0.01},
+      ${longitude+0.01},${latitude+0.01}&layer=mapnik&marker=${latitude},${longitude}`;
 }
 
 window.onload = initMap;
