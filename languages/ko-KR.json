@@ -5,7 +5,12 @@
   },
   "Strings": {
     "welcomeToStardust": "Stardust에 오신 것을 환영합니다!",
+    "searchPlaceholder": "가고 싶은 장소 검색",
     "saveCurrentLocation": "현재 위치 저장",
+    "geoNotSupported": "이 브라우저에서는 지오로케이션이 지원되지 않습니다.",
+    "noResultsFound": "결과를 찾을 수 없습니다. 다시 시도해주세요.",
+    "searchError": "검색 오류. 다시 시도해주세요.",
+    "locationSavedSuccess": "현재 위치가 성공적으로 저장되었습니다!",
 
     "navigation": "네비게이션",
     "community": "커뮤니티",

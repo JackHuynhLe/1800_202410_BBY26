@@ -5,7 +5,12 @@
   },
   "Strings": {
     "welcomeToStardust": "Stardust'a Hoş Geldiniz!",
+    "searchPlaceholder": "Gitmek istediğiniz yeri arayın",
     "saveCurrentLocation": "Mevcut Konumu Kaydet",
+    "geoNotSupported": "Bu tarayıcı coğrafi konum desteği sunmuyor.",
+    "noResultsFound": "Sonuç bulunamadı. Lütfen tekrar deneyin.",
+    "searchError": "Arama hatası. Lütfen tekrar deneyin.",
+    "locationSavedSuccess": "Mevcut konum başarıyla kaydedildi!",
 
     "navigation": "Navigasyon",
     "community": "Topluluk",

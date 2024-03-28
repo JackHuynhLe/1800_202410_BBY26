@@ -5,7 +5,12 @@
   },
   "Strings": {
     "welcomeToStardust": "欢迎来到Stardust！",
+    "searchPlaceholder": "搜索你想去的地方",
     "saveCurrentLocation": "保存当前位置",
+    "geoNotSupported": "此浏览器不支持地理定位。",
+    "noResultsFound": "未找到结果。请再试一次。",
+    "searchError": "搜索错误。请再试一次。",
+    "locationSavedSuccess": "当前位置保存成功！",
 
     "navigation": "导航",
     "community": "社区",

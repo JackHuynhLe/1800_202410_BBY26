@@ -5,7 +5,12 @@
   },
   "Strings": {
     "welcomeToStardust": "歡迎來到Stardust！",
+    "searchPlaceholder": "搜尋您想去的地方",
     "saveCurrentLocation": "保存當前位置",
+    "geoNotSupported": "此瀏覽器不支援地理定位。",
+    "noResultsFound": "未找到結果。請再試一次。",
+    "searchError": "搜尋錯誤。請再試一次。",
+    "locationSavedSuccess": "當前位置儲存成功！",
 
     "navigation": "導航",
     "community": "社區",

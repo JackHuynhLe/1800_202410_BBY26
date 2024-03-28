@@ -2,7 +2,7 @@ function initMap() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     } else {
-        alert("Geolocation is not supported by this browser.");
+        alert(getLocalisedString("geoNotSupported"));
     }
 }
 
@@ -12,8 +12,8 @@ function showPosition(position) {
     const zoomLevel = 13;
     const mapFrame = document.getElementById('mapFrame');
     mapFrame.src =
-      `https://www.openstreetmap.org/export/embed.html?bbox=${longitude-0.01},${latitude-0.01},
-      ${longitude+0.01},${latitude+0.01}&layer=mapnik&marker=${latitude},${longitude}`;
+      `https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.01},${latitude - 0.01},
+      ${longitude + 0.01},${latitude + 0.01}&layer=mapnik&marker=${latitude},${longitude}`;
 }
 
 window.onload = initMap;
@@ -38,12 +38,12 @@ function searchOnMap() {
                 `https://www.openstreetmap.org/export/embed.html?bbox=${lon - 0.005},
                 ${lat - 0.005},${lon + 0.005},${lat + 0.005}&layer=mapnik&marker=${lat},${lon}`;
           } else {
-              alert('No results found. Please try again.');
+              alert(getLocalisedString("noResultsFound"));
           }
       })
       .catch(error => {
           console.error('Search error:', error);
-          alert('Search error. Please try again.');
+          alert(getLocalisedString("searchError"));
       });
 }
 
@@ -66,10 +66,10 @@ function saveCurrentLocation() {
             localStorage.setItem('savedLocation', JSON.stringify(savedLocation));
 
             // Example: Alert the user that the location is saved
-            alert('Current location saved successfully!');
+            alert(getLocalisedString("locationSavedSuccess"));
         });
     } else {
-        alert("Geolocation is not supported by this browser.");
+        alert(getLocalisedString("geoNotSupported"));
     }
 }
 

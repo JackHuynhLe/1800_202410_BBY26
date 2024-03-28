@@ -5,7 +5,12 @@
   },
   "Strings": {
     "welcomeToStardust": "¡Bienvenido a Stardust!",
+    "searchPlaceholder": "Busca el lugar al que quieres ir",
     "saveCurrentLocation": "Guardar ubicación actual",
+    "geoNotSupported": "La geolocalización no es compatible con este navegador.",
+    "noResultsFound": "No se encontraron resultados. Por favor, intenta de nuevo.",
+    "searchError": "Error de búsqueda. Por favor, intenta de nuevo.",
+    "locationSavedSuccess": "¡Ubicación actual guardada con éxito!",
 
     "navigation": "Navegación",
     "community": "Comunidad",

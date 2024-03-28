@@ -5,7 +5,12 @@
   },
   "Strings": {
     "welcomeToStardust": "مرحباً بكم في Stardust!",
+    "searchPlaceholder": "ابحث عن المكان الذي ترغب بالذهاب إليه",
     "saveCurrentLocation": "حفظ الموقع الحالي",
+    "geoNotSupported": "الموقع الجغرافي غير مدعوم من قبل هذا المتصفح.",
+    "noResultsFound": "لم يتم العثور على نتائج. يرجى المحاولة مرة أخرى.",
+    "searchError": "خطأ في البحث. يرجى المحاولة مرة أخرى.",
+    "locationSavedSuccess": "تم حفظ الموقع الحالي بنجاح!",
 
     "navigation": "التنقل",
     "community": "المجتمع",

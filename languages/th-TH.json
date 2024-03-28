@@ -5,7 +5,12 @@
   },
   "Strings": {
     "welcomeToStardust": "ยินดีต้อนรับสู่ Stardust!",
+    "searchPlaceholder": "ค้นหาสถานที่ที่คุณต้องการไป",
     "saveCurrentLocation": "บันทึกตำแหน่งปัจจุบัน",
+    "geoNotSupported": "เบราว์เซอร์นี้ไม่รองรับการระบุตำแหน่งทางภูมิศาสตร์",
+    "noResultsFound": "ไม่พบผลลัพธ์ กรุณาลองอีกครั้ง",
+    "searchError": "ข้อผิดพลาดในการค้นหา กรุณาลองอีกครั้ง",
+    "locationSavedSuccess": "บันทึกตำแหน่งปัจจุบันเรียบร้อยแล้ว!",
 
     "navigation": "นำทาง",
     "community": "ชุมชน",

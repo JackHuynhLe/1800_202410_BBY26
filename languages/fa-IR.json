@@ -5,7 +5,12 @@
   },
   "Strings": {
     "welcomeToStardust": "به Stardust خوش آمدید!",
+    "searchPlaceholder": "مکانی که می‌خواهید به آن بروید جستجو کنید",
     "saveCurrentLocation": "ذخیره موقعیت فعلی",
+    "geoNotSupported": "مکان‌یابی توسط این مرورگر پشتیبانی نمی‌شود.",
+    "noResultsFound": "نتیجه‌ای یافت نشد. لطفا دوباره تلاش کنید.",
+    "searchError": "خطای جستجو. لطفا دوباره تلاش کنید.",
+    "locationSavedSuccess": "مکان فعلی با موفقیت ذخیره شد!",
 
     "navigation": "ناوبری",
     "community": "جامعه",

@@ -4,7 +4,7 @@
 /**
  * To insert the bottom navbar and footer into each page,
  * and load the language file for it if exists.
- */
+ * */
 document.addEventListener("DOMContentLoaded", () => {
     let bottomNavLoaded = fetch("../text/bottom_navbar.html")
       .then(response => response.text())
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /**
  * To display the language list when the user clicks on the language button.
- */
+ * */
 document.getElementById("footerContainer").addEventListener("click", () => {
     const languageList = document.getElementById("language-list")
 
@@ -43,10 +43,12 @@ document.getElementById("footerContainer").addEventListener("click", () => {
     }
 });
 
+// Global variable to store current language strings
+let currentLanguageStrings = {};
+
 /**
  * Change the language based on the selected language.
  * */
-// Check if the preferred language is saved
 const preferredLanguage = localStorage.getItem("preferredLanguage");
 if (preferredLanguage) {
     changeLanguage(preferredLanguage);
@@ -60,17 +62,33 @@ function changeLanguage(language) {
     fetch(`../languages/${language}.json`)
       .then(response => response.json())
       .then(data => {
-          let strings = data.Strings;
-          document.querySelectorAll(".lang-text").forEach(element => {
-              let key = element.getAttribute("data-key");
-              // Check if the key exists in the strings object
-              if (key in strings) {
-                  // Set the text content of the element
-                  element.textContent = strings[key];
-              }
-          });
+          currentLanguageStrings = data.Strings; // Store the loaded language strings
+          updatePageContent(); // Update page content with the loaded language
+          updatePlaceholders(); // New function to update all placeholders
       })
       .catch(error => console.error("Error loading the language file:", error));
+}
+
+// Update the page content based on the current language strings
+function updatePageContent() {
+    document.querySelectorAll(".lang-text").forEach(element => {
+        const key = element.getAttribute("data-key");
+        if (key in currentLanguageStrings) {
+            element.textContent = currentLanguageStrings[key];
+        }
+    });
+}
+
+/**
+ * To update placeholders for all input elements with a data-key attribute
+ * */
+function updatePlaceholders() {
+    document.querySelectorAll('input[data-key]').forEach(input => {
+        const key = input.getAttribute('data-key');
+        if (key && key in currentLanguageStrings) {
+            input.placeholder = currentLanguageStrings[key];
+        }
+    });
 }
 
 document.body.addEventListener("click", function (event) {
@@ -81,3 +99,10 @@ document.body.addEventListener("click", function (event) {
         changeLanguage(selectedLanguageCode);
     }
 });
+
+/**
+ * Function to retrieve localised strings
+ * */
+function getLocalisedString(key) {
+    return currentLanguageStrings[key] || `Missing localization for: ${key}`;
+}

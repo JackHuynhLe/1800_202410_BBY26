@@ -5,7 +5,12 @@
   },
   "Strings": {
     "welcomeToStardust": "Добро пожаловать в Stardust!",
+    "searchPlaceholder": "Поиск места, куда вы хотите пойти",
     "saveCurrentLocation": "Сохранить текущее местоположение",
+    "geoNotSupported": "Геолокация не поддерживается этим браузером.",
+    "noResultsFound": "Результаты не найдены. Пожалуйста, попробуйте еще раз.",
+    "searchError": "Ошибка поиска. Пожалуйста, попробуйте еще раз.",
+    "locationSavedSuccess": "Текущее местоположение успешно сохранено!",
 
     "navigation": "Навигация",
     "community": "Сообщество",

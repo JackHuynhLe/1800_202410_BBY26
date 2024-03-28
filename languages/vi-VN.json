@@ -5,7 +5,12 @@
   },
   "Strings": {
     "welcomeToStardust": "Chào mừng đến với Stardust!",
+    "searchPlaceholder": "Tìm kiếm nơi bạn muốn đến",
     "saveCurrentLocation": "Lưu Vị Trí Hiện Tại",
+    "geoNotSupported": "Trình duyệt này không hỗ trợ định vị địa lý.",
+    "noResultsFound": "Không tìm thấy kết quả. Vui lòng thử lại.",
+    "searchError": "Lỗi tìm kiếm. Vui lòng thử lại.",
+    "locationSavedSuccess": "Vị trí hiện tại đã được lưu thành công!",
 
     "navigation": "Điều hướng",
     "community": "Cộng đồng",

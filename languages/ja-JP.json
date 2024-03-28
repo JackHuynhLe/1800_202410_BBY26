@@ -5,7 +5,12 @@
   },
   "Strings": {
     "welcomeToStardust": "Stardustへようこそ！",
+    "searchPlaceholder": "行きたい場所を検索",
     "saveCurrentLocation": "現在の位置を保存",
+    "geoNotSupported": "このブラウザでは地理位置情報がサポートされていません。",
+    "noResultsFound": "結果が見つかりませんでした。もう一度お試しください。",
+    "searchError": "検索エラー。もう一度お試しください。",
+    "locationSavedSuccess": "現在地が正常に保存されました！",
 
     "navigation": "ナビゲーション",
     "community": "コミュニティ",
