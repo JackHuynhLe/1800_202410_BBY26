@@ -5,7 +5,15 @@
   },
   "Strings": {
     "welcomeToStardust": "Stardustへようこそ！",
+<<<<<<< HEAD
+=======
+    "searchPlaceholder": "行きたい場所を検索",
+>>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": "現在の位置を保存",
+    "geoNotSupported": "このブラウザでは地理位置情報がサポートされていません。",
+    "noResultsFound": "結果が見つかりませんでした。もう一度お試しください。",
+    "searchError": "検索エラー。もう一度お試しください。",
+    "locationSavedSuccess": "現在地が正常に保存されました！",
 
     "navigation": "ナビゲーション",
     "community": "コミュニティ",
@@ -28,7 +36,7 @@
     "phone": "電話：",
     "accountSettings": "アカウント設定",
     "username": "ユーザー名：",
-    "language": "言語：",
+    "language": "言語",
     "otherSettings": "その他の設定",
     "linkedAccounts": "リンクされたアカウント",
     "addAccounts": "アカウントを追加",

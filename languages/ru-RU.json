@@ -5,7 +5,15 @@
   },
   "Strings": {
     "welcomeToStardust": "Добро пожаловать в Stardust!",
+<<<<<<< HEAD
+=======
+    "searchPlaceholder": "Поиск места, куда вы хотите пойти",
+>>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": "Сохранить текущее местоположение",
+    "geoNotSupported": "Геолокация не поддерживается этим браузером.",
+    "noResultsFound": "Результаты не найдены. Пожалуйста, попробуйте еще раз.",
+    "searchError": "Ошибка поиска. Пожалуйста, попробуйте еще раз.",
+    "locationSavedSuccess": "Текущее местоположение успешно сохранено!",
 
     "navigation": "Навигация",
     "community": "Сообщество",
@@ -28,7 +36,7 @@
     "phone": "Телефон:",
     "accountSettings": "Настройки аккаунта",
     "username": "Имя пользователя:",
-    "language": "Язык:",
+    "language": "Язык",
     "otherSettings": "Другие настройки",
     "linkedAccounts": "Связанные аккаунты",
     "addAccounts": "Добавить аккаунты",

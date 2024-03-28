@@ -5,7 +5,15 @@
   },
   "Strings": {
     "welcomeToStardust": "مرحباً بكم في Stardust!",
+<<<<<<< HEAD
+=======
+    "searchPlaceholder": "ابحث عن المكان الذي ترغب بالذهاب إليه",
+>>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": "حفظ الموقع الحالي",
+    "geoNotSupported": "الموقع الجغرافي غير مدعوم من قبل هذا المتصفح.",
+    "noResultsFound": "لم يتم العثور على نتائج. يرجى المحاولة مرة أخرى.",
+    "searchError": "خطأ في البحث. يرجى المحاولة مرة أخرى.",
+    "locationSavedSuccess": "تم حفظ الموقع الحالي بنجاح!",
 
     "navigation": "التنقل",
     "community": "المجتمع",
@@ -28,7 +36,7 @@
     "phone": "الهاتف:",
     "accountSettings": "إعدادات الحساب",
     "username": "اسم المستخدم:",
-    "language": "اللغة:",
+    "language": "اللغة",
     "otherSettings": "إعدادات أخرى",
     "linkedAccounts": "الحسابات المرتبطة",
     "addAccounts": "إضافة حسابات",

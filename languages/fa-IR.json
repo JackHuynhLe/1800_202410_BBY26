@@ -5,7 +5,15 @@
   },
   "Strings": {
     "welcomeToStardust": "به Stardust خوش آمدید!",
+<<<<<<< HEAD
+=======
+    "searchPlaceholder": "مکانی که می‌خواهید به آن بروید جستجو کنید",
+>>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": "ذخیره موقعیت فعلی",
+    "geoNotSupported": "مکان‌یابی توسط این مرورگر پشتیبانی نمی‌شود.",
+    "noResultsFound": "نتیجه‌ای یافت نشد. لطفا دوباره تلاش کنید.",
+    "searchError": "خطای جستجو. لطفا دوباره تلاش کنید.",
+    "locationSavedSuccess": "مکان فعلی با موفقیت ذخیره شد!",
 
     "navigation": "ناوبری",
     "community": "جامعه",
@@ -28,7 +36,7 @@
     "phone": "تلفن:",
     "accountSettings": "تنظیمات حساب",
     "username": "نام کاربری:",
-    "language": "زبان:",
+    "language": "زبان",
     "otherSettings": "سایر تنظیمات",
     "linkedAccounts": "حساب‌های مرتبط",
     "addAccounts": "افزودن حساب‌ها",

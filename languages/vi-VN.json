@@ -5,7 +5,15 @@
   },
   "Strings": {
     "welcomeToStardust": "Chào mừng đến với Stardust!",
+<<<<<<< HEAD
+=======
+    "searchPlaceholder": "Tìm kiếm nơi bạn muốn đến",
+>>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": "Lưu Vị Trí Hiện Tại",
+    "geoNotSupported": "Trình duyệt này không hỗ trợ định vị địa lý.",
+    "noResultsFound": "Không tìm thấy kết quả. Vui lòng thử lại.",
+    "searchError": "Lỗi tìm kiếm. Vui lòng thử lại.",
+    "locationSavedSuccess": "Vị trí hiện tại đã được lưu thành công!",
 
     "navigation": "Điều hướng",
     "community": "Cộng đồng",
@@ -28,7 +36,7 @@
     "phone": "Điện thoại:",
     "accountSettings": "Cài đặt tài khoản",
     "username": "Tên người dùng:",
-    "language": "Ngôn ngữ:",
+    "language": "Ngôn ngữ",
     "otherSettings": "Cài đặt khác",
     "linkedAccounts": "Tài khoản liên kết",
     "addAccounts": "Thêm tài khoản",

@@ -5,7 +5,15 @@
   },
   "Strings": {
     "welcomeToStardust": "Stardust'a Hoş Geldiniz!",
+<<<<<<< HEAD
+=======
+    "searchPlaceholder": "Gitmek istediğiniz yeri arayın",
+>>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": "Mevcut Konumu Kaydet",
+    "geoNotSupported": "Bu tarayıcı coğrafi konum desteği sunmuyor.",
+    "noResultsFound": "Sonuç bulunamadı. Lütfen tekrar deneyin.",
+    "searchError": "Arama hatası. Lütfen tekrar deneyin.",
+    "locationSavedSuccess": "Mevcut konum başarıyla kaydedildi!",
 
     "navigation": "Navigasyon",
     "community": "Topluluk",
@@ -28,7 +36,7 @@
     "phone": "Telefon:",
     "accountSettings": "Hesap Ayarları",
     "username": "Kullanıcı Adı:",
-    "language": "Dil:",
+    "language": "Dil",
     "otherSettings": "Diğer Ayarlar",
     "linkedAccounts": "Bağlı Hesaplar",
     "addAccounts": "Hesap Ekle",

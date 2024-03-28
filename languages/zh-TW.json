@@ -5,7 +5,15 @@
   },
   "Strings": {
     "welcomeToStardust": "歡迎來到Stardust！",
+<<<<<<< HEAD
+=======
+    "searchPlaceholder": "搜尋您想去的地方",
+>>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": "保存當前位置",
+    "geoNotSupported": "此瀏覽器不支援地理定位。",
+    "noResultsFound": "未找到結果。請再試一次。",
+    "searchError": "搜尋錯誤。請再試一次。",
+    "locationSavedSuccess": "當前位置儲存成功！",
 
     "navigation": "導航",
     "community": "社區",
@@ -28,7 +36,7 @@
     "phone": "手機:",
     "accountSettings": "帳戶設置",
     "username": "用戶名:",
-    "language": "語言:",
+    "language": "語言",
     "otherSettings": "其他設置",
     "linkedAccounts": "關聯帳戶",
     "addAccounts": "添加帳戶",

@@ -5,7 +5,15 @@
   },
   "Strings": {
     "welcomeToStardust": "Stardust में आपका स्वागत है!",
+<<<<<<< HEAD
+=======
+    "searchPlaceholder": "जिस जगह जाना चाहते हैं, उसे खोजें",
+>>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": " वर्तमान स्थान सहेजें",
+    "geoNotSupported": "इस ब्राउज़र में भू-स्थानीयकरण का समर्थन नहीं है।",
+    "noResultsFound": "कोई परिणाम नहीं मिला। कृपया पुनः प्रयास करें।",
+    "searchError": "खोज त्रुटि। कृपया पुनः प्रयास करें।",
+    "locationSavedSuccess": "वर्तमान स्थान सफलतापूर्वक सहेजा गया!",
 
     "navigation": "नेविगेशन",
     "community": "समुदाय",
@@ -28,7 +36,7 @@
     "phone": "फ़ोन:",
     "accountSettings": "खाता सेटिंग्स",
     "username": "उपयोगकर्ता नाम:",
-    "language": "भाषा:",
+    "language": "भाषा",
     "otherSettings": "अन्य सेटिंग्स",
     "linkedAccounts": "जुड़े खाते",
     "addAccounts": "खाते जोड़ें",

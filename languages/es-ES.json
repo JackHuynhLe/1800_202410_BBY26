@@ -5,7 +5,15 @@
   },
   "Strings": {
     "welcomeToStardust": "¡Bienvenido a Stardust!",
+<<<<<<< HEAD
+=======
+    "searchPlaceholder": "Busca el lugar al que quieres ir",
+>>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": "Guardar ubicación actual",
+    "geoNotSupported": "La geolocalización no es compatible con este navegador.",
+    "noResultsFound": "No se encontraron resultados. Por favor, intenta de nuevo.",
+    "searchError": "Error de búsqueda. Por favor, intenta de nuevo.",
+    "locationSavedSuccess": "¡Ubicación actual guardada con éxito!",
 
     "navigation": "Navegación",
     "community": "Comunidad",
@@ -28,7 +36,7 @@
     "phone": "Teléfono:",
     "accountSettings": "Configuración de la cuenta",
     "username": "Nombre de usuario:",
-    "language": "Idioma:",
+    "language": "Idioma",
     "otherSettings": "Otras configuraciones",
     "linkedAccounts": "Cuentas vinculadas",
     "addAccounts": "Agregar cuentas",

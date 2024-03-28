@@ -5,7 +5,15 @@
   },
   "Strings": {
     "welcomeToStardust": "Maligayang pagdating sa Stardust!",
+<<<<<<< HEAD
+=======
+    "searchPlaceholder": "Hanapin ang lugar na gusto mong puntahan",
+>>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": "I-save ang Kasalukuyang Lokasyon",
+    "geoNotSupported": "Hindi suportado ng browser na ito ang geolocation.",
+    "noResultsFound": "Walang natagpuang resulta. Pakisubukang muli.",
+    "searchError": "Error sa paghahanap. Pakisubukang muli.",
+    "locationSavedSuccess": "Matagumpay na nai-save ang kasalukuyang lokasyon!",
 
     "navigation": "Nabigasyon",
     "community": "Komunidad",
@@ -28,7 +36,7 @@
     "phone": "Telepono:",
     "accountSettings": "Mga Setting ng Account",
     "username": "Username:",
-    "language": "Wika:",
+    "language": "Wika",
     "otherSettings": "Iba pang mga Setting",
     "linkedAccounts": "Mga Naka-link na Account",
     "addAccounts": "Magdagdag ng mga Account",

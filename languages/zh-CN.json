@@ -5,7 +5,15 @@
   },
   "Strings": {
     "welcomeToStardust": "欢迎来到Stardust！",
+<<<<<<< HEAD
+=======
+    "searchPlaceholder": "搜索你想去的地方",
+>>>>>>> 3861ef183058280721a4f5fcc77a8e65fd476477
     "saveCurrentLocation": "保存当前位置",
+    "geoNotSupported": "此浏览器不支持地理定位。",
+    "noResultsFound": "未找到结果。请再试一次。",
+    "searchError": "搜索错误。请再试一次。",
+    "locationSavedSuccess": "当前位置保存成功！",
 
     "navigation": "导航",
     "community": "社区",
@@ -28,7 +36,7 @@
     "phone": "移动电话:",
     "accountSettings": "账户设置",
     "username": "用户名:",
-    "language": "语言:",
+    "language": "语言",
     "otherSettings": "其它设置",
     "linkedAccounts": "关联账户",
     "addAccounts": "添加账户",
