@@ -106,18 +106,35 @@ function saveCurrentLocation() {
             const longitude = position.coords.longitude;
             const dateTime = new Date().toLocaleString(); // Get current date and time
 
-            // Save the location to Firestore
-            saveLocationToFirestore(latitude, longitude, dateTime);
+            // Access the Firestore database
+            const db = firebase.firestore();
 
-            // Continue with original functionality
-            const savedLocation = {
+            // Access the currently authenticated user
+            const user = firebase.auth().currentUser;
+
+            // Ensure user is logged in
+            if (!user) {
+                alert("User not authenticated. Please log in.");
+                return;
+            }
+
+            // Construct the data object to be saved to Firestore
+            const locationData = {
                 latitude: latitude,
                 longitude: longitude,
                 dateTime: dateTime
             };
 
-            // Example: Storing the saved location in local storage
-            localStorage.setItem('savedLocation', JSON.stringify(savedLocation));
+            // Add the location data to Firestore under the user's document
+            db.collection("users").doc(user.uid).collection("locations").add(locationData)
+                .then(function(docRef) {
+                    // Success message
+                    alert("Location saved successfully to Firestore!");
+                })
+                .catch(function(error) {
+                    console.error("Error saving location to Firestore:", error);
+                    alert("Failed to save location to Firestore.");
+                });
 
             // Example: Alert the user that the location is saved
             alert(getLocalisedString("locationSavedSuccess"));
@@ -126,6 +143,7 @@ function saveCurrentLocation() {
         alert(getLocalisedString("geoNotSupported"));
     }
 }
+
 
 
 window.onload = initMap;
