@@ -133,10 +133,7 @@ function saveCurrentLocation() {
                 .catch(function(error) {
                     console.error("Error saving location to Firestore:", error);
                     alert("Failed to save location to Firestore.");
-                });
-
-            // Example: Alert the user that the location is saved
-            alert(getLocalisedString("locationSavedSuccess"));
+                });            
         }, handleError);
     } else {
         alert(getLocalisedString("geoNotSupported"));
