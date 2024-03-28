@@ -1,6 +1,5 @@
-// Import auth and db from
-import {auth, db} from '../Project/scripts/firebaseInit.js';
-import {doc, setDoc} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
+import { auth } from '../Project/scripts/firebaseInit.js';
+import { doc, setDoc, collection, addDoc, getFirestore } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
 
 function initMap() {
     if (navigator.geolocation) {
@@ -107,10 +106,10 @@ function saveCurrentLocation() {
             const dateTime = new Date().toLocaleString(); // Get current date and time
 
             // Access the Firestore database
-            const db = firebase.firestore();
+            const firestore = getFirestore();
 
             // Access the currently authenticated user
-            const user = firebase.auth().currentUser;
+            const user = auth.currentUser;
 
             // Ensure user is logged in
             if (!user) {
@@ -126,7 +125,7 @@ function saveCurrentLocation() {
             };
 
             // Add the location data to Firestore under the user's document
-            db.collection("users").doc(user.uid).collection("locations").add(locationData)
+            addDoc(collection(firestore, "users", user.uid, "locations"), locationData)
                 .then(function(docRef) {
                     // Success message
                     alert("Location saved successfully to Firestore!");
@@ -134,10 +133,7 @@ function saveCurrentLocation() {
                 .catch(function(error) {
                     console.error("Error saving location to Firestore:", error);
                     alert("Failed to save location to Firestore.");
-                });
-
-            // Example: Alert the user that the location is saved
-            alert(getLocalisedString("locationSavedSuccess"));
+                });            
         }, handleError);
     } else {
         alert(getLocalisedString("geoNotSupported"));
