@@ -2,61 +2,61 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
 <body>
 
-<button onclick="saveUserLocation()">Save Location</button>
+    <button onclick="saveUserLocation()">Save Location</button>
 
-<!-- Load Firebase SDK using script tags -->
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js"></script>
+    <!-- Load Firebase SDK using script tags -->
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js"></script>
 
-<script>
-    const firebaseConfig = {
-        apiKey: "AIzaSyAPr5p921A7Nvox_17pcrADPIcXgONlaGo",
-        authDomain: "bby26-c858c.firebaseapp.com",
-        databaseURL: "https://bby26-c858c-default-rtdb.firebaseio.com",
-        projectId: "bby26-c858c",
-        storageBucket: "bby26-c858c.appspot.com",
-        messagingSenderId: "569835543614",
-        appId: "1:569835543614:web:fc118410cebf4f1169856f",
-        measurementId: "G-3QTZ7MGJ7W"
-    };
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAPr5p921A7Nvox_17pcrADPIcXgONlaGo",
+            authDomain: "bby26-c858c.firebaseapp.com",
+            databaseURL: "https://bby26-c858c-default-rtdb.firebaseio.com",
+            projectId: "bby26-c858c",
+            storageBucket: "bby26-c858c.appspot.com",
+            messagingSenderId: "569835543614",
+            appId: "1:569835543614:web:fc118410cebf4f1169856f",
+            measurementId: "G-3QTZ7MGJ7W"
+        };
 
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
 
-    // Function to save user's location to Firestore
-    async function saveUserLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(async (position) => {
-                const userLocation = {
-                    latitude: position.coords.latitude,
-                    longitude: position.coords.longitude
-                };
+        // Function to save user's location to Firestore
+        async function saveUserLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(async (position) => {
+                    const userLocation = {
+                        latitude: position.coords.latitude,
+                        longitude: position.coords.longitude
+                    };
 
-                // Save user's location to Firestore
-                const locationDocRef = await db.collection("locations").add({
-                    location: userLocation
+                    // Save user's location to Firestore
+                    const locationDocRef = await db.collection("locations").add({
+                        location: userLocation
+                    });
+
+                    console.log("Location document written with ID: ", locationDocRef.id);
+                    alert("Location saved successfully!");
+                }, (error) => {
+                    console.error("Error getting user's location:", error);
+                    alert("Error getting user's location. Location not saved.");
                 });
-
-                console.log("Location document written with ID: ", locationDocRef.id);
-                alert("Location saved successfully!");
-            }, (error) => {
-                console.error("Error getting user's location:", error);
-                alert("Error getting user's location. Location not saved.");
-            });
-        } else {
-            console.error("Geolocation is not supported by this browser.");
-            alert("Geolocation is not supported by this browser. Location not saved.");
+            } else {
+                console.error("Geolocation is not supported by this browser.");
+                alert("Geolocation is not supported by this browser. Location not saved.");
+            }
         }
-    }
-</script>
+    </script>
 </body>
 
 </html>

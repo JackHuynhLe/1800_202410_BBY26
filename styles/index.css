@@ -33,7 +33,7 @@ The product reference for the mobile screen size is 430px * 932px
 /* ++++HTML++++ */
 body {
   height: 100vh;
-  }
+}
 
 /* ++++Body++++ */
 .header {
@@ -44,11 +44,11 @@ body {
   width: min(90%, 800px);
   padding: 10px 0;
   margin: auto;
-  }
+}
 
 .main {
   position: relative;
-  }
+}
 
 /*
 Main, Navbar and Footer without media query see global
@@ -71,7 +71,7 @@ Main, Navbar and Footer without media query see global
   font-size: min(2em, max(5vw, 1em));
   font-weight: bold;
   color: #000;
-  }
+}
 
 /* ++++Main++++ */
 .top-searchBox {
@@ -88,63 +88,65 @@ Main, Navbar and Footer without media query see global
 
   border: 1px solid black;
   border-radius: 46px;
-  }
+}
 
 .top-searchBox-search {
   display: grid;
   grid-template-columns: auto 25px 25px;
 
   place-items: center;
-  }
+}
 
 .top-searchBox-search-input {
   width: 100%;
-  }
+}
 
 .top-searchBox-search-input:focus {
   outline: none;
-  }
+}
 
 .main-map {
   display: grid;
   grid-auto-rows: 1fr 21px;
   width: 100%;
   height: 100%;
-  }
+}
 
 .main-map iframe {
   width: 100%;
   height: 100%;
-  }
+}
 
 .main-map small {
   text-align: center;
   width: 100%;
-  }
+}
 
-.main-map small > button {
+.main-map small>button {
   margin: auto;
   width: 100%;
 
   display: inline-block;
   background-color: #D2F8D0;
-  }
+}
 
 /* ====Media query==== */
 
 /* Phone view */
 @media (max-width: 700px) {
+
   /* ++++Body++++ */
   .main {
     flex-grow: 1;
 
     margin: 10px 20px 80px 20px;
-    }
   }
+}
 
 /* Computer view */
 /* index.html has 2 "content(header and main)", therefore can't use global */
 @media (min-width: 701px) {
+
   /* ++++HTML++++ */
   body {
     display: grid;
@@ -152,33 +154,33 @@ Main, Navbar and Footer without media query see global
     grid-template-columns: min(15%, 180px) auto;
     grid-template-rows: 70px auto 50px;
     grid-template-areas:
-        "nav-left header-right"
-        "nav-left main-right"
-        "footer footer";
+      "nav-left header-right"
+      "nav-left main-right"
+      "footer footer";
 
     height: 100vh;
-    }
+  }
 
   /* ++++Body++++ */
   .header {
     /* grid */
     grid-area: header-right;
-    }
+  }
 
   .main {
     /* grid */
     grid-area: main-right;
-    }
+  }
 
   .bottom-nav {
     /* grid */
     grid-area: nav-left;
 
     background-color: #F0F0F0;
-    }
+  }
 
   .footer {
     /* grid */
     grid-area: footer;
-    }
   }
+}

@@ -5,11 +5,11 @@ import {
 import {
     createUserWithEmailAndPassword
 } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js';
-import {auth} from './firebaseInit.js';
-import {db} from './firebaseInit.js';
-import {collection, getDocs} from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js';
-import {setupGuides} from './login.js';
-import {setupUI} from './login.js';
+import { auth } from './firebaseInit.js';
+import { db } from './firebaseInit.js';
+import { collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js';
+import { setupGuides } from './login.js';
+import { setupUI } from './login.js';
 
 //listen for auth status changes
 
