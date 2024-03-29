@@ -12,10 +12,10 @@
          * */
         function loadHTMLContent(containerId, htmlPath) {
             return fetch(htmlPath)
-              .then(response => response.text())
-              .then(html => {
-                  document.getElementById(containerId).innerHTML = html;
-              }).catch(error => console.error("Error loading HTML content:", error));
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(containerId).innerHTML = html;
+                }).catch(error => console.error("Error loading HTML content:", error));
         }
 
         /**
@@ -86,18 +86,18 @@
 
         // Load the new language
         fetch(`../languages/${language}.json`)
-          .then(response => response.json())
-          .then(data => {
-              // Store the loaded language strings
-              currentLanguageStrings = data.Strings;
-              // Update page content with the loaded language
-              updatePageContent();
-              // To update all placeholders
-              updatePlaceholders();
-              // Update the language attribute of the HTML element
-              updateLangAttribute(language);
-          })
-          .catch(error => console.error("Error loading the language file:", error));
+            .then(response => response.json())
+            .then(data => {
+                // Store the loaded language strings
+                currentLanguageStrings = data.Strings;
+                // Update page content with the loaded language
+                updatePageContent();
+                // To update all placeholders
+                updatePlaceholders();
+                // Update the language attribute of the HTML element
+                updateLangAttribute(language);
+            })
+            .catch(error => console.error("Error loading the language file:", error));
     }
 
     /**

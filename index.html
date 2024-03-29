@@ -23,15 +23,19 @@
   <!-- Outside libraries -->
 
   <!-- Bootstrap Library CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
   <!-- Boostrap Library JS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+          crossorigin="anonymous">
   </script>
 
   <script type="module" src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
-  <script type="module" src="https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js"></script>
+  <script type="module"
+          src="https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js"></script>
 
 
   <!-- Other libraries -->
@@ -54,7 +58,8 @@
 
   <!--    Script    -->
   <script defer src="./scripts/client.js"></script>
-  <script type="module" src="./scripts/map.js"></script>
+  <script defer src="./scripts/map.js"></script>
+  <script type="module" src="./scripts/firebase_docs.mjs"></script>
 
 </head>
 
@@ -69,11 +74,12 @@
   <!--Search-->
   <div class="row top-searchBox">
     <form class="top-searchBox-search" onsubmit="searchOnMap(); return false;">
-      <input class="undecorated top-searchBox-search-input" id="site-search" type="search" name="query"
+      <input class="undecorated top-searchBox-search-input" id="site-search" type="search"
+             name="query"
              aria-label="Search through site content" data-key="searchPlaceholder"
              placeholder="Search the place you want to go">
       <button class="undecorated top-searchBox-search-btns" type="submit">
-        <img class="btns-icon" id="Ender_Pearl" src="/images/icon/icon_Search.png" alt="Go!">
+        <img class="btns-icon" id="Ender_Pearl" src="./images/icon/icon_Search.png" alt="Go!">
       </button>
       <!--User avatar-->
       <a class="undecorated top-searchBox-user-avatar" href="profile.html">
