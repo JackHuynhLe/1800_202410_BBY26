@@ -11,6 +11,7 @@
     "noResultsFound": "No results found. Please try again.",
     "searchError": "Search error. Please try again.",
     "locationSavedSuccess": "Current location saved successfully!",
+    "locationSaveError": "Failed to save current location.",
 
     "navigation": "Navigation",
     "community": "Community",
@@ -38,9 +39,13 @@
     "linkedAccounts": "Linked Accounts",
     "addAccounts": "Add Accounts",
     "logout": "Logout",
-
     "address": "Address:",
     "city": "City:",
-    "province": "Province:"
+    "province": "Province:",
+
+    "userNotLoggedIn": "User not authenticated. Please log in.",
+    "profileSaveSuccess": "Profile information saved successfully!",
+    "profileSaveError": "Failed to save profile information.",
+    "profileNeedLogin": "Please sign in to update your profile."
   }
 }

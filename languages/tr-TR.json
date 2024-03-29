@@ -11,6 +11,7 @@
     "noResultsFound": "Sonuç bulunamadı. Lütfen tekrar deneyin.",
     "searchError": "Arama hatası. Lütfen tekrar deneyin.",
     "locationSavedSuccess": "Mevcut konum başarıyla kaydedildi!",
+    "locationSaveError": "Mevcut konum kaydedilemedi.",
 
     "navigation": "Navigasyon",
     "community": "Topluluk",
@@ -38,9 +39,13 @@
     "linkedAccounts": "Bağlı Hesaplar",
     "addAccounts": "Hesap Ekle",
     "logout": "Çıkış Yap",
-
     "address": "Adres:",
     "city": "Şehir:",
-    "province": "İl:"
+    "province": "İl:",
+
+    "userNotLoggedIn": "Kullanıcı kimliği doğrulanmadı. Lütfen giriş yapın.",
+    "profileSaveSuccess": "Profil bilgileri başarıyla kaydedildi!",
+    "profileSaveError": "Profil bilgileri kaydedilemedi.",
+    "profileNeedLogin": "Profilinizi güncellemek için lütfen giriş yapın."
   }
 }

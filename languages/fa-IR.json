@@ -11,6 +11,7 @@
     "noResultsFound": "نتیجه‌ای یافت نشد. لطفا دوباره تلاش کنید.",
     "searchError": "خطای جستجو. لطفا دوباره تلاش کنید.",
     "locationSavedSuccess": "مکان فعلی با موفقیت ذخیره شد!",
+    "locationSaveError": "ذخیره‌سازی مکان فعلی با شکست مواجه شد.",
 
     "navigation": "ناوبری",
     "community": "جامعه",
@@ -38,9 +39,13 @@
     "linkedAccounts": "حساب‌های مرتبط",
     "addAccounts": "افزودن حساب‌ها",
     "logout": "خروج",
-
     "address": "آدرس:",
     "city": "شهر:",
-    "province": "استان:"
+    "province": "استان:",
+
+    "userNotLoggedIn": "کاربر احراز هویت نشده است. لطفا وارد شوید.",
+    "profileSaveSuccess": "اطلاعات پروفایل با موفقیت ذخیره شد!",
+    "profileSaveError": "ذخیره اطلاعات پروفایل با شکست مواجه شد.",
+    "profileNeedLogin": "لطفا برای به‌روزرسانی پروفایل خود وارد شوید."
   }
 }

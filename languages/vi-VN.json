@@ -11,6 +11,7 @@
     "noResultsFound": "Không tìm thấy kết quả. Vui lòng thử lại.",
     "searchError": "Lỗi tìm kiếm. Vui lòng thử lại.",
     "locationSavedSuccess": "Vị trí hiện tại đã được lưu thành công!",
+    "locationSaveError": "Không thể lưu vị trí hiện tại.",
 
     "navigation": "Điều hướng",
     "community": "Cộng đồng",
@@ -38,9 +39,13 @@
     "linkedAccounts": "Tài khoản liên kết",
     "addAccounts": "Thêm tài khoản",
     "logout": "Đăng xuất",
-
     "address": "Địa chỉ:",
     "city": "Thành phố:",
-    "province": "Tỉnh:"
+    "province": "Tỉnh:",
+
+    "userNotLoggedIn": "Người dùng chưa được xác thực. Vui lòng đăng nhập.",
+    "profileSaveSuccess": "Thông tin hồ sơ đã được lưu thành công!",
+    "profileSaveError": "Không thể lưu thông tin hồ sơ.",
+    "profileNeedLogin": "Vui lòng đăng nhập để cập nhật hồ sơ của bạn."
   }
 }

@@ -11,6 +11,7 @@
     "noResultsFound": "Keine Ergebnisse gefunden. Bitte versuchen Sie es erneut.",
     "searchError": "Suchfehler. Bitte versuchen Sie es erneut.",
     "locationSavedSuccess": "Aktueller Standort erfolgreich gespeichert!",
+    "locationSaveError": "Aktueller Standort konnte nicht gespeichert werden.",
 
     "navigation": "Navigation",
     "community": "Gemeinschaft",
@@ -38,9 +39,13 @@
     "linkedAccounts": "Verknüpfte Konten",
     "addAccounts": "Konten hinzufügen",
     "logout": "Abmelden",
-
     "address": "Adresse:",
     "city": "Stadt:",
-    "province": "Provinz:"
+    "province": "Provinz:",
+
+    "userNotLoggedIn": "Benutzer nicht authentifiziert. Bitte melden Sie sich an.",
+    "profileSaveSuccess": "Profilinformationen erfolgreich gespeichert!",
+    "profileSaveError": "Speichern der Profilinformationen fehlgeschlagen.",
+    "profileNeedLogin": "Bitte melden Sie sich an, um Ihr Profil zu aktualisieren."
   }
 }

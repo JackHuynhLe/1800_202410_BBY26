@@ -16,7 +16,7 @@ async function saveLocationToFirestore(latitude, longitude, dateTime) {
 
         // Ensure user is logged in
         if (!user) {
-            alert("User not authenticated. Please log in.");
+            alert(getLocalisedString("userNotLoggedIn"));
             return;
         }
 
@@ -40,10 +40,10 @@ async function saveLocationToFirestore(latitude, longitude, dateTime) {
         await addDoc(locationsCollectionRef, locationData);
 
         // Success message
-        alert("Location saved successfully to Firestore!");
+        alert(getLocalisedString("locationSavedSuccess"));
     } catch (error) {
         console.error("Error saving location to Firestore:", error);
-        alert("Failed to save location to Firestore.");
+        alert(getLocalisedString("locationSaveError"));
     }
 }
 
@@ -64,7 +64,7 @@ function saveCurrentLocation() {
 
             // Ensure user is logged in
             if (!user) {
-                alert("User not authenticated. Please log in.");
+                alert(getLocalisedString("userNotLoggedIn"));
                 return;
             }
 
@@ -79,11 +79,11 @@ function saveCurrentLocation() {
             addDoc(collection(firestore, "users", user.uid, "locations"), locationData)
                 .then(function (docRef) {
                     // Success message
-                    alert("Location saved successfully to Firestore!");
+                    alert(getLocalisedString("locationSavedSuccess"));
                 })
                 .catch(function (error) {
                     console.error("Error saving location to Firestore:", error);
-                    alert("Failed to save location to Firestore.");
+                    alert(getLocalisedString("locationSaveError"));
                 });
         }, handleError);
     } else {

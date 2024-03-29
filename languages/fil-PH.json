@@ -11,6 +11,7 @@
     "noResultsFound": "Walang natagpuang resulta. Pakisubukang muli.",
     "searchError": "Error sa paghahanap. Pakisubukang muli.",
     "locationSavedSuccess": "Matagumpay na nai-save ang kasalukuyang lokasyon!",
+    "locationSaveError": "Nabigo ang pag-save ng kasalukuyang lokasyon.",
 
     "navigation": "Nabigasyon",
     "community": "Komunidad",
@@ -38,9 +39,13 @@
     "linkedAccounts": "Mga Naka-link na Account",
     "addAccounts": "Magdagdag ng mga Account",
     "logout": "Mag-log Out",
-
     "address": "Address:",
     "city": "Lungsod:",
-    "province": "Lalawigan:"
+    "province": "Lalawigan:",
+
+    "userNotLoggedIn": "Hindi na-authenticate ang user. Mangyaring mag-log in.",
+    "profileSaveSuccess": "Matagumpay na nai-save ang impormasyon ng profile!",
+    "profileSaveError": "Nabigo ang pag-save ng impormasyon ng profile.",
+    "profileNeedLogin": "Mangyaring mag-sign in upang i-update ang iyong profile."
   }
 }

@@ -11,6 +11,7 @@
     "noResultsFound": "未找到結果。請再試一次。",
     "searchError": "搜尋錯誤。請再試一次。",
     "locationSavedSuccess": "當前位置儲存成功！",
+    "locationSaveError": "無法儲存當前位置。",
 
     "navigation": "導航",
     "community": "社區",
@@ -38,9 +39,13 @@
     "linkedAccounts": "關聯帳戶",
     "addAccounts": "添加帳戶",
     "logout": "登出",
-
     "address": "地址:",
     "city": "城市:",
-    "province": "省份:"
+    "province": "省份:",
+
+    "userNotLoggedIn": "用戶未經認證。請登入。",
+    "profileSaveSuccess": "個人資料信息成功保存！",
+    "profileSaveError": "保存個人資料信息失敗。",
+    "profileNeedLogin": "請登入以更新您的個人資料。"
   }
 }

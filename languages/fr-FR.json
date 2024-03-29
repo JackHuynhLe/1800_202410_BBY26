@@ -11,6 +11,7 @@
     "noResultsFound": "Aucun résultat trouvé. Veuillez réessayer.",
     "searchError": "Erreur de recherche. Veuillez réessayer.",
     "locationSavedSuccess": "Emplacement actuel enregistré avec succès!",
+    "locationSaveError": "Échec de l'enregistrement de l'emplacement actuel.",
 
     "navigation": "Navigation",
     "community": "Communauté",
@@ -38,9 +39,13 @@
     "linkedAccounts": "Comptes liés",
     "addAccounts": "Ajouter des comptes",
     "logout": "Déconnexion",
-
     "address": "Adresse :",
     "city": "Ville :",
-    "province": "Province :"
+    "province": "Province :",
+
+    "userNotLoggedIn": "Utilisateur non authentifié. Veuillez vous connecter.",
+    "profileSaveSuccess": "Informations du profil enregistrées avec succès !",
+    "profileSaveError": "Échec de l'enregistrement des informations du profil.",
+    "profileNeedLogin": "Veuillez vous connecter pour mettre à jour votre profil."
   }
 }
