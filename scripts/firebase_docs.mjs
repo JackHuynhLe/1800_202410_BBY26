@@ -1,4 +1,4 @@
-import {auth} from './firebaseInit.js';
+import { auth } from './firebaseInit.js';
 import {
     doc,
     setDoc,
