@@ -11,6 +11,7 @@
     "noResultsFound": "結果が見つかりませんでした。もう一度お試しください。",
     "searchError": "検索エラー。もう一度お試しください。",
     "locationSavedSuccess": "現在地が正常に保存されました！",
+    "locationSaveError": "現在地を保存できませんでした。",
 
     "navigation": "ナビゲーション",
     "community": "コミュニティ",
@@ -38,9 +39,13 @@
     "linkedAccounts": "リンクされたアカウント",
     "addAccounts": "アカウントを追加",
     "logout": "ログアウト",
-
     "address": "住所：",
     "city": "市：",
-    "province": "県："
+    "province": "県：",
+
+    "userNotLoggedIn": "ユーザーが認証されていません。ログインしてください。",
+    "profileSaveSuccess": "プロファイル情報が正常に保存されました！",
+    "profileSaveError": "プロファイル情報の保存に失敗しました。",
+    "profileNeedLogin": "プロファイルを更新するには、サインインしてください。"
   }
 }

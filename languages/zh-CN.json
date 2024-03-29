@@ -11,6 +11,7 @@
     "noResultsFound": "未找到结果。请再试一次。",
     "searchError": "搜索错误。请再试一次。",
     "locationSavedSuccess": "当前位置保存成功！",
+    "locationSaveError": "无法保存当前位置。",
 
     "navigation": "导航",
     "community": "社区",
@@ -38,9 +39,13 @@
     "linkedAccounts": "关联账户",
     "addAccounts": "添加账户",
     "logout": "登出",
-
     "address": "地址:",
     "city": "城市:",
-    "province": "省份:"
+    "province": "省份:",
+
+    "userNotLoggedIn": "用户未经认证。请登录。",
+    "profileSaveSuccess": "个人资料信息成功保存！",
+    "profileSaveError": "保存个人资料信息失败。",
+    "profileNeedLogin": "请登录以更新您的个人资料。"
   }
 }

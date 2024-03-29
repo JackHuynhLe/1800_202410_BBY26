@@ -11,6 +11,7 @@
     "noResultsFound": "لم يتم العثور على نتائج. يرجى المحاولة مرة أخرى.",
     "searchError": "خطأ في البحث. يرجى المحاولة مرة أخرى.",
     "locationSavedSuccess": "تم حفظ الموقع الحالي بنجاح!",
+    "locationSaveError": "فشل في حفظ الموقع الحالي.",
 
     "navigation": "التنقل",
     "community": "المجتمع",
@@ -38,9 +39,13 @@
     "linkedAccounts": "الحسابات المرتبطة",
     "addAccounts": "إضافة حسابات",
     "logout": "تسجيل الخروج",
-
     "address": "العنوان:",
     "city": "المدينة:",
-    "province": "المحافظة:"
+    "province": "المحافظة:",
+
+    "userNotLoggedIn": "المستخدم غير مصادق عليه. الرجاء تسجيل الدخول.",
+    "profileSaveSuccess": "تم حفظ معلومات الملف الشخصي بنجاح!",
+    "profileSaveError": "فشل في حفظ معلومات الملف الشخصي.",
+    "profileNeedLogin": "الرجاء تسجيل الدخول لتحديث ملفك الشخصي."
   }
 }

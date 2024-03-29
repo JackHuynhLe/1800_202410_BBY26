@@ -8,9 +8,11 @@
   <!-- Include Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
   <!-- Include Leaflet Routing Machine CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css"/>
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css"/>
   <!-- Include Leaflet Control Geocoder CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
   <!-- Include Leaflet EasyButton CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton/src/easy-button.css"/>
 
@@ -69,8 +71,8 @@
 
                 // Create a marker for the user's location
                 marker = L.marker([latitude, longitude]).addTo(map)
-                  .bindPopup('Your Location')
-                  .openPopup();
+                    .bindPopup('Your Location')
+                    .openPopup();
 
                 // Pan the map to the user's location
                 map.setView([latitude, longitude], 13);
