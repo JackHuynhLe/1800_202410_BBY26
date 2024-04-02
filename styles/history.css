@@ -1,0 +1,64 @@
+/**
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+This css file is for history
+///////////////////////////////////////////////////////////
+About comment:
+-----------------------------------------------------------
+====Content====
+means that under this comment is a big class.
+E.g.:
+====media query====
+@media 1 {}
+@media 2 {}
+-----------------------------------------------------------
+++++Element++++:
+means that under this comment are direct child elements.
+E.g.:
+++++Body++++
+<header>
+<main>
+<nav>
+<footer>
+///////////////////////////////////////////////////////////
+-----------------------------------------------------------
+Note:
+The product reference for the mobile screen size is 430px * 932px
+-----------------------------------------------------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+/* ====HTML==== */
+
+/* ++++Body++++ */
+
+main {
+  /* layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  /* style */
+  background-image: url("../images/icon/travel.jpg");
+  background-size: cover;
+  }
+
+/* ++++Main++++ */
+.historySelectContainer {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* box */
+  width: 80%;
+  height: 100%;
+
+  /* style */
+  background-color: rgba(255, 255, 255, 0.8);
+  }
+
+.iconSelect  {
+  transform: rotate(180deg);
+  }

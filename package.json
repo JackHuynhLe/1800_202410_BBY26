@@ -15,9 +15,5 @@
   "bugs": {
     "url": "https://github.com/JackHuynhLe/1800_202410_BBY26/issues"
   },
-  "homepage": "https://github.com/JackHuynhLe/1800_202410_BBY26#readme",
-  "dependencies": {
-    "express": "^4.19.0",
-    "firebaseui": "^6.1.0"
-  }
+  "homepage": "https://github.com/JackHuynhLe/1800_202410_BBY26#readme"
 }
