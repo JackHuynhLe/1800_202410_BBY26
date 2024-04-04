@@ -56,3 +56,20 @@ function searchOnMap() {
 }
 
 window.onload = initMap;
+
+/**
+ * Interactive functions of the map in the main.html
+ */
+{
+    /**
+     * Function to get the current location of the user
+     */
+    const currentLocationBtn = document.getElementById('currentLocationBtn');
+    currentLocationBtn.addEventListener('click', () => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, handleError);
+        } else {
+            alert(getLocalisedString("geoNotSupported"));
+        }
+    });
+}
