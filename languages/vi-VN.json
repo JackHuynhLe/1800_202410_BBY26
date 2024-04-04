@@ -46,6 +46,9 @@
     "userNotLoggedIn": "Người dùng chưa được xác thực. Vui lòng đăng nhập.",
     "profileSaveSuccess": "Thông tin hồ sơ đã được lưu thành công!",
     "profileSaveError": "Không thể lưu thông tin hồ sơ.",
-    "profileNeedLogin": "Vui lòng đăng nhập để cập nhật hồ sơ của bạn."
+    "profileNeedLogin": "Vui lòng đăng nhập để cập nhật hồ sơ của bạn.",
+
+    "travelHistory": "Lịch sử đi lại",
+    "communityHistory": "Lịch sử cộng đồng"
   }
 }

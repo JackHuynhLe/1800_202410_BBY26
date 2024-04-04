@@ -46,6 +46,9 @@
     "userNotLoggedIn": "Benutzer nicht authentifiziert. Bitte melden Sie sich an.",
     "profileSaveSuccess": "Profilinformationen erfolgreich gespeichert!",
     "profileSaveError": "Speichern der Profilinformationen fehlgeschlagen.",
-    "profileNeedLogin": "Bitte melden Sie sich an, um Ihr Profil zu aktualisieren."
+    "profileNeedLogin": "Bitte melden Sie sich an, um Ihr Profil zu aktualisieren.",
+
+    "travelHistory": "Reiseverlauf",
+    "communityHistory": "Gemeinschaftsgeschichte"
   }
 }

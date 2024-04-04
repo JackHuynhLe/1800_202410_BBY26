@@ -46,6 +46,9 @@
     "userNotLoggedIn": "Utilisateur non authentifié. Veuillez vous connecter.",
     "profileSaveSuccess": "Informations du profil enregistrées avec succès !",
     "profileSaveError": "Échec de l'enregistrement des informations du profil.",
-    "profileNeedLogin": "Veuillez vous connecter pour mettre à jour votre profil."
+    "profileNeedLogin": "Veuillez vous connecter pour mettre à jour votre profil.",
+
+    "travelHistory": "Historique de voyage",
+    "communityHistory": "Historique de la communauté"
   }
 }

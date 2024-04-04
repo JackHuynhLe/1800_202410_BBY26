@@ -46,6 +46,9 @@
     "userNotLoggedIn": "Hindi na-authenticate ang user. Mangyaring mag-log in.",
     "profileSaveSuccess": "Matagumpay na nai-save ang impormasyon ng profile!",
     "profileSaveError": "Nabigo ang pag-save ng impormasyon ng profile.",
-    "profileNeedLogin": "Mangyaring mag-sign in upang i-update ang iyong profile."
+    "profileNeedLogin": "Mangyaring mag-sign in upang i-update ang iyong profile.",
+
+    "travelHistory": "Kasaysayan ng Paglalakbay",
+    "communityHistory": "Kasaysayan ng Komunidad"
   }
 }

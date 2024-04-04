@@ -46,6 +46,9 @@
     "userNotLoggedIn": "ユーザーが認証されていません。ログインしてください。",
     "profileSaveSuccess": "プロファイル情報が正常に保存されました！",
     "profileSaveError": "プロファイル情報の保存に失敗しました。",
-    "profileNeedLogin": "プロファイルを更新するには、サインインしてください。"
+    "profileNeedLogin": "プロファイルを更新するには、サインインしてください。",
+
+    "travelHistory": "旅行履歴",
+    "communityHistory": "コミュニティ履歴"
   }
 }

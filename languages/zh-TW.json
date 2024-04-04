@@ -46,6 +46,9 @@
     "userNotLoggedIn": "用戶未經認證。請登入。",
     "profileSaveSuccess": "個人資料信息成功保存！",
     "profileSaveError": "保存個人資料信息失敗。",
-    "profileNeedLogin": "請登入以更新您的個人資料。"
+    "profileNeedLogin": "請登入以更新您的個人資料。",
+
+    "travelHistory": "旅行歷史",
+    "communityHistory": "社區歷史"
   }
 }

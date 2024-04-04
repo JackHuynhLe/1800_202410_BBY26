@@ -46,6 +46,9 @@
     "userNotLoggedIn": "المستخدم غير مصادق عليه. الرجاء تسجيل الدخول.",
     "profileSaveSuccess": "تم حفظ معلومات الملف الشخصي بنجاح!",
     "profileSaveError": "فشل في حفظ معلومات الملف الشخصي.",
-    "profileNeedLogin": "الرجاء تسجيل الدخول لتحديث ملفك الشخصي."
+    "profileNeedLogin": "الرجاء تسجيل الدخول لتحديث ملفك الشخصي.",
+
+    "travelHistory": "تاريخ السفر",
+    "communityHistory": "تاريخ المجتمع"
   }
 }
