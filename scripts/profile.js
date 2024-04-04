@@ -23,7 +23,7 @@ auth.onAuthStateChanged(user => {
                 // Use the user's UID as the document ID in the 'users' collection
                 await setDoc(doc(db, "users", user.uid), userInfo);
                 alert(getLocalisedString("profileSaveSuccess"));
-                window.location.href = './index.html';
+                window.location.href = '../main.html';
                 form.reset();
             } catch (error) {
                 console.error("Error saving profile information:", error);
@@ -35,6 +35,6 @@ auth.onAuthStateChanged(user => {
         console.log("No user is signed in.");
         alert(getLocalisedString("profileNeedLogin"));
         // Redirect to login page if necessary
-        // window.location.href = '/login.html';
+        // window.location.href = '/index.html';
     }
 });
