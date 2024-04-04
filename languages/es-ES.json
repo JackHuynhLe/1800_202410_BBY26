@@ -47,6 +47,9 @@
     "userNotLoggedIn": "Usuario no autenticado. Por favor, inicia sesión.",
     "profileSaveSuccess": "¡Información del perfil guardada con éxito!",
     "profileSaveError": "Error al guardar la información del perfil.",
-    "profileNeedLogin": "Por favor, inicia sesión para actualizar tu perfil."
+    "profileNeedLogin": "Por favor, inicia sesión para actualizar tu perfil.",
+
+    "travelHistory": "Historial de viajes",
+    "communityHistory": "Historial comunitario"
   }
 }

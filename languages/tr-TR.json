@@ -46,6 +46,9 @@
     "userNotLoggedIn": "Kullanıcı kimliği doğrulanmadı. Lütfen giriş yapın.",
     "profileSaveSuccess": "Profil bilgileri başarıyla kaydedildi!",
     "profileSaveError": "Profil bilgileri kaydedilemedi.",
-    "profileNeedLogin": "Profilinizi güncellemek için lütfen giriş yapın."
+    "profileNeedLogin": "Profilinizi güncellemek için lütfen giriş yapın.",
+
+    "travelHistory": "Seyahat Geçmişi",
+    "communityHistory": "Topluluk Geçmişi"
   }
 }

@@ -46,6 +46,9 @@
     "userNotLoggedIn": "用户未经认证。请登录。",
     "profileSaveSuccess": "个人资料信息成功保存！",
     "profileSaveError": "保存个人资料信息失败。",
-    "profileNeedLogin": "请登录以更新您的个人资料。"
+    "profileNeedLogin": "请登录以更新您的个人资料。",
+
+    "travelHistory": "旅行历史",
+    "communityHistory": "社区历史"
   }
 }

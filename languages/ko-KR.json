@@ -46,6 +46,9 @@
     "userNotLoggedIn": "사용자가 인증되지 않았습니다. 로그인 해주세요.",
     "profileSaveSuccess": "프로필 정보가 성공적으로 저장되었습니다!",
     "profileSaveError": "프로필 정보 저장에 실패했습니다.",
-    "profileNeedLogin": "프로필을 업데이트하려면 로그인 해주세요."
+    "profileNeedLogin": "프로필을 업데이트하려면 로그인 해주세요.",
+
+    "travelHistory": "여행 기록",
+    "communityHistory": "커뮤니티 이력"
   }
 }

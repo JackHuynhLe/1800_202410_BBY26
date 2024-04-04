@@ -46,6 +46,9 @@
     "userNotLoggedIn": "User not authenticated. Please log in.",
     "profileSaveSuccess": "Profile information saved successfully!",
     "profileSaveError": "Failed to save profile information.",
-    "profileNeedLogin": "Please sign in to update your profile."
+    "profileNeedLogin": "Please sign in to update your profile.",
+
+    "travelHistory": "Travel History",
+    "communityHistory": "Community History"
   }
 }

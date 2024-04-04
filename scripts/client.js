@@ -2,84 +2,53 @@
  * The main JavaScript file for the Stardust.
  * */
 
+// Function to retrieve localised strings with fallback
+function getLocalisedString(key) {
+    // Wait for the currentLanguageStrings to be loaded
+    if (window.currentLanguageStrings && key in window.currentLanguageStrings) {
+        return window.currentLanguageStrings[key];
+    } else {
+        // Fallback to English or a default message before the language files are loaded
+        return `Loading...`;
+    }
+}
+
 /**
  * Function about loading page
  * */
-{
-    document.addEventListener("DOMContentLoaded", () => {
-        /*
-         * Fetches and injects HTML content into a specified container.
-         * */
-        function loadHTMLContent(containerId, htmlPath) {
-            return fetch(htmlPath)
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById(containerId).innerHTML = html;
-                }).catch(error => console.error("Error loading HTML content:", error));
-        }
+document.addEventListener("DOMContentLoaded", () => {
+    /*
+     * Fetches and injects HTML content into a specified container.
+     * */
+    function loadHTMLContent(containerId, htmlPath) {
+        return fetch(htmlPath)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById(containerId).innerHTML = html;
+            }).catch(error => console.error("Error loading HTML content:", error));
+    }
 
-        /**
-         * To insert the bottom navbar and footer into each page,
-         * and load the language file for it if exists.
-         * */
-        const bottomNavLoaded = loadHTMLContent("bottomNavContainer", "../text/bottom_navbar.html");
-        const footerLoaded = loadHTMLContent("footerContainer", "../text/footer.html")
+    /**
+     * To insert the bottom navbar and footer into each page,
+     * and load the language file for it if exists.
+     * */
+    const bottomNavLoaded = loadHTMLContent("bottomNavContainer", "../text/bottom_navbar.html");
+    const footerLoaded = loadHTMLContent("footerContainer", "../text/footer.html");
 
-        Promise.all([bottomNavLoaded, footerLoaded]).then(() => {
-            // Check if the preferred language is saved and change it if it is.
-            const preferredLanguage = localStorage.getItem("preferredLanguage");
-            if (preferredLanguage) {
-                changeLanguage(preferredLanguage);
-            }
-        }).catch(error => console.error("Error initializing the page:", error));
-    });
-}
-/**
- * Function about language selection
- * */
-{
-    document.addEventListener("DOMContentLoaded", () => {
-        /**
-         * To display the language list when the user clicks on the language button.
-         * */
-        document.getElementById("footerContainer").addEventListener("click", () => {
-            const languageList = document.getElementById("language-list")
+    Promise.all([bottomNavLoaded, footerLoaded]).then(() => {
+        // Check if the preferred language is saved and change it if it is.
+        const preferredLanguage = localStorage.getItem("preferredLanguage") || 'en-UK'; // Default to 'en-UK' if not set
+        changeLanguage(preferredLanguage);
+    }).catch(error => console.error("Error initializing the page:", error));
+});
 
-            if (languageList.style.display === "none") {
-                languageList.style.display = "flex";
-            } else {
-                languageList.style.display = "none";
-            }
-        });
-
-        /**
-         * Select language code
-         * */
-        document.body.addEventListener("click", function (event) {
-            // Check if the clicked element is an interlanguage link
-            if (event.target.matches(".interlanguage-link, .interlanguage-link *")) {
-                const element = event.target.closest(".interlanguage-link");
-                const selectedLanguageCode = element.getAttribute("data-code");
-                changeLanguage(selectedLanguageCode);
-            }
-        });
-    });
-}
 /**
  * Change the language based on the selected language.
  * */
 {
     // Global variable to store current language strings
-    let currentLanguageStrings = {};
-    const preferredLanguage = localStorage.getItem("preferredLanguage");
-    if (preferredLanguage) {
-        changeLanguage(preferredLanguage);
-        updateLangAttribute(preferredLanguage);
-    }
+    window.currentLanguageStrings = {};
 
-    /**
-     * Change the language JSON file
-     * */
     function changeLanguage(language) {
         // Save the selected language
         window.localStorage.setItem("preferredLanguage", language);
@@ -89,7 +58,7 @@
             .then(response => response.json())
             .then(data => {
                 // Store the loaded language strings
-                currentLanguageStrings = data.Strings;
+                window.currentLanguageStrings = data.Strings;
                 // Update page content with the loaded language
                 updatePageContent();
                 // To update all placeholders
@@ -100,42 +69,66 @@
             .catch(error => console.error("Error loading the language file:", error));
     }
 
-    /**
-     * Update the page content based on the current language strings
-     * */
     function updatePageContent() {
         document.querySelectorAll(".lang-text").forEach(element => {
             const key = element.getAttribute("data-key");
-            if (key in currentLanguageStrings) {
-                element.textContent = currentLanguageStrings[key];
+            if (key in window.currentLanguageStrings) {
+                element.textContent = window.currentLanguageStrings[key];
             }
         });
     }
 
-    /**
-     * To update placeholders for all input elements with a data-key attribute
-     * */
     function updatePlaceholders() {
         document.querySelectorAll('input[data-key]').forEach(input => {
             const key = input.getAttribute('data-key');
-            if (key && key in currentLanguageStrings) {
-                input.placeholder = currentLanguageStrings[key];
+            if (key && key in window.currentLanguageStrings) {
+                input.placeholder = window.currentLanguageStrings[key];
             }
         });
     }
 
-    /**
-     * Function to retrieve localised strings
-     * */
-    function getLocalisedString(key) {
-        return currentLanguageStrings[key] || `Missing localization for: ${key}`;
-    }
-
-    /**
-     * Function to update the language attribute of the HTML element
-     * @param language - The language code
-     */
     function updateLangAttribute(language) {
         document.documentElement.lang = language;
     }
+}
+
+// Event listeners for language selection
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("footerContainer").addEventListener("click", () => {
+        const languageList = document.getElementById("language-list");
+        languageList.style.display = languageList.style.display === "none" ? "flex" : "none";
+    });
+
+    document.body.addEventListener("click", function (event) {
+        if (event.target.matches(".interlanguage-link, .interlanguage-link *")) {
+            const element = event.target.closest(".interlanguage-link");
+            const selectedLanguageCode = element.getAttribute("data-code");
+            changeLanguage(selectedLanguageCode);
+        }
+    });
+});
+/**
+ * Interactive of the page.
+ */
+{
+    /**
+     * Interactive of the history page.
+     * */
+    document.addEventListener("DOMContentLoaded", () => {
+        function toggleDisplay(elementToShow, elementToHide) {
+            elementToShow.style.display = elementToShow.style.display === "flex" ? "none" : "flex";
+            elementToHide.style.display = "none";
+        }
+
+        const travelHistoryContainer = document.getElementById("travelHistoryContainer");
+        const communityHistoryContainer = document.getElementById("communityHistoryContainer");
+
+        document.getElementById("travelHistoryBtn").addEventListener("click", () => {
+            toggleDisplay(travelHistoryContainer, communityHistoryContainer);
+        });
+
+        document.getElementById("communityHistoryBtn").addEventListener("click", () => {
+            toggleDisplay(communityHistoryContainer, travelHistoryContainer);
+        });
+    });
 }
