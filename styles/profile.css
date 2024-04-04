@@ -43,34 +43,6 @@ The product reference for the mobile screen size is 430px * 932px
   }
 
 /* ++++Fieldset++++ */
-.signupForm,
-.loginForm {
-  /* layout */
-  display: flex;
-  }
-
-.login-title {
-  /* layout */
-  text-align: center;
-  /* box */
-  margin: 0 50px;
-  /* font */
-  font-size: 25px;
-  font-weight: bold;
-  }
-
-.loginForm-item {
-  /* box */
-  margin: 5px 20px;
-  }
-
-.loginForm-btn {
-  /* layout */
-  display: flex;
-  /* box */
-  margin-top: 20px;
-  }
-
 .loginForm-btn > * {
   /* box */
   flex: 1;
@@ -83,20 +55,12 @@ The product reference for the mobile screen size is 430px * 932px
     /* layout */
     flex-direction: column;
     }
-
-  .background {
-    background-position: left;
-    }
   }
 
 @media (min-width: 701px) {
   .login {
     /* box */
     width: 400px;
-    }
-
-  .background {
-    background-position: center;
     }
   }
 

@@ -174,12 +174,13 @@ html, body {
 
   /* box */
   margin: 10px;
+  height: 100%;
   max-height: 300px;
   }
 
 .post-imgContainer > img {
   /* box */
-  height: 100%;
+  max-width: 100% !important;
   max-height: 300px;
   }
 
@@ -190,6 +191,7 @@ html, body {
   gap: 10px;
 
   /* box */
+  max-width: 100%;
   align-items: center;
 
   /* style */
@@ -203,6 +205,7 @@ html, body {
   justify-content: space-between;
 
   /* box */
+  width: 100%;
   align-items: center;
 
   /* style */
