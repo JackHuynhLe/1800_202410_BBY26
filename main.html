@@ -70,35 +70,40 @@
   </div>
 </header>
 
-<main class="main">
-  <!--Search-->
-  <div class="row top-searchBox">
-    <form class="top-searchBox-search" onsubmit="searchOnMap(); return false;">
-      <input class="undecorated top-searchBox-search-input" id="site-search" type="search"
-             name="query"
-             aria-label="Search through site content" data-key="searchPlaceholder"
-             placeholder="Search the place you want to go">
-      <button class="undecorated top-searchBox-search-btns" type="submit">
-        <img class="btns-icon" id="Ender_Pearl" src="./images/icon/icon_Search.png" alt="Go!">
-      </button>
-      <!--User avatar-->
-      <a class="undecorated top-searchBox-user-avatar" href="profile.html">
-        <img src="./images/icon/icon_UserImg.png" alt="User">
-      </a>
-    </form>
-  </div>
-
-  <!--Map-->
+<main>
   <div class="main-map">
+
+    <!--Search Box-->
+    <div class="row top-searchBox">
+      <form class="top-searchBox-search" onsubmit="searchOnMap(); return false;">
+        <input class="undecorated top-searchBox-search-input" id="site-search" type="search"
+               name="query"
+               aria-label="Search through site content" data-key="searchPlaceholder"
+               placeholder="Search the place you want to go">
+        <button class="undecorated top-searchBox-search-btns" type="submit">
+          <img class="btns-icon" id="Ender_Pearl" src="./images/icon/icon_Search.png" alt="Go!">
+        </button>
+        <!--User avatar-->
+        <a class="undecorated top-searchBox-user-avatar" href="profile.html">
+          <img src="./images/icon/icon_UserImg.png" alt="User">
+        </a>
+      </form>
+    </div>
+
+    <!--Map-->
     <iframe id="mapFrame" width="425" height="350"
             src="https://www.openstreetmap.org/export/embed.html?bbox=-123.02095413208009%2C49.24119423801864%2C-122.99177169799806%2C49.25508941196021&amp;layer=mapnik"
             style="border: 1px solid black">
     </iframe>
+
+    <!--Save current location btn-->
     <small>
       <button id="saveLocationBtn" class="overflow">
         <span class="lang-text" data-key="saveCurrentLocation">Save Current Location</span>
       </button>
     </small>
+
+    <!--Current location btn-->
     <div id="currentLocationBtn">
       <img src="./images/icon/icon_currentLocationBtn.png" alt="+">
     </div>

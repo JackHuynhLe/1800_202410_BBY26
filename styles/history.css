@@ -31,19 +31,6 @@ The product reference for the mobile screen size is 430px * 932px
 
 /* ++++Body++++ */
 
-main {
-  /* layout */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  overflow: auto;
-
-  /* style */
-  background-image: url("../images/icon/travel.jpg");
-  background-size: cover;
-  }
-
 /* ++++Main++++ */
 .historySelectContainer {
   /* layout */
@@ -98,7 +85,7 @@ main {
   height: 100%;
   }
 
-.historyContext{
+.historyContext {
   /* layout */
   display: grid;
 
@@ -110,10 +97,4 @@ main {
   /* style */
   background-color: #FFF;
   border-bottom: 1px solid #000;
-  }
-
-@media (max-width: 701px) {
-  main {
-    height: 100vh;
-    }
   }

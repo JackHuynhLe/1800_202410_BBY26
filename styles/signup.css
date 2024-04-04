@@ -5,14 +5,14 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-}
+  }
 
 form {
   background-color: #F2F2F2;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+  }
 
 button[type=submit] {
   background-color: #4CAF50;
@@ -22,20 +22,20 @@ button[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   width: 100%;
-}
+  }
 
 button[type=submit]:hover {
   background-color: #45A049;
-}
+  }
 
 @media (max-width: 700px) {
   .sign-up-form {
     padding: 20%;
+    }
   }
-}
 
 @media (min-width: 701px) {
   .sign-up-form {
     padding: 10%;
+    }
   }
-}

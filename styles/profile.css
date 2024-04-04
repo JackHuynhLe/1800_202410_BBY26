@@ -31,18 +31,6 @@ The product reference for the mobile screen size is 430px * 932px
 
 /* ++++Body++++ */
 
-main {
-  /* layout */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-
-  /* style */
-  background-image: url("../images/icon/travel.jpg");
-  background-size: cover;
-}
-
 .login {
   /* box */
   position: relative;
@@ -52,14 +40,14 @@ main {
   border-radius: 20px;
   width: min(400px, 100%);
   height: fit-content;
-}
+  }
 
 /* ++++Fieldset++++ */
 .signupForm,
 .loginForm {
   /* layout */
   display: flex;
-}
+  }
 
 .login-title {
   /* layout */
@@ -69,55 +57,55 @@ main {
   /* font */
   font-size: 25px;
   font-weight: bold;
-}
+  }
 
 .loginForm-item {
   /* box */
   margin: 5px 20px;
-}
+  }
 
 .loginForm-btn {
   /* layout */
   display: flex;
   /* box */
   margin-top: 20px;
-}
+  }
 
-.loginForm-btn>* {
+.loginForm-btn > * {
   /* box */
   flex: 1;
   margin: 0 5px;
-}
+  }
 
 /* ====Media Query==== */
 @media (max-width: 700px) {
   body {
     /* layout */
     flex-direction: column;
-  }
+    }
 
   .background {
     background-position: left;
+    }
   }
-}
 
 @media (min-width: 701px) {
   .login {
     /* box */
     width: 400px;
-  }
+    }
 
   .background {
     background-position: center;
+    }
   }
-}
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100vh;
   margin: 0;
-  background-color: #e9ecef;
-}
+  background-color: #E9ECEF;
+  }
 
 form {
   background-color: white;
@@ -126,13 +114,13 @@ form {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
-}
+  }
 
 label {
   display: block;
   font-weight: 600;
   margin-bottom: 5px;
-}
+  }
 
 input[type=text],
 input[type=tel],
@@ -141,14 +129,14 @@ textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #ced4da;
+  border: 1px solid #CED4DA;
   border-radius: 4px;
   font-size: 16px;
-}
+  }
 
 input[type=submit] {
   width: 100%;
-  background-color: #007bff;
+  background-color: #007BFF;
   color: white;
   padding: 10px;
   border: none;
@@ -156,22 +144,22 @@ input[type=submit] {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.2s;
-}
+  }
 
 input[type=submit]:hover {
-  background-color: #0056b3;
-}
+  background-color: #0056B3;
+  }
 
 textarea {
   height: 100px;
-}
+  }
 
 /* Enhancing the focus state for accessibility */
 input[type=text]:focus,
 input[type=tel]:focus,
 select:focus,
 textarea:focus {
-  border-color: #80bdff;
+  border-color: #80BDFF;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
+  }
