@@ -4,7 +4,7 @@
 <head>
   <!--    =====Website Title=====    -->
   <title>Stardust</title>
-  <link rel="icon" type="images/x-icon" href="./images/icon/logo_Stardust.png">
+  <link rel="icon" type="images/x-icon" href="images/logo_Stardust.png">
 
 
   <!--    =====Required meta tags=====     -->
@@ -58,7 +58,7 @@
 
   <!--    Script    -->
   <script defer src="./scripts/client.js"></script>
-  <script defer src="./scripts/map.js"></script>
+  <script defer src="./scripts/community.js"></script>
   <script type="module" src="./scripts/firebase_docs.mjs"></script>
 
 </head>
@@ -67,19 +67,119 @@
 
 <main>
   <div class="postContainer">
-    <div id="travelHistoryContainer" class="initiallyHidden historyContainer">
-      <!-- TODO: Insert travel history here -->
-      <div class="historyContext">Travel Test</div>
-      <div class="historyContext">Travel Test</div>
-      <div class="historyContext">Travel Test</div>
-      <div class="historyContext">Travel Test</div>
-      <div class="historyContext">Travel Test</div>
-      <div class="historyContext">Travel Test</div>
-      <div class="historyContext">Travel Test</div>
-      <div class="historyContext">Travel Test</div>
-      <div class="historyContext">Travel Test</div>
-      <div class="historyContext">Travel Test</div>
+    <!-- TODO: Insert user posts here -->
+    <!-- The template framework of the post -->
+    <div class="userPost">
+      <!-- User Profile -->
+      <div class="post-user">
+        <div class="post-userProfile">
+          <img class="post-userProfile-avatar" src="./images/YuanXiQWQ.png" alt="">
+          <span class="post-userProfile-username">一碗元夕</span>
+        </div>
+        <button class="post-userProfile-reportBtn undecorated">
+          <img class="post-icon" src="./images/icon/icon_report.svg" alt="more">
+        </button>
+      </div>
+
+      <!-- Post Overview -->
+      <div class="post-overviewContainer">
+        <!-- Post Title -->
+        <h5 class="post-title overflow">Mr. Fox taking a comfortable nap in the sunlight</h5>
+
+        <!-- Post Context -->
+        <div class="post-contextContainer">
+        <pre>
+Today, I was traveling in my survival base in my Minecraft save when I suddenly came across Mr. Fox taking a nap in the sunlight. The way Mr. Fox was curled up looked so adorably clumsy, giving a sense of healing. My heart felt like it was melting because of Mr. Fox taking a nap.
+        </pre>
+        </div>
+
+        <!-- Post Image -->
+        <div class="post-imgContainer">
+          <img src="images/Mr.Fox.png" alt="Mr. Fox">
+        </div>
+      </div>
+
+      <!-- Community interaction -->
+      <div class="post-communityInteractionContainer">
+        <div class="post-communityInteraction-likeBtn undecorated">
+          <img class="post-icon" src="./images/icon/icon_like.svg" alt="like">
+          <span>3.1415926535897932384626</span>
+        </div>
+        <div class="post-communityInteraction-commentBtn undecorated">
+          <img class="post-icon" src="./images/icon/icon_comment.svg" alt="comment">
+          <span>6.626070E-15</span>
+        </div>
+      </div>
+      <!-- Post Info -->
+      <div class="post-infoContainer">
+        <div class="post-info-postLocation">
+          <img class="post-icon" src="./images/icon/icon_location.svg" alt="Locate:">
+          <span class="post-info-postLocation-text">Minecraft World</span>
+        </div>
+        <div class="post-info-postTime">
+          <span class="post-info-postTime-text">2077-13-32</span>
+        </div>
+      </div>
     </div>
+
+    <!-- Another template framework of the post -->
+    <div class="userPost">
+      <!-- User Profile -->
+      <div class="post-user">
+        <div class="post-userProfile">
+          <img class="post-userProfile-avatar" src="./images/Dr.Cat.png" alt="">
+          <span class="post-userProfile-username">Dr. Cat</span>
+        </div>
+        <button class="post-userProfile-reportBtn undecorated">
+          <img class="post-icon" src="./images/icon/icon_report.svg" alt="more">
+        </button>
+      </div>
+
+      <!-- Post Overview -->
+      <div class="post-overviewContainer">
+        <!-- Post Title -->
+        <h5 class="post-title overflow">Dear COMP1800 Students</h5>
+
+        <!-- Post Context -->
+        <div class="post-contextContainer">
+        <pre>
+Today is a nice day to learn something new with me! We will take a lab in SE12-324. Don't forget to bring your laptop!
+        </pre>
+        </div>
+
+        <!-- Post Image -->
+        <div class="post-imgContainer">
+          <img src="images/travel.jpg" alt="Example img">
+        </div>
+      </div>
+
+      <!-- Community interaction -->
+      <div class="post-communityInteractionContainer">
+        <div class="post-communityInteraction-likeBtn undecorated">
+          <img class="post-icon" src="./images/icon/icon_like.svg" alt="like">
+          <span>1</span>
+        </div>
+        <div class="post-communityInteraction-commentBtn undecorated">
+          <img class="post-icon" src="./images/icon/icon_comment.svg" alt="comment">
+          <span>666</span>
+        </div>
+      </div>
+      <!-- Post Info -->
+      <div class="post-infoContainer">
+        <div class="post-info-postLocation">
+          <img class="post-icon" src="./images/icon/icon_location.svg" alt="Locate:">
+          <span class="post-info-postLocation-text">BCIT</span>
+        </div>
+        <div class="post-info-postTime">
+          <span class="post-info-postTime-text">2077-13-32</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="submitPostBtn">
+    <!-- TODO: Add submit post button here -->
   </div>
 </main>
 <!-- Bottom Navbar -->
