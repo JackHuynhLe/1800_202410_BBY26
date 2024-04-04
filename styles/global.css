@@ -155,7 +155,6 @@ main {
   /* box */
   height: 100%;
   width: 100%;
-  padding: 5px 0 10px 0;
   }
 
 .bottom-nav a {
@@ -167,6 +166,7 @@ main {
   align-items: center;
   height: 100%;
   width: 100%;
+  padding: 5px 0 10px 0;
 
   /* style */
   font-size: 10px;
@@ -263,12 +263,10 @@ main {
     flex-direction: column;
     }
 
+  /* ++++Body++++ */
+
   /* ++++Navbar++++ */
   .bottom-nav {
-    /* layout */
-    position: fixed;
-    bottom: 0;
-
     /* box */
     height: 60px;
     width: 100%;
@@ -326,11 +324,5 @@ main {
     bottom: 0;
     /* grid */
     grid-area: footer;
-    }
-  }
-
-@media (max-width: 701px) {
-  main {
-    height: 100vh;
     }
   }

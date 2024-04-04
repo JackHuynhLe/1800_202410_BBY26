@@ -35,7 +35,7 @@ html, body {
 /* ++++Body++++ */
 
 /* ++++Main++++ */
-.historySelectContainer {
+.postContainer {
   /* layout */
   display: flex;
   flex-direction: column;
@@ -46,58 +46,4 @@ html, body {
 
   /* style */
   background-color: rgba(255, 255, 255, 0.8);
-  }
-
-.historySelectContainer > div {
-  /* layout */
-  width: 100%;
-  }
-
-.selectBtn {
-  /* layout */
-  display: flex;
-  align-items: center;
-
-  /* box */
-  padding: 10px;
-  width: 100%;
-  height: 3em;
-
-  /* style */
-  background-color: #EFEFEF;
-  border-bottom: 1px solid #000;
-  font-size: 2rem;
-  font-weight: bold;
-  cursor: pointer;
-  }
-
-.selectBtn:hover {
-  /* style */
-  background-color: #D6D6D6;
-  cursor: pointer;
-  }
-
-.iconSelect {
-  transform: rotate(180deg);
-  }
-
-.historyContainer {
-  /* layout */
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  }
-
-.historyContext {
-  /* layout */
-  display: grid;
-
-  /* box */
-  padding: 10px;
-  width: 100%;
-  height: 10em;
-
-  /* style */
-  background-color: #FFF;
-  border-bottom: 1px solid #000;
   }
