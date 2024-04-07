@@ -26,16 +26,4 @@ button[type=submit] {
 
 button[type=submit]:hover {
   background-color: #45A049;
-}
-
-@media (max-width: 700px) {
-  .sign-up-form {
-    padding: 20%;
   }
-}
-
-@media (min-width: 701px) {
-  .sign-up-form {
-    padding: 10%;
-  }
-}

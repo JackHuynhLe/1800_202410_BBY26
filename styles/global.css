@@ -71,14 +71,6 @@ The product reference for the mobile screen size is 430px * 932px
   border: none;
 }
 
-.decoratedAnchor {
-  color: #2757C3;
-  text-decoration: underline;
-}
-
-.decoratedAnchor:hover {
-  color: #BD7FFF;
-}
 
 a {
   color: var(--link-color);
@@ -99,6 +91,19 @@ body {
   padding: 0;
   margin: 0;
 }
+
+main {
+  /* layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: auto;
+
+  /* style */
+  background-image: url("../images/travel.jpg");
+  background-size: cover;
+  }
 
 /* ++++Body++++ */
 .footer {
@@ -142,8 +147,7 @@ body {
   /* box */
   height: 100%;
   width: 100%;
-  padding: 5px 0 10px 0;
-}
+  }
 
 .bottom-nav a {
   /* layout */
@@ -154,6 +158,7 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
+  padding: 5px 0 10px 0;
 
   /* style */
   font-size: 10px;
@@ -169,10 +174,6 @@ body {
   width: 25px;
   height: 25px;
   margin-bottom: 4px;
-}
-
-.bottom-nav-items.active {
-  background-color: #E0E0E0;
 }
 
 /* ++++Footer++++ */
@@ -250,12 +251,9 @@ body {
     flex-direction: column;
   }
 
+  /* ++++Body++++ */
   /* ++++Navbar++++ */
   .bottom-nav {
-    /* layout */
-    position: fixed;
-    bottom: 0;
-
     /* box */
     height: 60px;
     width: 100%;
