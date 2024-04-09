@@ -193,6 +193,14 @@ async function displayLocationOnMap(latitude, longitude, dateTime) {
 
             // Set the HTML content of the mapSection
             mapSection.innerHTML = mapHtml;
+
+ 
+             // Add a marker to the map
+             L.marker([latitude, longitude]).addTo(mymap)
+                 .bindPopup(`<b>${city}</b><br>${province}, ${country}`)
+                 .openPopup();
+
+
         } catch (error) {
             console.error("Error fetching reverse geocode data:", error);
         }
