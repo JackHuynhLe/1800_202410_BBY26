@@ -52,28 +52,51 @@
   <!--    main    -->
   <link rel="stylesheet" href="./styles/global.css">
   <!--    specific    -->
-  <link rel="stylesheet" href="./styles/history.css">
+  <link rel="stylesheet" href="styles/main.css">
 
   <!--    *****Libraries*****   -->
 
   <!--    Script    -->
-
+  <script defer src="./scripts/client.js"></script>
+  <script defer src="./scripts/map.js"></script>
+  <script type="module" src="./scripts/firebase_docs.mjs"></script>
 
 </head>
 
 <body>
+<header class="header">
+  <div class="header-title">
+    <span class="lang-text" data-key="welcomeToStardust">Welcome to Stardust!</span>
+  </div>
+</header>
 
 <main>
- 
+  <div class="main-map">
+
+    <!--Save current location btn-->
+    <small>
+      <button id="saveLocationBtn" class="overflow">
+        <span class="lang-text" data-key="saveCurrentLocation">Save Current Location</span>
+      </button>
+    </small>
+
+    <!--Current location btn-->
+    <div id="currentLocationBtn">
+      <img src="./images/icon/icon_currentLocationBtn.png" alt="+">
+    </div>
+  </div>
+
+  <!-- This works over here -->
+  <button id="fetchLocationsBtn">Fetch Locations</button>
+  <div id="locationsDisplay"></div> <!-- Placeholder for displaying fetched locations -->
+
+
 </main>
 <!-- Bottom Navbar -->
 <div id="bottomNavContainer" class="bottom-nav"></div>
 
 <!-- Footer -->
 <div id="footerContainer" class="footer"></div>
-<script defer src="./scripts/client.js"></script>
-<script type="module" src="./scripts/firebaseInit.js"></script>
-<script type="module" src="./scripts/firebase_docs.mjs"></script>
 </body>
 
 </html>
