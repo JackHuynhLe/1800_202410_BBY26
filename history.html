@@ -57,62 +57,24 @@
   <!--    *****Libraries*****   -->
 
   <!--    Script    -->
-  <script defer src="./scripts/client.js"></script>
-  <script type="module" src="./scripts/firebase_docs.mjs"></script>
+
 
 </head>
 
 <body>
 
 <main>
-  <div class="historySelectContainer">
-    <div class="historySelect-TravelHistory">
-      <button id="travelHistoryBtn" class="selectBtn undecorated">
-        <span class="lang-text" data-key="travelHistory">Travel History</span>
-        <img class="iconSelect" src="./images/icon/icon_select.png" alt="o">
-      </button>
-      <div id="travelHistoryContainer" class="initiallyHidden historyContainer">
-        <!-- TODO: Insert travel history here -->
-        <div class="historyContext">Travel Test</div>
-        <div class="historyContext">Travel Test</div>
-        <div class="historyContext">Travel Test</div>
-        <div class="historyContext">Travel Test</div>
-        <div class="historyContext">Travel Test</div>
-        <div class="historyContext">Travel Test</div>
-        <div class="historyContext">Travel Test</div>
-        <div class="historyContext">Travel Test</div>
-        <div class="historyContext">Travel Test</div>
-        <div class="historyContext">Travel Test</div>
-      </div>
-    </div>
-
-    <div class="historySelect-CommunityHistory">
-      <button id="communityHistoryBtn" class="selectBtn undecorated">
-        <span class="lang-text" data-key="communityHistory">Community History</span>
-        <img class="iconSelect" src="./images/icon/icon_select.png" alt="">
-      </button>
-      <div id="communityHistoryContainer" class="initiallyHidden historyContainer">
-        <!-- TODO: Insert community history here -->
-        <div class="historyContext">Community Test</div>
-        <div class="historyContext">Community Test</div>
-        <div class="historyContext">Community Test</div>
-        <div class="historyContext">Community Test</div>
-        <div class="historyContext">Community Test</div>
-        <div class="historyContext">Community Test</div>
-        <div class="historyContext">Community Test</div>
-        <div class="historyContext">Community Test</div>
-        <div class="historyContext">Community Test</div>
-        <div class="historyContext">Community Test</div>
-
-      </div>
-    </div>
-  </div>
+  <button id="fetchLocationsBtn">Fetch Locations</button>
+<div id="locationsDisplay"></div> <!-- Placeholder for displaying fetched locations -->
 </main>
 <!-- Bottom Navbar -->
 <div id="bottomNavContainer" class="bottom-nav"></div>
 
 <!-- Footer -->
 <div id="footerContainer" class="footer"></div>
+<script defer src="./scripts/client.js"></script>
+<script type="module" src="./scripts/firebaseInit.js"></script>
+<script type="module" src="./scripts/firebase_docs.mjs"></script>
 </body>
 
 </html>
