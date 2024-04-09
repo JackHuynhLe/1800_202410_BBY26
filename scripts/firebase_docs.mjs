@@ -47,6 +47,7 @@ async function saveLocationToFirestore(latitude, longitude, dateTime) {
 
         // Success message
         alert(getLocalisedString("locationSavedSuccess"));
+        console.log("hello");
     } catch (error) {
         console.error("Error saving location to Firestore:", error);
         alert(getLocalisedString("locationSaveError"));
@@ -141,4 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('fetchLocationsBtn').addEventListener('click', fetchUserLocations);
 });
 
+console.log("Script is running");
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOM fully loaded and parsed");
+    document.getElementById('fetchLocationsBtn').addEventListener('click', fetchUserLocations);
+    console.log("Event listener attached");
+});
 
