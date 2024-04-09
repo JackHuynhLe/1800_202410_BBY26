@@ -100,4 +100,26 @@ html, body {
   /* style */
   background-color: #FFF;
   border-bottom: 1px solid #000;
+
   }
+
+  #saveLocationBtn {
+    display: none;
+  }
+
+
+.map-container {
+  position: relative;
+}
+
+.map-info-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  background-color: white;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
