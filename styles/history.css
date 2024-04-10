@@ -114,7 +114,7 @@ html, body {
 
 .map-info-box {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
   transform: translate(-50%, -100%);
   background-color: white;
