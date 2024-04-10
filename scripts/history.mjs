@@ -1,15 +1,9 @@
 import {saveCurrentLocation} from './firebase_docs.mjs'
 import {auth, db} from './firebaseInit.js'
 import {
-    doc,
-    setDoc,
     collection,
-    addDoc,
-    getFirestore,
-    query,
-    where,
     getDocs,
-    getDoc
+    query
 } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
 
 
@@ -53,9 +47,10 @@ async function displayLocationOnMap(latitude, longitude, dateTime) {
             const country = address.country || '';
 
             // Construct the HTML content for displaying the map with a marker and information
-            const mapHtml = `
+            // Set the HTML content of the mapSection
+            mapSection.innerHTML = `
             <div class="map-container">
-                <iframe id="mapFrame" width="600" height="450" frameborder="0" style="border:0;"
+                <iframe id="mapFrame" width="600" height="450" style="border:0;"
                     src="https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.005},${latitude - 0.005},${longitude + 0.005},${latitude + 0.005}&layer=mapnik&marker=${latitude},${longitude}">
                 </iframe>
                 <div class="map-info-box">
@@ -65,10 +60,6 @@ async function displayLocationOnMap(latitude, longitude, dateTime) {
                     <p>Country: ${country}</p>
                 </div>
             </div>`;
-
-
-            // Set the HTML content of the mapSection
-            mapSection.innerHTML = mapHtml;
 
 
             // Add a marker to the map
@@ -113,7 +104,7 @@ function displayLocationsInTable(locationsArray) {
             displayLocationOnMap(location.latitude, location.longitude, location.dateTime);
         });
 
-        // Append the button to the actions cell
+        // Append the button to the action cell
         actionsCell.appendChild(viewMapButton);
     });
 }
