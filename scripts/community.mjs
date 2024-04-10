@@ -1,86 +1,55 @@
-import { auth, db } from './firebaseInit.js';
+import { db } from './firebaseInit.js';
 import {
-    doc,
     collection,
-    addDoc,
     getDocs
 } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
 
-// Function to save a post to a user's collection in Firestore
-async function savePostToUserFirestore(postTitle, postText) {
-    try {
-        // Access the currently authenticated user
-        const user = auth.currentUser;
-
-        // Ensure user is logged in
-        if (!user) {
-            alert("User not logged in");
-            return;
-        }
-
-        // Construct the data object to be saved to Firestore
-        const postData = {
-            postTitle: postTitle,
-            postText: postText,
-            postDate: new Date().toISOString(),
-            postViews: 0 // You can set initial views to 0
-        };
-
-        // Add the post data to Firestore under the user's document
-        await addDoc(collection(db, "users", user.uid, "posts"), postData);
-
-        // Success message
-        alert("Post saved successfully");
-    } catch (error) {
-        console.error("Error saving post to Firestore:", error);
-        alert("Failed to save post");
-    }
-}
-
-// Function to retrieve posts from Firestore for the current user
+// Function to retrieve posts from Firestore
 async function getUserPostsFromFirestore() {
     try {
-        // Access the currently authenticated user
-        const user = auth.currentUser;
-
-        // Ensure user is logged in
-        if (!user) {
-            alert("User not logged in");
-            return [];
-        }
-
-        // Retrieve all posts for the current user from Firestore
-        const querySnapshot = await getDocs(collection(db, "users", user.uid, "posts"));
+        // Retrieve all posts from the "users" collection
+        const postsRef = collection(db, "users");
+        const querySnapshot = await getDocs(postsRef);
         const userPosts = [];
         querySnapshot.forEach((doc) => {
-            userPosts.push({ id: doc.id, ...doc.data() });
+            const userData = doc.data();
+            userData.posts.forEach((post) => {
+                userPosts.push({
+                    userName: userData.name,
+                    postTitle: post.postTitle,
+                    postText: post.postText,
+                    postDate: post.postDate
+                });
+            });
         });
         return userPosts;
     } catch (error) {
         console.error("Error fetching user posts from Firestore:", error);
-        alert("Failed to fetch user posts");
-        return [];
+        throw error;
     }
 }
 
-// Usage: Saving a new post
-async function saveNewPost(postTitle, postText) {
-    await savePostToUserFirestore(postTitle, postText);
-}
-
-// Usage: Retrieving posts for the current user
+// Usage: Retrieving posts and displaying them in the HTML
 async function displayUserPosts() {
-    const userPosts = await getUserPostsFromFirestore();
-    console.log("User posts:", userPosts);
-    // Now you can display the user's posts in your HTML or perform further actions
-}
+    try {
+        const userPosts = await getUserPostsFromFirestore();
+        const postsList = document.getElementById('postsList');
+        postsList.innerHTML = ''; // Clear existing posts
 
-// Add event listener to the button to save the new post
-document.getElementById('savePostBtn').addEventListener('click', async () => {
-    const postTitle = document.getElementById('postTitle').value;
-    const postText = document.getElementById('postText').value;
-    await saveNewPost(postTitle, postText);
-});
+        userPosts.forEach((post) => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <h3>${post.postTitle}</h3>
+                <p>${post.postText}</p>
+                <p>Posted by ${post.userName} on ${post.postDate}</p>
+            `;
+            postsList.appendChild(li);
+        });
+    } catch (error) {
+        console.error("Error displaying user posts:", error);
+        alert(`Failed to display user posts: ${error.message}`);
+    }
+}
 
 // Call the function to display user posts when needed
 displayUserPosts();
