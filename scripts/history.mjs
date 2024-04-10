@@ -56,7 +56,7 @@ async function displayLocationOnMap(latitude, longitude, dateTime) {
             const mapHtml = `
             <div class="map-container">
                 <iframe id="mapFrame" width="600" height="450" frameborder="0" style="border:0;"
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.02},${latitude - 0.01},${longitude + 0.02},${latitude + 0.01}">
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.005},${latitude - 0.005},${longitude + 0.005},${latitude + 0.005}&layer=mapnik&marker=${latitude},${longitude}">
                 </iframe>
                 <div class="map-info-box">
                     <p>Date: ${dateTime}</p>
