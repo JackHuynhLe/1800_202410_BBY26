@@ -1,35 +1,9 @@
-import {saveCurrentLocation} from './firebase_docs.mjs'
 import {auth, db} from './firebaseInit.js'
 import {
     collection,
     getDocs,
     query
 } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOM fully loaded and parsed");
-
-    // Attach event listener to saveLocationBtn
-    const saveLocationBtn = document.getElementById('saveLocationBtn');
-    if (saveLocationBtn) {
-        console.log("saveLocationBtn found, attaching event listener");
-        saveLocationBtn.addEventListener('click', saveCurrentLocation);
-    } else {
-        console.error("saveLocationBtn not found in the DOM");
-    }
-
-    // Attach event listener to fetchLocationsBtn
-    const fetchLocationsBtn = document.getElementById('fetchLocationsBtn');
-    if (fetchLocationsBtn) {
-        console.log("fetchLocationsBtn found, attaching event listener");
-        fetchLocationsBtn.addEventListener('click', fetchUserLocations);
-    } else {
-        console.error("fetchLocationsBtn not found in the DOM");
-    }
-
-    console.log("Event listeners attached");
-});
 
 
 // Function to display the location on the map section
@@ -118,7 +92,7 @@ function showTableHeaders() {
 }
 
 // Add event listener to the button to fetch locations
-document.getElementById('fetchLocationsBtn').addEventListener('click', async () => {
+document.getElementById('travelHistoryBtn').addEventListener('click', async () => {
     // Fetch user locations when the button is clicked
     await fetchUserLocations();
     // Show table headers after fetching locations
