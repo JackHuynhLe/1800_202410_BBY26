@@ -103,11 +103,6 @@ html, body {
 
   }
 
-  #saveLocationBtn {
-    display: none;
-  }
-
-
 .map-container {
   position: relative;
 }
