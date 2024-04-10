@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="496044dd-5b35-4dd1-8e01-dbd21e41f579" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting..cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting..cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/firebase_docs.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/firebase_docs.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +67,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "F:/JerryCode/1800_202410_BBY26",
+    "last_opened_file_path": "F:/JerryCode/BCIT-Asignments/Comp1537/Assignment_5",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
