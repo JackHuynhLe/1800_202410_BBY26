@@ -1,25 +1,20 @@
-
-
-let map; // Declare map variable outside the function scope
-
-function displayLocationOnMap(latitude, longitude) {
-    if (!map) {
-        // Initialize the map if it's not already initialized
-        map = L.map('map').setView([latitude, longitude], 13);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-    } else {
-        // Clear previous markers if any
-        map.eachLayer(layer => {
-            if (layer instanceof L.Marker) {
-                map.removeLayer(layer);
-            }
-        });
-        // Set new view
-        map.setView([latitude, longitude], 13);
+/**
+ * Interactive of the history page.
+ * */
+document.addEventListener("DOMContentLoaded", () => {
+    function toggleDisplay(elementToShow, elementToHide) {
+        elementToShow.style.display = elementToShow.style.display === "flex" ? "none" : "flex";
+        elementToHide.style.display = "none";
     }
-    
-    // Add marker for the location
-    L.marker([latitude, longitude]).addTo(map);
-}
+
+    const travelHistoryContainer = document.getElementById("travelHistoryContainer");
+    const communityHistoryContainer = document.getElementById("communityHistoryContainer");
+
+    document.getElementById("travelHistoryBtn").addEventListener("click", () => {
+        toggleDisplay(travelHistoryContainer, communityHistoryContainer);
+    });
+
+    document.getElementById("communityHistoryBtn").addEventListener("click", () => {
+        toggleDisplay(communityHistoryContainer, travelHistoryContainer);
+    });
+});
