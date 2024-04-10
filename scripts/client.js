@@ -142,26 +142,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 }
-
-/**
- * Interactive of the page.
- */
-{
-  
-}
-
-// Event listeners for language selection
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("footerContainer").addEventListener("click", () => {
-        const languageList = document.getElementById("language-list");
-        languageList.style.display = languageList.style.display === "none" ? "flex" : "none";
-    });
-
-    document.body.addEventListener("click", function (event) {
-        if (event.target.matches(".interlanguage-link, .interlanguage-link *")) {
-            const element = event.target.closest(".interlanguage-link");
-            const selectedLanguageCode = element.getAttribute("data-code");
-            changeLanguage(selectedLanguageCode);
-        }
-    });
-});
