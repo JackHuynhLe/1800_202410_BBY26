@@ -103,6 +103,7 @@ export function saveCurrentLocation() {
 document.getElementById('saveLocationBtn').addEventListener('click', saveCurrentLocation);
 
 
+<<<<<<< HEAD
 // Function to display the location on the map section
 async function displayLocationOnMap(latitude, longitude, dateTime) {
     const mapSection = document.getElementById('mapSection');
@@ -182,6 +183,9 @@ function displayLocationsInTable(locationsArray) {
         actionsCell.appendChild(viewMapButton);
     });
 }
+=======
+
+>>>>>>> 06bd66ddd957029553110695edc611183ab5a92d
 
 
 

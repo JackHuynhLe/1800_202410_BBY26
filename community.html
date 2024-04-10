@@ -182,6 +182,25 @@ Today is a nice day to learn something new with me! We will take a lab in SE12-3
     <!-- TODO: Add submit post button here -->
   </div>
 
+  <h1>Post Management</h1>
+    
+  <!-- Form for adding a new post -->
+  <form id="postForm">
+      <label for="postTitle">Post Title:</label><br>
+      <input type="text" id="postTitle" name="postTitle"><br>
+      <label for="postText">Post Text:</label><br>
+      <textarea id="postText" name="postText"></textarea><br>
+      <button type="submit" id="savePostBtn">Save Post</button>
+  </form>
+
+  <!-- Container for displaying user posts -->
+  <div id="userPosts">
+      <h2>Your Posts</h2>
+      <ul id="postsList"></ul>
+  </div>
+
+  <script src="community.mjs"></script> <!-- Replace 'your_script.js' with the path to your JavaScript file -->
+
 </main>
 <!-- Bottom Navbar -->
 <div id="bottomNavContainer" class="bottom-nav"></div>
