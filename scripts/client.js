@@ -165,8 +165,3 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-/**
- * Interactive of the page.
- */
-{
-}
