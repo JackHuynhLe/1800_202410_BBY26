@@ -1,6 +1,6 @@
 /**
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-This css file is for history
+This css file is for community
 ///////////////////////////////////////////////////////////
 About comment:
 -----------------------------------------------------------
@@ -38,104 +38,115 @@ html, body {
 /* Style the form for adding a new post */
 #postForm {
   margin-bottom: 20px;
-}
+  }
 
 #postForm label {
   display: block;
   margin-bottom: 5px;
-}
+  }
 
 #postForm input[type="text"],
 #postForm textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #CCC;
   border-radius: 5px;
   resize: none;
-}
+  }
 
 #postForm button {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #007BFF;
+  color: #FFF;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
+  }
 
 #postForm button:hover {
-  background-color: #0056b3;
-}
+  background-color: #0056B3;
+  }
 
 /* Style the container for displaying user posts */
 
 /* Style the container for displaying user posts */
-#userPostsContainer {
-  position: fixed;
-  top: 0; /* Position at the top of the viewport */
-  left: 50%; /* Position at the horizontal center */
-  transform: translateX(-50%); /* Center horizontally */
-  width: 90%; /* Adjust width as needed */
-  max-height: calc(100vh - 20px); /* Adjust the height accordingly */
+#userPostsContainer,
+#userPostsMove {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  height: calc(100vh - 20px); /* Adjust the height accordingly */
   overflow-y: auto; /* Enable vertical scrolling if needed */
   z-index: 999; /* Ensure the posts container is on top of other elements */
-}
+  }
 
 #userPosts {
-  background-color: #fff;
+  background-color: #FFF;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
+  }
 
 #userPosts h2 {
   margin-top: 0;
   margin-bottom: 20px;
-}
+  }
 
 #postsList {
   list-style-type: none;
   padding: 0;
-}
+  }
 
 #postsList li {
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #F9F9F9;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   width: auto; /* Allow width to adjust dynamically */
   overflow-x: auto; /* Enable horizontal scrolling if needed */
   font-size: 1.2em;
-}
+  }
 
 #postsList h3 {
   margin-top: 0;
   word-wrap: break-word; /* Allow long words to break and wrap */
   margin-bottom: 10px; /* Add some space between title and text */
-}
+  }
 
 #postsList p {
   margin-bottom: 0;
   word-wrap: break-word; /* Allow long words to break and wrap */
-}
+  }
 
 /* Style the share button */
 .share-button {
   position: fixed;
-  bottom: 20px; /* Adjust this value to your preference */
-  right: 20px; /* Adjust this value to your preference */
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max(50vw, 200px);
+  height: 50px;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  margin: 0 auto;
+  background-color: #007BFF;
+  color: #FFF;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   z-index: 1000; /* Ensure the button is on top of other elements */
-}
+  }
 
 .share-button:hover {
-  background-color: #0056b3;
-}
+  background-color: #0056B3;
+  }
+
+@media (max-width: 700px) {
+  .share-button {
+    bottom: 100px;
+    right: 0;
+    }
+  }
