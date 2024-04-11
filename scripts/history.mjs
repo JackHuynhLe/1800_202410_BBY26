@@ -71,16 +71,27 @@ async function displayLocationsInTable(locationArray) {
             travelHistoryContainer.innerHTML = htmlStrings.join('');
 
             const viewOnMapBtn = document.querySelectorAll('.viewOnMapBtn');
+            const historyMapContainer = document.getElementById('historyMapContainer');
+            const historySelectContainer = document.getElementById('historySelectContainer');
+            const backToHistoryBtn = document.getElementById('backToHistoryBtn');
+
             viewOnMapBtn.forEach(btn => {
                 btn.addEventListener('click', async () => {
                     const locationName = btn.closest('.historyContext').querySelector('.locationName').textContent;
                     const location = locationArray.find(location => location.locationName === locationName);
                     if (location) {
+                        historyMapContainer.classList.remove('initiallyHidden');
+                        historySelectContainer.style.display = 'none';
                         await displayLocationOnMap(location.latitude, location.longitude, location.dateTime);
                     } else {
                         console.error('Location not found for:', locationName);
                     }
                 });
+            });
+
+            backToHistoryBtn.addEventListener('click', () => {
+                historyMapContainer.classList.add('initiallyHidden');
+                historySelectContainer.style.display = 'flex';
             });
         })
         .catch(error => {
