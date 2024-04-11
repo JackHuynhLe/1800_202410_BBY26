@@ -76,12 +76,14 @@
   <button id="togglePostFormBtn" class="share-button">Share</button>
   <!-- Form for adding a new post (initially hidden) -->
   <form id="postForm" class="initiallyHidden">
-    <label for="postTitle">Post Title:</label><br/>
-    <input type="text" id="postTitle" name="postTitle"/><br/>
-    <label for="postText">Post Text:</label><br/>
-    <textarea id="postText" name="postText"></textarea><br/>
-    <button type="submit" id="savePostBtn">Save Post</button>
-    <button type="button" id="cancelPostBtn">Cancel</button>
+    <label for="postTitle">Post Title:</label>
+    <input type="text" id="postTitle" name="postTitle"/>
+    <label for="postText">Post Text:</label>
+    <textarea id="postText" name="postText"></textarea>
+    <div id="postFormBtns">
+      <button type="submit" id="savePostBtn">Save Post</button>
+      <button type="button" id="cancelPostBtn">Cancel</button>
+    </div>
     <!-- Button to cancel and close the form -->
   </form>
 </main>

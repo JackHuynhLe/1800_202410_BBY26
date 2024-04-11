@@ -37,31 +37,42 @@ html, body {
 
 /* Style the form for adding a new post */
 #postForm {
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-rows: 1.5rem 2em 1.5rem 1fr 50px;
+  padding: 10px;
+  height: 80%;
+  width: 90%;
+  background-color: #EFEFEF;
+  border-radius: 15px;
   }
 
 #postForm label {
   display: block;
-  margin-bottom: 5px;
   }
 
 #postForm input[type="text"],
 #postForm textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
   border: 1px solid #CCC;
   border-radius: 5px;
   resize: none;
   }
 
 #postForm button {
-  padding: 10px 20px;
+  height: 50px;
+  width: 100%;
+  margin: 5px 5px 0 5px;
   background-color: #007BFF;
   color: #FFF;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  }
+
+#postFormBtns {
+  display: flex;
+  flex: 1;
   }
 
 #postForm button:hover {
@@ -132,7 +143,7 @@ html, body {
   height: 50px;
   padding: 10px 20px;
   margin: 0 auto;
-  background-color: #007BFF;
+  background-color: #3579f6;
   color: #FFF;
   border: none;
   border-radius: 5px;

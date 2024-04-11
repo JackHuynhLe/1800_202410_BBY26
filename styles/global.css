@@ -44,7 +44,7 @@ The product reference for the mobile screen size is 430px * 932px
 }
 
 .initiallyHidden {
-  display: none;
+  display: none !important;
 }
 
 .column {

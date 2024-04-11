@@ -126,7 +126,11 @@ function initEventListeners() {
  */
 function togglePostForm() {
     const postForm = document.getElementById('postForm');
-    postForm.style.display = postForm.style.display === 'none' ? 'block' : 'none';
+    const userPostsMove = document.getElementById('userPostsMove');
+
+    postForm.classList.toggle('initiallyHidden');
+    userPostsMove.classList.toggle('initiallyHidden');
+
 }
 
 /**
@@ -139,6 +143,13 @@ async function handlePostFormSubmit(event) {
     const postTitle = document.getElementById('postTitle').value;
     const postText = document.getElementById('postText').value;
 
+    if (!postTitle || !postText) {
+        const which = postText ? "title" :
+            postTitle ? "text" : "title and a text";
+        alert("please enter a " + which + "!");
+        return;
+    }
+
     await savePostToUserFirestore(postTitle, postText);
     await getAllPosts();
     clearAndHidePostForm();
@@ -148,9 +159,10 @@ async function handlePostFormSubmit(event) {
  * Function to clear and hide the post-form
  */
 function clearAndHidePostForm() {
-    document.getElementById('postTitle').value = '';
-    document.getElementById('postText').value = '';
-    document.getElementById('postForm').style.display = 'none';
+    document.getElementById('postTitle').value = null;
+    document.getElementById('postText').value = null;
+    document.getElementById('postForm').classList.toggle('initiallyHidden');
+    document.getElementById('userPostsMove').classList.toggle('initiallyHidden');
 }
 
 /**
