@@ -26,194 +26,108 @@ The product reference for the mobile screen size is 430px * 932px
 -----------------------------------------------------------
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 */
-/* ====Specific==== */
-.post-icon {
-  /* box */
-  width: 15px;
-  height: 15px;
-  }
-
-.overflow {
-  /* box */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  }
 
 /* ====HTML==== */
 html, body {
   height: 100vh;
+  overflow-y: auto; /* Enable vertical scrolling */
   }
 
 /* ++++Body++++ */
 
-/* ++++Main++++ */
-.postContainer {
-  /* layout */
-  display: flex;
-  flex-direction: column;
+/* Style the form for adding a new post */
+#postForm {
+  margin-bottom: 20px;
+}
 
-  /* box */
-  width: 90%;
-  height: 100%;
+#postForm label {
+  display: block;
+  margin-bottom: 5px;
+}
 
-  /* style */
-  background-color: rgba(255, 255, 255, 0.8);
-  }
-
-.userPost {
-  /* layout */
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  text-align: center;
-
-  /* box */
+#postForm input[type="text"],
+#postForm textarea {
   width: 100%;
-  height: fit-content;
   padding: 10px;
   margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
 
-  /* style */
-  background-color: #FFF;
-  }
-
-.post-user {
-  /* layout */
-  display: flex;
-  justify-content: space-between;
-  }
-
-.post-userProfile {
-  /* layout */
-  display: flex;
-  gap: 5px;
-  place-items: center;
-  }
-
-.post-userProfile:hover {
-  /* style */
+#postForm button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  }
+}
 
-.post-userProfile-avatar {
-  /* box */
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  }
+#postForm button:hover {
+  background-color: #0056b3;
+}
 
-.post-userProfile-username {
-  /* style */
-  font-weight: bold;
-  font-size: 10px;
-  }
+/* Style the container for displaying user posts */
+#userPosts {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-height: calc(100vh - 200px); /* Adjust the height accordingly */
+  width:90%;
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  text-align: center;
+}
 
-.post-userProfile-reportBtn {
-  /* layout */
-  align-items: center;
+#userPosts h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 
-  /* box */
-  padding: 0 15px;
-  }
-
-
-.post-overviewContainer {
-  /* layout */
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  }
-
-.post-overviewContainer:hover {
-  /* style */
-  cursor: pointer;
-  }
-
-.post-title {
-  /* layout */
-  text-align: start;
-
-  /* box */
-  padding: 10px 0;
-  margin: 0;
-
-  /* style */
-  font-weight: bold;
-  }
-
-.post-contextContainer {
-  /* box */
-  text-align: start;
-
-  /* style */
-  font-size: 20px;
-  line-height: 1em;
-  letter-spacing: 0.5px;
-  word-spacing: -4px;
-  }
-
-.post-contextContainer pre {
-  /* style */
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-
-  /* box */
-  max-height: 3em;
+#postsList {
+  list-style-type: none;
   padding: 0;
-  margin: 0;
+}
 
-  /* style */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: pre-wrap;
-  }
+#postsList li {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: auto; /* Allow width to adjust dynamically */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  font-size:1.2em;
+}
 
-.post-imgContainer {
-  /* layout */
-  display: grid;
-  place-items: center;
+#postsList h3 {
+  margin-top: 0;
+  word-wrap: break-word; /* Allow long words to break and wrap */
+  margin-bottom: 10px; /* Add some space between title and text */
+}
 
-  /* box */
-  margin: 10px;
-  height: 100%;
-  max-height: 300px;
-  }
+#postsList p {
+  margin-bottom: 0;
+  word-wrap: break-word; /* Allow long words to break and wrap */
+}
 
-.post-imgContainer > img {
-  /* box */
-  max-width: 100% !important;
-  max-height: 300px;
-  }
 
-.post-communityInteractionContainer {
-  /* layout */
-  display: flex;
-  justify-content: end;
-  gap: 10px;
 
-  /* box */
-  max-width: 100%;
-  align-items: center;
-
-  /* style */
-  color: #8C8C8C;
-  font-size: 13px;
-  }
-
-.post-infoContainer {
-  /* layout */
-  display: flex;
-  justify-content: space-between;
-
-  /* box */
-  width: 100%;
-  align-items: center;
-
-  /* style */
-  color: #8C8C8C;
-  font-size: 13px;
-  }
-
-.post-info-postLocation:hover {
-  /* style */
+/* Style the share button */
+.share-button {
+  position: absolute;
+  top: 20px; /* Adjust this value to your preference */
+  right: 20px; /* Adjust this value to your preference */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  }
+  z-index: 1; /* Ensure the button is on top of other elements */
+}
+
+.share-button:hover {
+  background-color: #0056b3;
+}
