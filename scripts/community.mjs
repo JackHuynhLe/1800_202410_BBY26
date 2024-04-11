@@ -115,6 +115,8 @@ document.getElementById('postForm').addEventListener('submit', async (event) => 
     const postText = document.getElementById('postText').value;
 
     await saveNewPost(postTitle, postText); // Save the post
+    getAllPosts();
+
 
     // Clear the form fields
     document.getElementById('postTitle').value = '';
