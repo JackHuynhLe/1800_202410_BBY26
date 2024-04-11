@@ -14,9 +14,10 @@ async function displayLocationOnMap(latitude, longitude, dateTime) {
             mapSection.innerHTML = `
             <div class="map-container">
                 <iframe id="mapFrame" width="600" height="450" style="border:0;"
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.005},${latitude - 0.005},${longitude + 0.005},${latitude + 0.005}&layer=mapnik&marker=${latitude},${longitude}">
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.001},${latitude - 0.001},${longitude + 0.001},${latitude + 0.001}&layer=mapnik&marker=${latitude},${longitude}">
                 </iframe>
             </div>`;
+
         } catch (error) {
             console.error("Error fetching reverse geocode data:", error);
         }

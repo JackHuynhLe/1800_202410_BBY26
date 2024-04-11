@@ -2,9 +2,13 @@
  * Interactive of the history page.
  * */
 document.addEventListener("DOMContentLoaded", () => {
-    const travelHistoryContainer = document.getElementById("travelHistoryContainer");
-    document.getElementById("travelHistoryBtn").addEventListener("click", () => {
-        travelHistoryContainer.style.display = travelHistoryContainer.style.display === "flex" ? "none" : "flex";
-    });
 
+    showOrHide(".viewOnMapBtn", ".historyContext", "click");
 });
+
+function showOrHide(element, selector, functionName) {
+    document.querySelectorAll(selector + element).forEach(cb =>
+        cb.addEventListener(functionName, () => {
+            cb.classList.toggle("initiallyHidden");
+        }))
+}
