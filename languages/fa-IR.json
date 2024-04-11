@@ -48,7 +48,20 @@
     "profileSaveError": "ذخیره اطلاعات پروفایل با شکست مواجه شد.",
     "profileNeedLogin": "لطفا برای به‌روزرسانی پروفایل خود وارد شوید.",
 
+    "back": "بازگشت",
     "travelHistory": "تاریخچه سفر",
-    "communityHistory": "تاریخچه اجتماعی"
+    "communityHistory": "تاریخچه اجتماع",
+
+    "addPost": "افزودن پست",
+    "postTitle": "عنوان:",
+    "postText": "متن:",
+    "savePost": "ذخیره پست",
+    "cancel": "لغو",
+    "postSavedSuccess": "پست با موفقیت ذخیره شد!",
+    "postSaveError": "ذخیره پست با خطا مواجه شد.",
+    "postTitleMissing": "لطفا یک عنوان وارد کنید!",
+    "postTextMissing": "لطفا متنی وارد کنید!",
+    "postContentMissing": "لطفا یک عنوان و متنی وارد کنید!",
+    "allPosts": "تمام پست‌ها"
   }
 }

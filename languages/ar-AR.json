@@ -48,7 +48,20 @@
     "profileSaveError": "فشل في حفظ معلومات الملف الشخصي.",
     "profileNeedLogin": "الرجاء تسجيل الدخول لتحديث ملفك الشخصي.",
 
+    "back": "العودة",
     "travelHistory": "تاريخ السفر",
-    "communityHistory": "تاريخ المجتمع"
+    "communityHistory": "تاريخ المجتمع",
+
+    "addPost": "إضافة منشور",
+    "postTitle": "العنوان:",
+    "postText": "النص:",
+    "savePost": "حفظ المنشور",
+    "cancel": "إلغاء",
+    "postSavedSuccess": "تم حفظ المنشور بنجاح!",
+    "postSaveError": "فشل في حفظ المنشور.",
+    "postTitleMissing": "يرجى إدخال عنوان!",
+    "postTextMissing": "يرجى إدخال نص!",
+    "postContentMissing": "يرجى إدخال عنوان ونص!",
+    "allPosts": "جميع المشاركات"
   }
 }

@@ -48,7 +48,20 @@
     "profileSaveError": "Profil bilgileri kaydedilemedi.",
     "profileNeedLogin": "Profilinizi güncellemek için lütfen giriş yapın.",
 
+    "back": "Geri",
     "travelHistory": "Seyahat Geçmişi",
-    "communityHistory": "Topluluk Geçmişi"
+    "communityHistory": "Topluluk Geçmişi",
+
+    "addPost": "Gönderi Ekle",
+    "postTitle": "Başlık:",
+    "postText": "Metin:",
+    "savePost": "Gönderiyi Kaydet",
+    "cancel": "İptal",
+    "postSavedSuccess": "Gönderi başarıyla kaydedildi!",
+    "postSaveError": "Gönderi kaydedilemedi.",
+    "postTitleMissing": "Lütfen bir başlık girin!",
+    "postTextMissing": "Lütfen biraz metin girin!",
+    "postContentMissing": "Lütfen bir başlık ve biraz metin girin!",
+    "allPosts": "Tüm Gönderiler"
   }
 }

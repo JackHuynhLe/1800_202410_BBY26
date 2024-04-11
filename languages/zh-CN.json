@@ -48,7 +48,20 @@
     "profileSaveError": "保存个人资料信息失败。",
     "profileNeedLogin": "请登录以更新您的个人资料。",
 
+    "back": "返回",
     "travelHistory": "旅行历史",
-    "communityHistory": "社区历史"
+    "communityHistory": "社区历史",
+
+    "addPost": "添加帖子",
+    "postTitle": "标题:",
+    "postText": "文本:",
+    "savePost": "保存帖子",
+    "cancel": "取消",
+    "postSavedSuccess": "帖子保存成功!",
+    "postSaveError": "保存帖子失败。",
+    "postTitleMissing": "请输入标题！",
+    "postTextMissing": "请输入一些文本！",
+    "postContentMissing": "请输入标题和一些文本！",
+    "allPosts": "所有帖子"
   }
 }

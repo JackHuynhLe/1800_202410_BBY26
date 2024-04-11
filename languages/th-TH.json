@@ -48,7 +48,20 @@
     "profileSaveError": "ไม่สามารถบันทึกข้อมูลโปรไฟล์ได้",
     "profileNeedLogin": "กรุณาเข้าสู่ระบบเพื่ออัพเดทโปรไฟล์ของคุณ",
 
+    "back": "กลับ",
     "travelHistory": "ประวัติการเดินทาง",
-    "communityHistory": "ประวัติชุมชน"
+    "communityHistory": "ประวัติชุมชน",
+
+    "addPost": "เพิ่มโพสต์",
+    "postTitle": "หัวข้อ:",
+    "postText": "ข้อความ:",
+    "savePost": "บันทึกโพสต์",
+    "cancel": "ยกเลิก",
+    "postSavedSuccess": "บันทึกโพสต์สำเร็จแล้ว!",
+    "postSaveError": "ไม่สามารถบันทึกโพสต์ได้",
+    "postTitleMissing": "กรุณาใส่หัวข้อ!",
+    "postTextMissing": "กรุณาใส่ข้อความ!",
+    "postContentMissing": "กรุณาใส่หัวข้อและข้อความ!",
+    "allPosts": "โพสต์ทั้งหมด"
   }
 }

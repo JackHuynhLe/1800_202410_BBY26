@@ -14,7 +14,7 @@ import {
 async function getCurrentUser() {
     const user = auth.currentUser;
     if (!user) {
-        alert("User not logged in");
+        alert(getLocalisedString("UserNotLoggedIn"));
         throw new Error("User not logged in");
     }
     return user;
@@ -54,10 +54,10 @@ async function savePostToUserFirestore(postTitle, postText) {
         };
 
         await addDoc(collection(db, "users", user.uid, "posts"), postData);
-        alert("Post saved successfully");
+        alert(getLocalisedString("PostSavedSuccess"));
     } catch (error) {
         console.error("Error saving post to Firestore:", error);
-        alert("Failed to save post");
+        alert(getLocalisedString("PostSaveError"));
     }
 }
 
@@ -144,9 +144,9 @@ async function handlePostFormSubmit(event) {
     const postText = document.getElementById('postText').value;
 
     if (!postTitle || !postText) {
-        const which = postText ? "title" :
-            postTitle ? "text" : "title and a text";
-        alert("please enter a " + which + "!");
+        alert(postText ? getLocalisedString("postTitleMissing")
+            : postTitle ? getLocalisedString("postTextMissing")
+                : getLocalisedString("postContentMissing"));
         return;
     }
 

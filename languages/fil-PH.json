@@ -48,7 +48,20 @@
     "profileSaveError": "Nabigo ang pag-save ng impormasyon ng profile.",
     "profileNeedLogin": "Mangyaring mag-sign in upang i-update ang iyong profile.",
 
+    "back": "Bumalik",
     "travelHistory": "Kasaysayan ng Paglalakbay",
-    "communityHistory": "Kasaysayan ng Komunidad"
+    "communityHistory": "Kasaysayan ng Komunidad",
+
+    "addPost": "Magdagdag ng Post",
+    "postTitle": "Pamagat:",
+    "postText": "Teksto:",
+    "savePost": "I-save ang Post",
+    "cancel": "Kanselahin",
+    "postSavedSuccess": "Matagumpay na nai-save ang post!",
+    "postSaveError": "Nabigo ang pag-save ng post.",
+    "postTitleMissing": "Mangyaring maglagay ng pamagat!",
+    "postTextMissing": "Mangyaring maglagay ng ilang teksto!",
+    "postContentMissing": "Mangyaring maglagay ng pamagat at ilang teksto!",
+    "allPosts": "Lahat ng Post"
   }
 }

@@ -48,7 +48,20 @@
     "profileSaveError": "Échec de l'enregistrement des informations du profil.",
     "profileNeedLogin": "Veuillez vous connecter pour mettre à jour votre profil.",
 
-    "travelHistory": "Historique de voyage",
-    "communityHistory": "Historique de la communauté"
+    "back": "Retour",
+    "travelHistory": "Historique des voyages",
+    "communityHistory": "Historique de la communauté",
+
+    "addPost": "Ajouter un post",
+    "postTitle": "Titre :",
+    "postText": "Texte :",
+    "savePost": "Enregistrer le post",
+    "cancel": "Annuler",
+    "postSavedSuccess": "Post enregistré avec succès !",
+    "postSaveError": "Échec de l'enregistrement du post.",
+    "postTitleMissing": "Veuillez saisir un titre !",
+    "postTextMissing": "Veuillez saisir du texte !",
+    "postContentMissing": "Veuillez saisir un titre et du texte !",
+    "allPosts": "Tous les posts"
   }
 }

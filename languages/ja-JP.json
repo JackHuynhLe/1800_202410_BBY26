@@ -48,7 +48,20 @@
     "profileSaveError": "プロファイル情報の保存に失敗しました。",
     "profileNeedLogin": "プロファイルを更新するには、サインインしてください。",
 
+    "back": "戻る",
     "travelHistory": "旅行履歴",
-    "communityHistory": "コミュニティ履歴"
+    "communityHistory": "コミュニティ履歴",
+
+    "addPost": "投稿を追加",
+    "postTitle": "タイトル:",
+    "postText": "テキスト:",
+    "savePost": "投稿を保存",
+    "cancel": "キャンセル",
+    "postSavedSuccess": "投稿が成功に保存されました！",
+    "postSaveError": "投稿の保存に失敗しました。",
+    "postTitleMissing": "タイトルを入力してください！",
+    "postTextMissing": "テキストを入力してください！",
+    "postContentMissing": "タイトルとテキストを入力してください！",
+    "allPosts": "すべての投稿"
   }
 }

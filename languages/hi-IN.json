@@ -48,7 +48,20 @@
     "profileSaveError": "प्रोफ़ाइल जानकारी सहेजने में विफल।",
     "profileNeedLogin": "अपनी प्रोफ़ाइल अपडेट करने के लिए कृपया साइन इन करें।",
 
+    "back": "वापस",
     "travelHistory": "यात्रा इतिहास",
-    "communityHistory": "समुदाय इतिहास"
+    "communityHistory": "समुदाय का इतिहास",
+
+    "addPost": "पोस्ट जोड़ें",
+    "postTitle": "शीर्षक:",
+    "postText": "टेक्स्ट:",
+    "savePost": "पोस्ट सेव करें",
+    "cancel": "रद्द करें",
+    "postSavedSuccess": "पोस्ट सफलतापूर्वक सहेजी गई!",
+    "postSaveError": "पोस्ट सहेजने में विफल।",
+    "postTitleMissing": "कृपया एक शीर्षक दर्ज करें!",
+    "postTextMissing": "कृपया कुछ पाठ दर्ज करें!",
+    "postContentMissing": "कृपया एक शीर्षक और कुछ पाठ दर्ज करें!",
+    "allPosts": "सभी पोस्ट"
   }
 }

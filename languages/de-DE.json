@@ -48,7 +48,20 @@
     "profileSaveError": "Speichern der Profilinformationen fehlgeschlagen.",
     "profileNeedLogin": "Bitte melden Sie sich an, um Ihr Profil zu aktualisieren.",
 
+    "back": "Zurück",
     "travelHistory": "Reiseverlauf",
-    "communityHistory": "Gemeinschaftsgeschichte"
+    "communityHistory": "Community-Verlauf",
+
+    "addPost": "Beitrag hinzufügen",
+    "postTitle": "Titel:",
+    "postText": "Text:",
+    "savePost": "Beitrag speichern",
+    "cancel": "Abbrechen",
+    "postSavedSuccess": "Beitrag erfolgreich gespeichert!",
+    "postSaveError": "Fehler beim Speichern des Beitrags.",
+    "postTitleMissing": "Bitte geben Sie einen Titel ein!",
+    "postTextMissing": "Bitte geben Sie einen Text ein!",
+    "postContentMissing": "Bitte geben Sie einen Titel und einen Text ein!",
+    "allPosts": "Alle Beiträge"
   }
 }

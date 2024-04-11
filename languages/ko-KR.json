@@ -48,7 +48,20 @@
     "profileSaveError": "프로필 정보 저장에 실패했습니다.",
     "profileNeedLogin": "프로필을 업데이트하려면 로그인 해주세요.",
 
+    "back": "뒤로",
     "travelHistory": "여행 기록",
-    "communityHistory": "커뮤니티 이력"
+    "communityHistory": "커뮤니티 기록",
+
+    "addPost": "게시물 추가",
+    "postTitle": "제목:",
+    "postText": "본문:",
+    "savePost": "게시물 저장",
+    "cancel": "취소",
+    "postSavedSuccess": "게시물이 성공적으로 저장되었습니다!",
+    "postSaveError": "게시물 저장 실패.",
+    "postTitleMissing": "제목을 입력해 주세요!",
+    "postTextMissing": "텍스트를 입력해 주세요!",
+    "postContentMissing": "제목과 텍스트를 입력해 주세요!",
+    "allPosts": "모든 게시물"
   }
 }

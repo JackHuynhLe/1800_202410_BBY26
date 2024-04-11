@@ -49,7 +49,20 @@
     "profileSaveError": "Error al guardar la información del perfil.",
     "profileNeedLogin": "Por favor, inicia sesión para actualizar tu perfil.",
 
+    "back": "Volver",
     "travelHistory": "Historial de viajes",
-    "communityHistory": "Historial comunitario"
+    "communityHistory": "Historial de la comunidad",
+
+    "addPost": "Agregar publicación",
+    "postTitle": "Título:",
+    "postText": "Texto:",
+    "savePost": "Guardar publicación",
+    "cancel": "Cancelar",
+    "postSavedSuccess": "¡Publicación guardada con éxito!",
+    "postSaveError": "Error al guardar la publicación.",
+    "postTitleMissing": "¡Por favor, introduce un título!",
+    "postTextMissing": "¡Por favor, introduce algún texto!",
+    "postContentMissing": "¡Por favor, introduce un título y algún texto!",
+    "allPosts": "Todas las publicaciones"
   }
 }

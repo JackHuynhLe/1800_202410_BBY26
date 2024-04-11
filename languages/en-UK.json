@@ -48,7 +48,20 @@
     "profileSaveError": "Failed to save profile information.",
     "profileNeedLogin": "Please sign in to update your profile.",
 
+    "back": "Back",
     "travelHistory": "Travel History",
-    "communityHistory": "Community History"
+    "communityHistory": "Community History",
+
+    "addPost": "Add Post",
+    "postTitle": "Title:",
+    "postText": "Text:",
+    "savePost": "Save Post",
+    "cancel": "Cancel",
+    "postSavedSuccess": "Post saved successfully!",
+    "postSaveError": "Failed to save post.",
+    "postTitleMissing": "Please enter a title!",
+    "postTextMissing": "Please enter some text!",
+    "postContentMissing": "Please enter a title and some text!",
+    "allPosts": "All Posts"
   }
 }

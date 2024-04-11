@@ -48,7 +48,20 @@
     "profileSaveError": "Không thể lưu thông tin hồ sơ.",
     "profileNeedLogin": "Vui lòng đăng nhập để cập nhật hồ sơ của bạn.",
 
-    "travelHistory": "Lịch sử đi lại",
-    "communityHistory": "Lịch sử cộng đồng"
+    "back": "Quay lại",
+    "travelHistory": "Lịch sử du lịch",
+    "communityHistory": "Lịch sử cộng đồng",
+
+    "addPost": "Thêm bài viết",
+    "postTitle": "Tiêu đề:",
+    "postText": "Văn bản:",
+    "savePost": "Lưu bài viết",
+    "cancel": "Hủy bỏ",
+    "postSavedSuccess": "Bài viết đã được lưu thành công!",
+    "postSaveError": "Không thể lưu bài viết.",
+    "postTitleMissing": "Vui lòng nhập tiêu đề!",
+    "postTextMissing": "Vui lòng nhập văn bản!",
+    "postContentMissing": "Vui lòng nhập tiêu đề và văn bản!",
+    "allPosts": "Tất cả bài viết"
   }
 }

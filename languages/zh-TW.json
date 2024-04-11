@@ -48,7 +48,20 @@
     "profileSaveError": "保存個人資料信息失敗。",
     "profileNeedLogin": "請登入以更新您的個人資料。",
 
-    "travelHistory": "旅行歷史",
-    "communityHistory": "社區歷史"
+    "back": "返回",
+    "travelHistory": "旅遊歷史",
+    "communityHistory": "社群歷史",
+
+    "addPost": "新增貼文",
+    "postTitle": "標題:",
+    "postText": "文字:",
+    "savePost": "儲存貼文",
+    "cancel": "取消",
+    "postSavedSuccess": "貼文成功儲存!",
+    "postSaveError": "儲存貼文失敗。",
+    "postTitleMissing": "請輸入標題！",
+    "postTextMissing": "請輸入一些文字！",
+    "postContentMissing": "請輸入標題和一些文字！",
+    "allPosts": "所有貼文"
   }
 }
