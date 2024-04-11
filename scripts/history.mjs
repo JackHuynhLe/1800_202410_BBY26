@@ -73,7 +73,6 @@ async function displayLocationsInTable(locationArray) {
             const viewOnMapBtn = document.querySelectorAll('.viewOnMapBtn');
             const historyMapContainer = document.getElementById('historyMapContainer');
             const historySelectContainer = document.getElementById('historySelectContainer');
-            const backToHistoryBtn = document.getElementById('backToHistoryBtn');
 
             viewOnMapBtn.forEach(btn => {
                 btn.addEventListener('click', async () => {
@@ -81,17 +80,12 @@ async function displayLocationsInTable(locationArray) {
                     const location = locationArray.find(location => location.locationName === locationName);
                     if (location) {
                         historyMapContainer.classList.remove('initiallyHidden');
-                        historySelectContainer.style.display = 'none';
+                        historySelectContainer.classList.add('initiallyHidden');
                         await displayLocationOnMap(location.latitude, location.longitude, location.dateTime);
                     } else {
                         console.error('Location not found for:', locationName);
                     }
                 });
-            });
-
-            backToHistoryBtn.addEventListener('click', () => {
-                historyMapContainer.classList.add('initiallyHidden');
-                historySelectContainer.style.display = 'flex';
             });
         })
         .catch(error => {

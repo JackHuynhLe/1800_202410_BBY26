@@ -2,17 +2,6 @@
  * The main JavaScript file for the Stardust.
  * */
 
-// Function to retrieve localised strings with fallback
-function getLocalisedString(key) {
-    // Wait for the currentLanguageStrings to be loaded
-    if (window.currentLanguageStrings && key in window.currentLanguageStrings) {
-        return window.currentLanguageStrings[key];
-    } else {
-        // Fallback to English or a default message before the language files are loaded
-        return `Loading...`;
-    }
-}
-
 /**
  * Function about loading page
  * */
@@ -36,12 +25,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const footerLoaded = loadHTMLContent("footerContainer", "../text/footer.html");
 
     Promise.all([bottomNavLoaded, footerLoaded]).then(() => {
-        // Check if the preferred language is saved and change it if it is.
-        // Default to 'en-UK' if not set
-        const preferredLanguage = localStorage.getItem("preferredLanguage") || 'en-UK';
+        let preferredLanguage;
+        if (isMobileDevice()) {
+            // If mobile, use system language
+            preferredLanguage = navigator.language || 'en-UK';
+        } else {
+            // Else storage language first
+            preferredLanguage = localStorage.getItem("preferredLanguage") || 'en-UK';
+        }
         changeLanguage(preferredLanguage);
     }).catch(error => console.error("Error initializing the page:", error));
 });
+
+/**
+ * Function to check if the current device is a mobile device
+ * @return {boolean} - Whether the current device is a mobile device
+ */
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 
 /**
  * Functions about change the language based on the selected language.

@@ -1,10 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     toggleEvent("#travelHistoryBtn", "#travelHistoryContainer");
+
+    toggleEvent("#backToHistoryBtn", "#historyMapContainer")
     toggleEvent("#backToHistoryBtn", "#historySelectContainer");
-
-    toggleEvent("#viewOnMapBtn", "#historyMapContainer");
-
 });
 
 /**
