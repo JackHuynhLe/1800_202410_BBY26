@@ -55,7 +55,6 @@ async function saveNewPost(postTitle, postText) {
 }
 
 
-
 async function getAllPosts() {
     try {
         const postsContainer = document.getElementById('postsList');
@@ -76,7 +75,15 @@ async function getAllPosts() {
 
                 postTitleElement.textContent = postData.postTitle;
                 postTextElement.textContent = postData.postText;
-                postDateElement.textContent = "Date: " + postData.postDate;
+
+                // Convert ISO date string to Date object
+                const postDate = new Date(postData.postDate);
+
+                // Format the date and time as desired
+                const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+                const formattedDateTime = postDate.toLocaleString('en-US', options);
+
+                postDateElement.textContent = "Date: " + formattedDateTime;
                 userNameElement.textContent = "Posted by: " + postData.userName;
 
                 postElement.appendChild(postTitleElement);
@@ -91,6 +98,7 @@ async function getAllPosts() {
         console.error("Error retrieving posts:", error);
     }
 }
+
 
 // Call the function to retrieve and display all posts
 getAllPosts();
@@ -135,3 +143,5 @@ document.getElementById('cancelPostBtn').addEventListener('click', () => {
     // Hide the post form
     document.getElementById('postForm').style.display = 'none';
 });
+
+

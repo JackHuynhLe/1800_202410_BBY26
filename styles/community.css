@@ -70,14 +70,16 @@ html, body {
 
 /* Style the container for displaying user posts */
 
-#userPostsMove {
-  display:flex;
-  align-items:start;
-
-}
-
+/* Style the container for displaying user posts */
 #userPostsContainer {
-  position: relative;
+  position: fixed;
+  top: 0; /* Position at the top of the viewport */
+  left: 50%; /* Position at the horizontal center */
+  transform: translateX(-50%); /* Center horizontally */
+  width: 90%; /* Adjust width as needed */
+  max-height: calc(100vh - 20px); /* Adjust the height accordingly */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  z-index: 999; /* Ensure the posts container is on top of other elements */
 }
 
 #userPosts {
@@ -85,13 +87,8 @@ html, body {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-height: calc(100vh - 200px); /* Adjust the height accordingly */
-  overflow-y: auto; /* Enable vertical scrolling if needed */
   text-align: center;
 }
-
-
-
 
 #userPosts h2 {
   margin-top: 0;
@@ -111,7 +108,7 @@ html, body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   width: auto; /* Allow width to adjust dynamically */
   overflow-x: auto; /* Enable horizontal scrolling if needed */
-  font-size:1.2em;
+  font-size: 1.2em;
 }
 
 #postsList h3 {
@@ -125,11 +122,10 @@ html, body {
   word-wrap: break-word; /* Allow long words to break and wrap */
 }
 
-
 /* Style the share button */
 .share-button {
-  position: absolute;
-  bottom: 70px; /* Adjust this value to your preference */
+  position: fixed;
+  bottom: 20px; /* Adjust this value to your preference */
   right: 20px; /* Adjust this value to your preference */
   padding: 10px 20px;
   background-color: #007bff;
@@ -137,7 +133,7 @@ html, body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 1; /* Ensure the button is on top of other elements */
+  z-index: 1000; /* Ensure the button is on top of other elements */
 }
 
 .share-button:hover {
