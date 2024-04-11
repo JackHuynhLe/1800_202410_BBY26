@@ -11,37 +11,12 @@ async function displayLocationOnMap(latitude, longitude, dateTime) {
     const mapSection = document.getElementById('mapSection');
     if (mapSection) {
         try {
-            // Reverse geocode to get city, state, and country
-            const reverseGeocodeUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&zoom=18&addressdetails=1`;
-            const response = await fetch(reverseGeocodeUrl);
-            const data = await response.json();
-            const address = data.address;
-            const city = address.city || address.town || address.village || address.hamlet || address.suburb || '';
-            const province = address.state || address.county || '';
-            const country = address.country || '';
-
-            // Construct the HTML content for displaying the map with a marker and information
-            // Set the HTML content of the mapSection
             mapSection.innerHTML = `
             <div class="map-container">
                 <iframe id="mapFrame" width="600" height="450" style="border:0;"
                     src="https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.005},${latitude - 0.005},${longitude + 0.005},${latitude + 0.005}&layer=mapnik&marker=${latitude},${longitude}">
                 </iframe>
-                <div class="map-info-box">
-                    <p>Date: ${dateTime}</p>
-                    <p>City: ${city}</p>
-                    <p>Province: ${province}</p>
-                    <p>Country: ${country}</p>
-                </div>
             </div>`;
-
-
-            // Add a marker to the map
-            L.marker([latitude, longitude]).addTo(mymap)
-                .bindPopup(`<b>${city}</b><br>${province}, ${country}`)
-                .openPopup();
-
-
         } catch (error) {
             console.error("Error fetching reverse geocode data:", error);
         }
@@ -52,51 +27,66 @@ async function displayLocationOnMap(latitude, longitude, dateTime) {
 
 
 // Function to display locations in a table
-function displayLocationsInTable(locationsArray) {
-    const tableBody = document.getElementById('locationsTableBody');
-    tableBody.innerHTML = ''; // Clear existing table rows
+async function displayLocationsInTable(locationArray) {
+    const travelHistoryContainer = document.getElementById('travelHistoryContainer');
 
-    locationsArray.forEach((location, index) => {
-        const row = tableBody.insertRow();
-        const indexCell = row.insertCell();
-        indexCell.textContent = index + 1;
-        const latitudeCell = row.insertCell();
-        latitudeCell.textContent = location.latitude;
-        const longitudeCell = row.insertCell();
-        longitudeCell.textContent = location.longitude;
-        const dateTimeCell = row.insertCell();
-        dateTimeCell.textContent = location.dateTime;
-        const actionsCell = row.insertCell(); // New cell for actions
+    const locationPromises = locationArray.map(location => {
+        const [date, time] = location.dateTime.split(" ");
+        const userDIYName = location.locationName;
+        const latitude = location.latitude;
+        const longitude = location.longitude;
+        const reverseGeocodeUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&zoom=18&addressdetails=1`;
 
-        // Create a button to view the location on map
-        const viewMapButton = document.createElement('button');
-        viewMapButton.textContent = 'View on Map';
+        return fetch(reverseGeocodeUrl)
+            .then(response => response.json())
+            .then(data => {
+                const address = data.address;
+                const city = address.city ?? address.town ?? address.village ?? address.hamlet ?? address.suburb ?? '';
+                const province = address.state ?? address.county ?? '';
+                const country = address.country ?? '';
+                const postcode = address.postcode ?? '';
+                const locationName = address.name ?? userDIYName;
 
-        // Attach event listener to the button
-        viewMapButton.addEventListener('click', () => {
-            // When the button is clicked, display the location on the map
-            displayLocationOnMap(location.latitude, location.longitude, location.dateTime);
-        });
-
-        // Append the button to the action cell
-        actionsCell.appendChild(viewMapButton);
+                return `
+                    <div class="historyContext">
+                      <div class="locationInfo">
+                        <div class="locationName">${locationName}</div>
+                        <div class="locationAddress">${city} ${province} ${country} ${postcode}</div>
+                      </div>
+                      <div class="timeInfo">
+                        <div class="date">${date}</div>
+                        <div class="time">${time}</div>
+                      </div>
+                      <button class="viewOnMapBtn">
+                        <span class="lang-text" data-key="viewOnMap">View on map</span>
+                      </button>
+                    </div>
+                `;
+            });
     });
-}
 
-// Hide table headers initially
-document.getElementById('locationsTable').style.display = 'none';
+    Promise.all(locationPromises)
+        .then(htmlStrings => {
+            travelHistoryContainer.innerHTML = htmlStrings.join('');
 
-// Function to show table headers
-function showTableHeaders() {
-    document.getElementById('locationsTable').style.display = 'table';
+            const viewOnMapBtn = document.querySelectorAll('.viewOnMapBtn');
+            viewOnMapBtn.forEach(btn => {
+                btn.addEventListener('click', async () => {
+                    const locationName = btn.closest('.historyContext').querySelector('.locationName').textContent;
+                    const location = locationArray.find(location => location.locationName === locationName);
+                    await displayLocationOnMap(location.latitude, location.longitude, location.dateTime);
+                });
+            });
+        })
+        .catch(error => {
+            console.error("Error processing locations:", error);
+        });
 }
 
 // Add event listener to the button to fetch locations
 document.getElementById('travelHistoryBtn').addEventListener('click', async () => {
     // Fetch user locations when the button is clicked
     await fetchUserLocations();
-    // Show table headers after fetching locations
-    showTableHeaders();
 });
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -105,15 +95,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 async function fetchUserLocations() {
-    const locationsArray = [];
+    const locationArray = [];
     const user = auth.currentUser;
 
     if (user) {
-        console.log(`Found user: ${user.uid}`); // Log to confirm user is found
-        const locationsRef = collection(db, "users", user.uid, "locations");
-        console.log("Accessing user locations collection..."); // Log accessing the collection
-        const q = query(locationsRef);
-        const querySnapshot = await getDocs(q); // Corrected function name to getDocs
+        console.log(`Found user: ${user.uid}`);
+        const locationRef = collection(db, "users", user.uid, "locations");
+        console.log("Accessing user locations collection...");
+        const q = query(locationRef);
+        // Corrected function name to getDocs
+        const querySnapshot = await getDocs(q);
 
         if (!querySnapshot.empty) {
             console.log("Found location documents."); // Log if documents are found
@@ -122,11 +113,11 @@ async function fetchUserLocations() {
         }
 
         querySnapshot.forEach((doc) => {
-            locationsArray.push({id: doc.id, ...doc.data()});
+            locationArray.push({id: doc.id, ...doc.data()});
         });
 
         // Update UI by displaying locations in a table
-        displayLocationsInTable(locationsArray);
+        await displayLocationsInTable(locationArray);
     } else {
         console.log("No user is signed in.");
     }

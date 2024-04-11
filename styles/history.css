@@ -91,21 +91,72 @@ html, body {
 .historyContext {
   /* layout */
   display: grid;
+  grid-template-rows: auto auto 2.5rem;
 
   /* box */
-  padding: 10px;
+  text-align: start;
+  align-items: center;
+  padding: 10px 10px 0 10px;
   width: 100%;
-  height: 10em;
+  height: fit-content;
 
   /* style */
   background-color: #FFF;
   border-bottom: 1px solid #000;
+  }
 
+.historyContext * {
+  /* style */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+
+.locationInfo {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+
+  /* box */
+  justify-content: start;
+  padding: 0;
+  margin: 0;
+  }
+
+.locationName {
+  /* style */
+  font-size: 2em;
+  font-weight: bold;
+  }
+
+.locationAddress {
+  /* style */
+  font-size: .875em;
+  }
+
+.timeInfo {
+  /* layout */
+  display: flex;
+  flex-direction: row;
+
+  /* box */
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+
+  /* style */
+  font-size: .875rem;
+  font-weight: lighter;
+  }
+
+.viewOnMapBtn {
+  height: 2em;
+  padding: 0;
   }
 
 .map-container {
   position: relative;
-}
+  }
 
 .map-info-box {
   position: absolute;
@@ -114,7 +165,7 @@ html, body {
   transform: translate(-50%, -100%);
   background-color: white;
   padding: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #CCC;
   border-radius: 5px;
-}
+  }
 
