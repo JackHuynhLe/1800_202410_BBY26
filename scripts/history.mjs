@@ -74,13 +74,18 @@ async function displayLocationsInTable(locationArray) {
                 btn.addEventListener('click', async () => {
                     const locationName = btn.closest('.historyContext').querySelector('.locationName').textContent;
                     const location = locationArray.find(location => location.locationName === locationName);
-                    await displayLocationOnMap(location.latitude, location.longitude, location.dateTime);
+                    if (location) {
+                        await displayLocationOnMap(location.latitude, location.longitude, location.dateTime);
+                    } else {
+                        console.error('Location not found for:', locationName);
+                    }
                 });
             });
         })
         .catch(error => {
             console.error("Error processing locations:", error);
         });
+
 }
 
 // Add event listener to the button to fetch locations
