@@ -1,15 +1,12 @@
 import {auth, db} from './firebaseInit.js';
 import {
-    doc,
-    collection,
-    addDoc,
-    getDoc,
-    getDocs
+    doc, collection, addDoc, getDoc, getDocs
 } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
 
 /**
- * Function to get the current user
- * @return {Promise<*>} Promise that resolves to the current user
+ * Function to get the current user.
+ *
+ * @throws {Error} If the user is not logged in.
  */
 async function getCurrentUser() {
     const user = auth.currentUser;
@@ -21,9 +18,10 @@ async function getCurrentUser() {
 }
 
 /**
- * Function to get the user data
- * @param uid {string} The user ID
- * @return {Promise<*>} Promise that resolves to the user data
+ * Function to get the user data.
+ *
+ * @param uid {string} The user ID.
+ * @throws {Error} If the user document does not exist.
  */
 async function getUserData(uid) {
     const userDocRef = doc(db, "users", uid);
@@ -35,10 +33,11 @@ async function getUserData(uid) {
 }
 
 /**
- * Function to save a post to Firestore
+ * Function to save a post to Firestore.
+ *
  * @param postTitle {string} The title of the post
  * @param postText {string} The text of the post
- * @return {Promise<void>} Promise that resolves when the post is saved
+ * @return {Promise<void>} Promise.
  */
 async function savePostToUserFirestore(postTitle, postText) {
     try {
@@ -46,10 +45,7 @@ async function savePostToUserFirestore(postTitle, postText) {
         const userData = await getUserData(user.uid);
 
         const postData = {
-            postTitle,
-            postText,
-            postDate: new Date().toISOString(),
-            postViews: 0,
+            postTitle, postText, postDate: new Date().toISOString(), postViews: 0,
             userName: userData.name
         };
 
@@ -62,8 +58,9 @@ async function savePostToUserFirestore(postTitle, postText) {
 }
 
 /**
- * Function to get all posts from Firestore
- * @return {Promise<void>} Promise that resolves when the posts are retrieved
+ * Function to get all posts from Firestore.
+ *
+ * @return {Promise<void>} Promise.
  */
 async function getAllPosts() {
     try {
@@ -84,7 +81,8 @@ async function getAllPosts() {
 }
 
 /**
- * Function to create a new post element
+ * Function to create a new post-element.
+ *
  * @param postData {object} The post data
  * @return {HTMLLIElement} The created post element
  */
@@ -100,20 +98,21 @@ function createPostElement(postData) {
 }
 
 /**
- * Function to format a date to a readable string
- * @param dateString {string} The date string
+ * Function to format a date.
+ *
+ * @param dateString {string} The date string from Firestore
  * @return {string} The formatted date string
  */
 function formatDate(dateString) {
     const postDate = new Date(dateString);
     return postDate.toLocaleString('en-US', {
-        year: 'numeric', month: 'long', day: 'numeric',
-        hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true
+        year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric',
+        second: 'numeric', hour12: true
     });
 }
 
 /**
- * Function to initialise event listeners
+ * Initialise event listeners
  */
 function initEventListeners() {
     document.getElementById('togglePostFormBtn').addEventListener('click', togglePostForm);
@@ -134,19 +133,25 @@ function togglePostForm() {
 }
 
 /**
- * Function to handle the submission of the post form
+ * Function to handle the submission of the post-form.
+ *
  * @param event {Event} The form submission event
- * @return {Promise<void>} Promise that resolves when the post is saved
+ * @return {Promise<void>} Promise.
  */
 async function handlePostFormSubmit(event) {
     event.preventDefault();
     const postTitle = document.getElementById('postTitle').value;
     const postText = document.getElementById('postText').value;
 
+    // Check if any of the fields are empty. We don't like undefined. :(
     if (!postTitle || !postText) {
+        // Have postText: don't have title.
         alert(postText ? getLocalisedString("postTitleMissing")
-            : postTitle ? getLocalisedString("postTextMissing")
-                : getLocalisedString("postContentMissing"));
+            // No postText, have title: don't have postText.
+                       : postTitle ? getLocalisedString("postTextMissing")
+                  /* No title, no text: this guy is bad, who trying to test our app's boundary
+                  conditions. :] */
+                                   : getLocalisedString("postContentMissing"));
         return;
     }
 

@@ -10,7 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const guideList = document.querySelector('.guides');
 
-//setup guide
+/**
+ * Function to set up guides.
+ *
+ * @param data - The data of the guides.
+ */
 export const setupGuides = (data) => {
 
     if (data.length) {
@@ -37,6 +41,12 @@ export const setupGuides = (data) => {
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
 
+/**
+ * Function to set up UI.
+ *
+ * @param user - The user.
+ * @export to auth.js
+ */
 export const setupUI = (user) => {
     if (user) {
         //toggle UI elements

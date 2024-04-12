@@ -1,9 +1,9 @@
 /**
- * Initialise the map
+ * Initialise the map.
  * */
 {
     /**
-     * Function to initialise the map
+     * Function to initialise the map.
      */
     function initMap() {
         if (navigator.geolocation) {
@@ -14,7 +14,7 @@
     }
 
     /*
-    * Handles errors during geolocation fetching
+    * Handles errors during geolocation fetching.
     * */
     function handleError(error) {
         console.error('Geolocation error:', error);
@@ -22,14 +22,15 @@
     }
 
     /*
-    * Generates URL for the iframe to display the map centered around the specified coordinates
+    * Generates URL for the iframe to display the map centered around the specified coordinates.
     * */
     function generateMapURL(latitude, longitude, latOffset = 0.005, longOffset = 0.005) {
         return `https://www.openstreetmap.org/export/embed.html?bbox=${longitude - longOffset},${latitude - latOffset},${longitude + longOffset},${latitude + latOffset}&layer=mapnik&marker=${latitude},${longitude}`;
     }
 
     /**
-     * Function to get the current location of the user
+     * Function to get the current location of the user.
+     *
      * @param position - The position of the user
      * @param zoomLevel - The smaller the number, the more detailed the information displayed.
      */
@@ -69,12 +70,13 @@
 
     window.onload = initMap;
 }
+
 /**
- * Interactive functions of the map in the main.html
+ * Interactive functions of the map in the main.html.
  */
 {
     /**
-     * Function to get the current location of the user
+     * Function to get the current location of the user.
      */
     const currentLocationBtn = document.getElementById('currentLocationBtn');
     currentLocationBtn.addEventListener('click', () => {

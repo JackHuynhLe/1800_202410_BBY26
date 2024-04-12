@@ -1,24 +1,28 @@
 import {auth, db} from './firebaseInit.js';
 import {
     doc,
-    setDoc,
     collection,
     addDoc,
     getFirestore,
-    query,
-    where,
-    getDocs,
     getDoc
 } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
 
-// Function to reverse geocode the latitude and longitude
+/**
+ * Reverse geocode a location from OpenStreetMap 的 Nominatim API.
+ *
+ * @param latitude 纬度 (---)
+ * @param longitude 经度 (|||)
+ * @return {Promise<null|{country: *, city: *, state: *}>} Promise, a location object.
+ */
 async function reverseGeocode(latitude, longitude) {
+
+    const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&zoom=18&addressdetails=1`
     try {
-        const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&zoom=18&addressdetails=1`);
+        const response = await fetch(url);
         const data = await response.json();
         return {
             country: data.address.country,
-            city: data.address.city || data.address.town || data.address.village,
+            city: data.address.city ?? data.address.town ?? data.address.village,
             state: data.address.state
         };
     } catch (error) {
@@ -27,14 +31,23 @@ async function reverseGeocode(latitude, longitude) {
     }
 }
 
+/**
+ * Save the location to Firestore.
+ *
+ * @param latitude latitude
+ * @param longitude longitude
+ * @param dateTime this is used to saving when did you save this location.
+ * @param locationName location name.
+ * @return {Promise<void>} Promise.
+ */
 async function saveLocationToFirestore(latitude, longitude, dateTime, locationName) {
     try {
-        // Access the currently authenticated user
         const user = auth.currentUser;
 
-        // Ensure user is logged in
+        // I'm not sure that why unlogged user can see this page but just add for insuring.
         if (!user) {
             alert(getLocalisedString("userNotLoggedIn"));
+            console.error("User not logged in.");
             return;
         }
 
@@ -56,7 +69,7 @@ async function saveLocationToFirestore(latitude, longitude, dateTime, locationNa
             province: locationDetails.state
         };
 
-        // Get the user document ID from the users collection
+        // Get the user document ID from the "users" collection in Firestore
         const userDocRef = doc(db, "users", user.uid);
         const userDocSnapshot = await getDoc(userDocRef);
         if (!userDocSnapshot.exists()) {
@@ -72,12 +85,17 @@ async function saveLocationToFirestore(latitude, longitude, dateTime, locationNa
         alert(getLocalisedString("locationSavedSuccess"));
         console.log("hello");
     } catch (error) {
+        // Boooooooooooooom!!!!!!!
         console.error("Error saving location to Firestore:", error);
         alert(getLocalisedString("locationSaveError"));
     }
 }
 
-// Function to save the current location
+/**
+ * Get the current location and save it to Firestore.
+ *
+ * @return {Promise<void>} Promise.
+ */
 export function saveCurrentLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -108,7 +126,7 @@ export function saveCurrentLocation() {
     }
 }
 
-// Add event listener to the button to save the current location
+/**
+ * Add event listener to the button to save the current location.
+ */
 document.getElementById('saveLocationBtn').addEventListener('click', saveCurrentLocation);
-
-console.log("Script is running");

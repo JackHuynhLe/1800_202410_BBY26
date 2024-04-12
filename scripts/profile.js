@@ -1,5 +1,5 @@
-import { auth, db } from './firebaseInit.js';
-import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
+import {auth, db} from './firebaseInit.js';
+import {doc, setDoc, getDoc} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
 
 // Listen for auth state changes to ensure we have a user logged in
 auth.onAuthStateChanged(user => {
@@ -38,6 +38,11 @@ auth.onAuthStateChanged(user => {
     }
 });
 
+/**
+ * Function to populate the form with current user information.
+ *
+ * @param {string} userId - The ID of the user whose profile information to retrieve.
+ */
 auth.onAuthStateChanged(user => {
     if (user) {
         populateFormWithCurrentUserInfo(user.uid); // Populate form with current user info
@@ -71,10 +76,17 @@ auth.onAuthStateChanged(user => {
     }
 });
 
+/**
+ * Function to populate the form with current user information.
+ *
+ * @param userId - User ID.
+ * @return {Promise<void>} Promise.
+ * @async Async.
+ */
 async function populateFormWithCurrentUserInfo(userId) {
     const userDocRef = doc(db, "users", userId);
     const userDoc = await getDoc(userDocRef);
-    
+
     if (userDoc.exists()) {
         const userData = userDoc.data();
         document.querySelector('#name').value = userData.name || '';
