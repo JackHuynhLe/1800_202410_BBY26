@@ -1,3 +1,6 @@
+/**
+ * Initialise the pop-up modal for the login page.
+ */
 document.addEventListener('DOMContentLoaded', function () {
 
     const modals = document.querySelectorAll('.modal')

@@ -83,5 +83,3 @@ loginForm.addEventListener('submit', (e) => {
         loginForm.reset();
     })
 })
-
-
